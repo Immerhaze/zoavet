@@ -3,7 +3,7 @@ import LogoZoa from "@/icons/logo_zoa.astro";
 ---
 
 <section class="relative bg w-full h-screen lg:flex lg:flex-row" >
-    <!-- <div class="progress-bar-container bg-white fixed z-50 top-0 h-screen w-full flex flex-col gap-5 justify-center items-center">
+ <div class="progress-bar-container bg-white fixed z-50 top-0 h-screen w-full flex flex-col gap-5 justify-center items-center">
        <svg class=" w-1/4 h-full pl-10 hidden xl:flex" viewBox="0 0 816 195" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 43.1536H122.942V72.7446L51.226 157.819H122.942V191.725H0V157.819L69.9084 72.7446H0V43.1536Z" fill="#6BB2AB"/>
         <path d="M285.66 191.725L340.502 43.1536H373.648L424.272 171.998H418.245C408.603 161.518 385.702 153.504 382.688 140.557C384.697 133.365 383.773 116.022 364.006 104.185C364.006 99.2533 364.006 89.3896 355.569 88.7731C352.555 94.7324 344.962 107.021 338.694 108.5C330.86 110.35 326.641 118.364 326.641 123.912C326.641 129.461 323.025 135.009 321.82 136.242C320.614 137.475 318.807 146.722 332.065 151.654C335.078 152.065 341.466 152.64 342.913 151.654C344.721 150.421 327.846 172.614 333.873 191.725H285.66Z" fill="#6BB2AB"/>
@@ -17,7 +17,7 @@ import LogoZoa from "@/icons/logo_zoa.astro";
         </svg>
       <h1  class="text-2xl font-bold tracking-wide">Cargando...</h1>
       <progress class="w-3/4 md:w-1/2 mt-1 min-h-10 border-4 border-[#66918c] rounded-2xl overflow-hidden" id="progress" max="100"></progress>
-    </div> -->
+    </div> 
     <!-- <div class="select-none absolute top-0 lg:static lg:w-1/2 h-screen lg:pt-30 flex lg:flex-col items-end lg:items-center lg:justify-evenly"> -->
     <div class="select-none absolute top-0 lg:static lg:w-1/2 h-screen flex lg:flex-col items-end lg:items-start lg:pl-5 lg:justify-center lg:gap-10">
         <LogoZoa logoClassName={"logo-big w-4/5  hidden lg:flex"}/>
@@ -28,7 +28,9 @@ import LogoZoa from "@/icons/logo_zoa.astro";
           </p>
         </div>
       </div>
-      <div id="container" class="w-full h-screen lg:w-1/2 overflow-hidden lg:rounded-2xl"></div>
+      <div id="container" class="w-full h-screen lg:w-1/2 overflow-hidden lg:rounded-2xl">
+        <!-- <span class="icon-[svg-spinners--pulse-rings-multiple] absolute w-16 h-16 top-[54%] left-[33%] z-50 pointer-events-none bg-white"></span> -->
+      </div>
   </section>
 
   <script>

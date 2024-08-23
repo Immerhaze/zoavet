@@ -66,3 +66,99 @@ const { title, description } = Astro.props;
   overflow: hidden;
 }
 </style>
+
+<script>
+	// __ card animations from  devices min width 1024px, lg in tailwind.
+	import gsap from "gsap"; 
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+	gsap.registerPlugin(ScrollTrigger);
+  
+	const setupCardAnimations = (bannerIndex: number) => {
+	  const selectorPrefix = `.card-${bannerIndex}`;
+  
+	  const scrollTriggerSettings = {
+		trigger: ".initial-bars",
+		start: "bottom top",
+		end: "bottom top",
+		toggleActions: "play none none none",
+	  };
+  
+	  const commonAnimationProps = {
+		marginTop: 0,
+		ease: "power1.out",
+		duration: 1,
+		delay: 0.5 * bannerIndex, // Set delay dynamically based on index
+	  };
+  
+	  gsap.fromTo(`${selectorPrefix}`,
+		{
+		  y: 100, // Start from 100px below the normal position
+		  opacity: 0 
+		},
+		{
+		  scrollTrigger: scrollTriggerSettings,
+		  y: 0, // End at the normal position
+		  opacity: 1,
+		  ...commonAnimationProps,
+		});
+	};
+  
+	const setupAnimations = () => {
+	  // Apply animations to all banners from 0 to 4
+	  for (let i = 0; i <= 3; i++) {
+		setupCardAnimations(i);
+	  }
+	};
+  
+	const init = () => {
+	  const divElement = document.querySelector(".card-0");
+  
+	  if (divElement instanceof HTMLElement) {
+		setupAnimations();
+	  } else {
+		console.error("Element not found or not an HTMLElement");
+	  }
+	};
+  
+	const breakPoint = gsap.matchMedia();
+  
+	breakPoint.add("(min-width: 1024px)", init);
+
+// __ card animations from  devices max-width 748px, tablets adn below md in tailwind.
+const initMobile = () => {
+  // Get all the card elements
+  const items = gsap.utils.toArray<HTMLElement>(".DirectionAwareHover"); // Explicitly typing as HTMLElement
+
+  // Loop through each card and set up the animation, except the last one
+  items.forEach((item, index) => {
+    // Skip the animation for the last card
+    if (index === 3) return;
+
+    // Adjust the animation-item value to set the offset for each card
+    const animationOffset = 10 * (index + 1) + "px";
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: item, // Use the item itself as the trigger
+        start: `top top+=${animationOffset}`,
+        endTrigger: ".card-3", // Adjust this if necessary based on layout
+        end: "top 24rem",
+        pin: true, // Pin each card
+        pinSpacing: false, // No spacing between pins
+        scrub: true, // Smooth scrubbing
+      },
+    });
+
+    tl.to(item, {
+      opacity: 0.4,
+      scale: 0.85 + 0.02 * index,
+      transformOrigin: "center center",
+    });
+  });
+};
+
+// Setup the animations when viewport width is below 768px
+breakPoint.add("(max-width: 768px)", initMobile);
+</script>
+  

@@ -20,6 +20,9 @@ importers:
       '@fontsource-variable/space-grotesk':
         specifier: ^5.0.19
         version: 5.0.19
+      '@midudev/tailwind-animations':
+        specifier: ^0.0.7
+        version: 0.0.7(tailwindcss@3.4.10)
       astro:
         specifier: ^4.14.4
         version: 4.14.4(rollup@4.21.0)(typescript@5.5.4)
@@ -29,6 +32,9 @@ importers:
       embla-carousel-react:
         specifier: ^8.2.0
         version: 8.2.0(react@18.3.1)
+      gsap:
+        specifier: ^3.12.5
+        version: 3.12.5
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -45,6 +51,12 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
     devDependencies:
+      '@iconify/json':
+        specifier: ^2.2.239
+        version: 2.2.239
+      '@iconify/tailwind':
+        specifier: ^1.1.2
+        version: 1.1.2
       '@types/three':
         specifier: ^0.167.2
         version: 0.167.2
@@ -380,6 +392,15 @@ packages:
   '@fontsource-variable/space-grotesk@5.0.19':
     resolution: {integrity: sha512-uYyY1jqW+71NkPCp0P6dwEcV6uO4MEiAZ5JylhrHbMMA7C2N0uO6EZUnq7rOMZT4e58Izia5Hy5HPZ18dan3ew==}
 
+  '@iconify/json@2.2.239':
+    resolution: {integrity: sha512-NoKhFlWGPQbKCUb0tslIQK00cbRXMH6NPxGvS4bQgkH2hfcK/jA7EuBEkOaIyR3HdtvRNCunCntuR9eJnP8FAQ==}
+
+  '@iconify/tailwind@1.1.2':
+    resolution: {integrity: sha512-ZgToKxxd7zF5T9NXPnY9APRF06ZjFF21H/bINzcbKTdeJzLrNLIoVaoePIUbWVQ2HAac5cAYEHPZO8ILSUe3bQ==}
+
+  '@iconify/types@2.0.0':
+    resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
+
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
@@ -506,6 +527,11 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
+
+  '@midudev/tailwind-animations@0.0.7':
+    resolution: {integrity: sha512-K897X4NvM3tV2/R7aCjl6gJ6msWSTqQtcAwb5VX5D5+m/Mo650mEFoeODwqzaePYNro5BTGyXXFQw/kiHBZlUA==}
+    peerDependencies:
+      tailwindcss: ^3.0.0
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1137,6 +1163,9 @@ packages:
     resolution: {integrity: sha512-5v6yZd4JK3eMI3FqqCouswVqwugaA9r4dNZB1wwcmrD02QkV5H0y7XBQW8QwQqEaZY1pM9aqORSORhJRdNK44Q==}
     engines: {node: '>=6.0'}
 
+  gsap@3.12.5:
+    resolution: {integrity: sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==}
+
   has-flag@3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
     engines: {node: '>=4'}
@@ -1623,6 +1652,9 @@ packages:
 
   path-to-regexp@6.2.2:
     resolution: {integrity: sha512-GQX3SSMokngb36+whdpRXE+3f9V8UzyAorlYvOGx87ufGHehNTn5lCxrKtLyZ4Yl/wEKnNnr98ZzOwwDZV5ogw==}
+
+  pathe@1.1.2:
+    resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
 
   picocolors@1.0.1:
     resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
@@ -2607,6 +2639,17 @@ snapshots:
 
   '@fontsource-variable/space-grotesk@5.0.19': {}
 
+  '@iconify/json@2.2.239':
+    dependencies:
+      '@iconify/types': 2.0.0
+      pathe: 1.1.2
+
+  '@iconify/tailwind@1.1.2':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify/types@2.0.0': {}
+
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
       '@img/sharp-libvips-darwin-arm64': 1.0.4
@@ -2707,6 +2750,10 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@midudev/tailwind-animations@0.0.7(tailwindcss@3.4.10)':
+    dependencies:
+      tailwindcss: 3.4.10
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -3404,6 +3451,8 @@ snapshots:
       section-matter: 1.0.0
       strip-bom-string: 1.0.0
 
+  gsap@3.12.5: {}
+
   has-flag@3.0.0: {}
 
   hasown@2.0.2:
@@ -4067,6 +4116,8 @@ snapshots:
       minipass: 7.1.2
 
   path-to-regexp@6.2.2: {}
+
+  pathe@1.1.2: {}
 
   picocolors@1.0.1: {}
 

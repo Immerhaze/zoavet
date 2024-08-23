@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import AboutProgressBars from "@/components/AboutProgressBars";
+import AboutProgressBars from "@/components/index/AboutProgressBars";
 
 export default function AboutCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });

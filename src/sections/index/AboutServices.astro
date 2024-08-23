@@ -1,0 +1,39 @@
+---
+import ServiceCards from '@/components/index/ServiceCard.astro';
+import { SERVICES_INITIAL } from '@/consts/services';
+import PrimaryButton from '@/components/primaryButton.astro';
+
+const handleClick = () => {
+  alert("Button clicked!");
+};
+---
+
+<div class="w-full lg:h-screen  flex flex-col p-2">
+  <div class="w-full h-1/6 flex flex-col justify-evenly lg:pl-5">
+    <h1 class="service-title uppercase text-left text-4xl md:text-6xl lg:text-7xl   font-semibold tracking-wide  text-primary">
+      Salud Integral
+    </h1>
+    <p class="w-full text-base md:text-xl  lg:text-2xl tracking-wide leading-relaxed font-light">
+      Cuidamos a tu mascota como parte de nuestra familia, ofreciéndole los mejores servicios para su bienestar y salud.
+    </p>
+  </div>
+  <!-- <div class=" bg-yellow-300 w-full flex flex-col lg:flex-wrap "> -->
+  <div class="lg:h-5/6 mt-10">
+      <div class="cards w-full lg:h-5/6 flex flex-col lg:flex-row justify-center  items-center lg:items-start lg:flex-wrap  px-5 ">
+        {SERVICES_INITIAL.map((service, index) => (
+          <ServiceCards
+          serviceImg={service.img}
+          title={service.title}
+          description={service.description}
+          index={index}
+          />
+        ))}
+    </div>
+    <div class="w-full lg:h-1/6 flex justify-center items-center">
+      <PrimaryButton  title="Más servicios"
+      icon="icon-[streamline--add-circle]"
+      onClick={handleClick}/>
+    </div>
+  </div>
+</div>
+</div>
