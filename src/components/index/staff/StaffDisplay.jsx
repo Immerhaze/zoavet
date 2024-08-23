@@ -1,13 +1,5 @@
 import React, { useState } from "react";
 import { staffcard } from "@/consts/staff";
-// Define the type for a staff member
-interface StaffMember {
-  id: number;
-  name: string;
-  designation: string;
-  image: string;
-  description: string;
-}
 
 // Define component
 const StaffDisplay = () => {
@@ -23,7 +15,7 @@ const StaffDisplay = () => {
           "Nuestra Jefe Veterinaria y Co-Fundadora. Se graduó en la Universidad Nacional de Colombia con un título en Medicina Veterinaria. Con más de 15 años de experiencia en el cuidado de animales, su pasión por la veterinaria y su liderazgo han sido fundamentales para el crecimiento de nuestra clínica.",
       });
 
-  const handleClick = (staffMember: StaffMember) => {
+  const handleClick = (staffMember) => {
     setSelectedStaff(staffMember);
     console.log(selectedStaff);
   };
