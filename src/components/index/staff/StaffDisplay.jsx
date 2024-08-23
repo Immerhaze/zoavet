@@ -11,14 +11,17 @@ interface StaffMember {
 
 // Define component
 const StaffDisplay = () => {
-  const [selectedStaff, setSelectedStaff] = useState<StaffMember | null>({
-    id: 1,
-    name: "Yissete Bautista",
-    designation: "Jefe Veterinario & Co-fundadora",
-    image: "/staff/large/man1.jpg",
-    description:
-      "Nuestra Jefe Veterinaria y Co-Fundadora. Se graduó en la Universidad Nacional de Colombia con un título en Medicina Veterinaria. Con más de 15 años de experiencia en el cuidado de animales, su pasión por la veterinaria y su liderazgo han sido fundamentales para el crecimiento de nuestra clínica.",
-  });
+  const [selectedStaff, setSelectedStaff] =
+    (useState < StaffMember) |
+    (null >
+      {
+        id: 1,
+        name: "Yissete Bautista",
+        designation: "Jefe Veterinario & Co-fundadora",
+        image: "/staff/large/man1.jpg",
+        description:
+          "Nuestra Jefe Veterinaria y Co-Fundadora. Se graduó en la Universidad Nacional de Colombia con un título en Medicina Veterinaria. Con más de 15 años de experiencia en el cuidado de animales, su pasión por la veterinaria y su liderazgo han sido fundamentales para el crecimiento de nuestra clínica.",
+      });
 
   const handleClick = (staffMember: StaffMember) => {
     setSelectedStaff(staffMember);
