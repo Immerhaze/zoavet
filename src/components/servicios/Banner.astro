@@ -1,0 +1,38 @@
+---
+let { title, description, img, classname, index } = Astro.props;
+import { cn } from "@/utils/cn";
+---
+
+<div class={cn(`banner-${index} select-none w-full max-h-screen lg:h-72 group flex flex-col lg:flex-row bg-primary_light lg:hover:bg-secondary hover:shadow-sm rounded-xl overflow-hidden transition-colors duration-500 animate-slide-in-bottom ${classname}`)}>
+  <aside class={`w-full ${img ? "h-1/2 md:h-1/2" : ""} p-2 lg:w-2/5 lg:h-full relative flex flex-col-reverse items-center  overflow-visible`}>
+    {img && (
+      <div class="w-full h-2/3 lg:absolute -right-44 lg:h-full overflow-hidden flex justify-center items-center lg:z-10">
+        <img
+          alt="image"
+          class={cn(
+            `banner-${index}-image h-full w-full md:h-64  object-scale-down md:object-contain ${index == 0 && "object-top"} ${index == 6 && "object-top"}${index == 12 && "object-bottom"} opacity-40 lg:group-hover:opacity-100 transition-opacity duration-500`
+          )}
+          src={img}
+        />
+      </div>
+    )}
+    <span class="lg:z-20 w-full md:h-1/3 flex justify-center items-center lg:justify-start text-center lg:text-left mb-3">
+      <h1 class={`banner-${index}-title text-4xl md:text-5xl lg:text-6xl  text-secondary_dark lg:group-hover:text-white font-medium`}>
+        {title}
+      </h1>
+    </span>
+  </aside>
+  <div class="z-30 flex flex-col-reverse lg:flex-row h-1/2 lg:h-full lg:w-3/5">
+    <div class="w-full lg:w-1/3 flex justify-center lg:items-end items-center p-3">
+      <span class={`banner-${index}-btn-comp cursor-pointer lg:group/button flex justify-center items-center border-2 border-secondary lg:group-hover:border-white lg:group-hover:bg-white p-2 lg:group-hover:py-2 lg:group-hover:px-5 text-lg tracking-wider font-semibold text-secondary rounded-full transition-all duration-500`}>
+        <span class={`banner-${index}-btn-icon icon-[material-symbols--arrow-outward-rounded] lg:group-hover:hidden text-xl text-secondary`} />
+        <h3 class={`banner-${index}-btn-text hidden lg:group-hover:block text-secondary transition-all duration-75`}>Agenda una cita</h3>
+      </span>
+    </div>
+    <div class="w-full lg:w-2/3 flex justify-center items-center p-3">
+      <p class={`banner-${index}-text text-base md:text-lg lg:text-base  text-secondary_dark lg:group-hover:text-white`}>
+        {description}
+      </p>
+    </div>
+  </div>
+</div>

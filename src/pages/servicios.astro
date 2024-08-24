@@ -1,0 +1,273 @@
+---
+import ServiciosHero from "@/sections/servicios/ServiciosHero.astro"
+import Layout from "../layouts/Layout.astro"
+import ServiciosBanners from "@/sections/servicios/ServiciosBanners.astro"
+import ServiciosStaff from "@/sections/servicios/ServiciosStaff.astro"
+import ServiciosTech from "@/sections/servicios/ServiciosTech.astro"
+import ServiciosSteps from "@/sections/servicios/ServiciosSteps.astro"
+---
+
+<Layout description=`Zoavet es una clínica veterinaria que cuneta con todo tipo de servicios de alud para tus mascotas,
+ ofreciendo servicios desde consultas y prevención hasta urgencias.` title="Zoavet- Servicios">
+    <ServiciosHero/>
+    <main>
+    <ServiciosBanners/>
+    <ServiciosStaff/>
+    <ServiciosTech/>
+    <ServiciosSteps/>
+    </main>
+</Layout>
+<script>
+  import gsap from "gsap"; 
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  //  Banners containe animation
+
+  gsap.to(".banner-container", {
+   scrollTrigger: {
+     trigger: ".service-title",
+     start: "bottom top",
+     end:"bottom top",
+     toggleActions: "play none reverse none",
+   },
+   marginTop:0,
+   ease: "power1.out",
+   duration: 1 ,
+  });
+
+// __Banners mobile and tablet animations
+  let height: number;
+  const divElement = document.querySelector(".banner-0"); 
+  
+  if (divElement instanceof HTMLElement) {
+   height = divElement.offsetHeight;
+   console.log(height);
+  } else {
+   console.error("Element not found or not an HTMLElement");
+  }
+  gsap.registerPlugin(ScrollTrigger);
+
+  const setupBannerAnimations = (bannerIndex: number) => {
+  const selectorPrefix = `.banner-${bannerIndex}`;
+  
+  const scrollTriggerSettings = {
+    trigger: selectorPrefix,
+    start: "center-=240px bottom-=240",
+    end: "center-=240px top",
+    toggleActions: "play reset play reset",
+  };
+
+  const commonAnimationProps = {
+    marginTop: 0,
+    ease: "power1.out",
+    duration: 0.3,
+  };
+
+  gsap.to(`${selectorPrefix}`, {
+    scrollTrigger: scrollTriggerSettings,
+    backgroundColor: "#e67658",
+    ...commonAnimationProps,
+  });
+
+  gsap.to(`${selectorPrefix}-image`, {
+    scrollTrigger: scrollTriggerSettings,
+    opacity: 1,
+    ...commonAnimationProps,
+  });
+
+  gsap.to(`${selectorPrefix}-title`, {
+    scrollTrigger: scrollTriggerSettings,
+    color: "white",
+    ...commonAnimationProps,
+  });
+
+  gsap.to(`${selectorPrefix}-text`, {
+    scrollTrigger: scrollTriggerSettings,
+    color: "white",
+    ...commonAnimationProps,
+  });
+
+  gsap.to(`${selectorPrefix}-btn-comp`, {
+    scrollTrigger: scrollTriggerSettings,
+    borderColor: "white",
+    backgroundColor: "white",
+    ...commonAnimationProps,
+  });
+
+  gsap.to(`${selectorPrefix}-btn-icon`, {
+    scrollTrigger: scrollTriggerSettings,
+    display: 'hidden',
+    ...commonAnimationProps,
+  });
+
+  gsap.to(`${selectorPrefix}-btn-text`, {
+    scrollTrigger: scrollTriggerSettings,
+    display: 'block',
+    color: "#e67658",
+    ...commonAnimationProps,
+  });
+};
+
+const setupAnimations = () => {
+  // Apply animations to all banners from 0 to 12
+  for (let i = 0; i <= 12; i++) {
+    setupBannerAnimations(i);
+  }
+};
+
+const init = () => {
+  let height: number;
+  const divElement = document.querySelector(".banner-0");
+  
+  if (divElement instanceof HTMLElement) {
+    height = divElement.offsetHeight;
+    console.log(height);
+    setupAnimations();
+  } else {
+    console.error("Element not found or not an HTMLElement");
+  }
+};
+
+const breakPoint = gsap.matchMedia();
+
+breakPoint.add("(max-width: 768px)", init);
+
+// servicios staff animation
+gsap.fromTo(".staff-title", 
+  {
+    y: 100, // Start from 100px below the normal position
+    opacity: 0 // Start invisible
+  }, 
+  {
+    y: 0, // End at the normal position
+    opacity: 1, // End fully visible
+    scrollTrigger: {
+      trigger: ".banner-12",
+      start: "top top",
+      end: "top top",
+      toggleActions: "play none none none",
+    },
+    ease: "power1.out",
+    duration: 1,
+  }
+);
+ gsap.fromTo(".staff-p", 
+  {
+    y: 100, // Start from 100px below the normal position
+    opacity: 0 // Start invisible
+  }, 
+  {
+    y: 0, // End at the normal position
+    opacity: 1, // End fully visible
+    scrollTrigger: {
+      trigger: ".banner-12",
+      start: "top top",
+      end: "top top",
+      toggleActions: "play none none none",
+    
+    },
+    delay:0.5,
+    ease: "power1.out",
+    duration: 1,
+  }
+);
+
+gsap.fromTo(".tech-title", 
+  {
+    y: 100, // Start from 100px below the normal position
+    opacity: 0 // Start invisible
+  }, 
+  {
+    y: 0, // End at the normal position
+    opacity: 1, // End fully visible
+    scrollTrigger: {
+      trigger: ".staff-p",
+      start: "top center",
+      end: "top center",
+      toggleActions: "play none reverse none",
+    },
+    ease: "power1.out",
+    duration: 1,
+  }
+);
+ gsap.fromTo(".tech-p", 
+  {
+    y: 100, // Start from 100px below the normal position
+    opacity: 0 // Start invisible
+  }, 
+  {
+    y: 0, 
+    opacity: 1, 
+    scrollTrigger: {
+      trigger: ".staff-p",
+      start: "top center",
+      end: "top center",
+      toggleActions: "play none reverse none",
+    
+    },
+    delay:0.5,
+    ease: "power1.out",
+    duration: 1,
+  }
+);
+
+// Steps animations with gsap
+gsap.fromTo(".steps-1", 
+  {
+    y: 100,
+    opacity: 0 
+  }, 
+  {
+    y: 0, 
+    opacity: 1, 
+    scrollTrigger: {
+      trigger: ".tech",
+      start: "center center",
+      end: "center center",
+      toggleActions: "play none none none"
+    },
+    delay:0.5,
+    ease: "power1.out",
+    duration: 1,
+  }
+);
+
+gsap.fromTo(".steps-2", 
+  {
+    y: 100,
+    opacity: 0 
+  }, 
+  {
+    y: 0, 
+    opacity: 1, 
+    scrollTrigger: {
+      trigger: ".tech",
+      start: "center center",
+      end: "center center",
+      toggleActions: "play none none none", 
+    },
+    delay:1,
+    ease: "power1.out",
+    duration: 1,
+  }
+);
+
+gsap.fromTo(".steps-3", 
+  {
+    y: 100,
+    opacity: 0
+  }, 
+  {
+    y: 0, 
+    opacity: 1, 
+    scrollTrigger: {
+    trigger: ".tech",
+      start: "center center",
+      end: "center center",
+      toggleActions: "play none none none",
+    },
+    delay:1.5,
+    ease: "power1.out",
+    duration: 1,
+  }
+  );
+</script>

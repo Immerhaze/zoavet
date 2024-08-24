@@ -46,7 +46,7 @@ export const FOUNDERS = [
   },
 ];
 
-export const staffcard = [
+export const staffCard = [
   {
     id: 1,
     name: "Yissete Bautista",

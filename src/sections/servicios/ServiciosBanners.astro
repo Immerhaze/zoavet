@@ -1,0 +1,14 @@
+---
+import Banner from '@/components/servicios/Banner.astro'
+import {SERVICE_BANNER} from '@/consts/services'
+---
+<div class="w-full banner-container flex flex-col items-center  px-2 md:px-5  pt-10 gap-8">
+  {SERVICE_BANNER.map((service, index) => (
+    <Banner
+     title={service.title}
+     img={service.img} 
+     description={service.description}
+     index={index}
+     />
+  ))}
+</div>
