@@ -4,7 +4,7 @@ export default function FounderFrame({ image, id, name, designation }) {
   const [showTooltip, setShowTooltip] = useState(null);
   return (
     <div
-      class={` w-full h-full flex ${
+      className={` w-full h-full flex ${
         id > 1 ? "md:pr-[15%] lg:pr-[25%]" : "md:pl-[15%] lg:pl-[25%]"
       }  ${
         id > 1 ? "flex-row-reverse" : "flex-row"

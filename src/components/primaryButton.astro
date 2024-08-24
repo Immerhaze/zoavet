@@ -1,20 +1,15 @@
 ---
-interface ButtonProps {
-  title: string;
-  icon: string;
-  onClick: () => void;
-}
-
-const { title, icon, onClick } = Astro.props;
+const { title, icon, href } = Astro.props;
 ---
 
-<button 
+<a href="/servicios">
+<button
   class="group/primarybtn p-3 flex flex-row justify-center items-center lg:mr-10 rounded-full gap-2 bg-secondary text-white tracking-wide transition-all duration-300"
-  onclick={onClick}
 >
-  <span class={`${icon} group-hover/primarybtn:hidden text-3xl lg:text-4xl`}></span>
-  <span class="icon-[line-md--compass-twotone-loop] hidden group-hover/primarybtn:block  text-3xl lg:text-4xl"></span>
-  <p class="font-semibold text-lg lg:text-3xl">
+<span class={`${icon} group-hover/primarybtn:hidden text-3xl lg:text-4xl`}></span>
+<span class="icon-[line-md--compass-twotone-loop] hidden group-hover/primarybtn:block  text-3xl lg:text-4xl"></span>
+<p class="font-semibold text-lg lg:text-3xl">
     {title}
   </p>
 </button>
+</a>

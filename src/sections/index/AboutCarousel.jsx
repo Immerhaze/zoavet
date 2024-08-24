@@ -106,7 +106,7 @@ export default function AboutCarousel() {
                   className="h-full md:w-full  md:h-auto md:rounded-r-xl"
                 />
                 <p className=" h-5 text-xs text-slate-300 md:pl-5 ">
-                  &copy; Foto por{" "}
+                  &copy; Foto por
                   <a href={slide.profile} className="font-semibold underline">
                     {slide.photographer}
                   </a>
