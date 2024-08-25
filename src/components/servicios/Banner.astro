@@ -3,7 +3,7 @@ let { title, description, img, classname, index } = Astro.props;
 import { cn } from "@/utils/cn";
 ---
 
-<div class={cn(`banner-${index} select-none w-full max-h-screen lg:h-72 group flex flex-col lg:flex-row bg-primary_light lg:hover:bg-secondary hover:shadow-sm rounded-xl overflow-hidden transition-colors duration-500 animate-slide-in-bottom ${classname}`)}>
+<div class={cn(`banner-${index}  w-full max-h-screen lg:h-72 group flex flex-col lg:flex-row bg-primary_light lg:hover:bg-secondary hover:shadow-sm rounded-xl overflow-hidden transition-colors duration-500 animate-slide-in-bottom ${classname}`)}>
   <aside class={`w-full ${img ? "h-1/2 md:h-1/2" : ""} p-2 lg:w-2/5 lg:h-full relative flex flex-col-reverse items-center  overflow-visible`}>
     {img && (
       <div class="w-full h-2/3 lg:absolute -right-44 lg:h-full overflow-hidden flex justify-center items-center lg:z-10">

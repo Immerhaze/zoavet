@@ -2,25 +2,20 @@
 import LogoZoa from "@/icons/logo_zoa.astro";
 ---
 
-<section class="relative bg w-full h-screen lg:flex lg:flex-row justify-center" >
- <div class="progress-bar-container bg-white w-full h-full fixed z-50 top-0  flex flex-col gap-5 justify-center items-center">
+<section class="relative  w-full h-screen flex items-end lg:justify-center" >
+ <div class="progress-bar-container bg-white  w-full h-full fixed z-50 top-0  flex flex-col gap-5 justify-center items-center">
     <LogoZoa logoClassName="w-1/2"/>
-      <h1  class="text-2xl font-bold tracking-wide">Cargando...</h1>
+      <h1  class="text-2xl font-bold tracking-wide flex justify-center items-end">Cargando<span class="icon-[svg-spinners--3-dots-bounce]"></span></h1>
       <progress class="w-3/4 md:w-1/2 mt-1 min-h-10 border-4 border-primary overflow-hidden" id="progress" max="100"></progress>
   </div> 
-    <!-- <div class="select-none absolute top-0 lg:static lg:w-1/2 h-screen lg:pt-30 flex lg:flex-col items-end lg:items-center lg:justify-evenly"> -->
-    <div class="select-none absolute top-0 lg:static lg:w-1/2 h-screen flex lg:flex-col items-end lg:items-start lg:px-5 lg:justify-center lg:gap-10">
-        <LogoZoa logoClassName={"logo-big w-4/5  hidden lg:flex"}/>
-      <div class="w-full h-1/2 lg:h-auto flex justify-center items-center lg:items-start ">
-        <p class="text-4xl md:text-5xl lg:text-7xl  bg-white/70  font-extralight tracking-wide text-center lg:text-left  text-[#60a09a]">
+  <div class="absolute lg:static w-full h-1/2 lg:h-full lg:w-1/2 flex flex-col justify-center items-start">
+    <LogoZoa logoClassName={"logo-big w-4/5  hidden lg:block lg:px-5 mb-10"}/>
+        <p class="text-4xl md:text-5xl lg:text-7xl lg:px-5  bg-white/70  font-extralight tracking-wide text-center lg:text-left  text-primary">
           Salud y confort para su mascota, 
             <span class="font-black">en manos de expertos.</span>
           </p>
         </div>
-      </div>
-      <div id="container" class="w-full h-screen lg:w-1/2 overflow-hidden lg:rounded-2xl">
-        <!-- <span class="icon-[svg-spinners--pulse-rings-multiple] absolute w-16 h-16 top-[54%] left-[33%] z-50 pointer-events-none bg-white"></span> -->
-      </div>
+      <div id="container" class="w-full h-full lg:w-1/2 overflow-hidden lg:rounded-2xl"/>
   </section>
 
   <script>
@@ -133,7 +128,7 @@ import LogoZoa from "@/icons/logo_zoa.astro";
           document.body.style.cursor = 'default';
         }
       });
-          window.addEventListener('click', function (e) {
+          container.addEventListener('click', function (e) {
             e.preventDefault();
             const { top, left, width, height } = renderer.domElement.getBoundingClientRect();
             const coords = new THREE.Vector2(

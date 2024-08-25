@@ -50,7 +50,7 @@ const EmblaCarousel = (props) => {
                 <div
                   className={`absolute left-[20%] lg:left-[20%] xl:left-[25%]  animate-slide-in-bottom  ${
                     showTooltip === personal.id ? "lg:flex " : "lg:hidden"
-                  } select-none border-2 w-[60%] xl:w-[50%]  -bottom-10 p-2 flex-col justify-center items-center  text-center rounded-2xl bg-white `}
+                  }  border-2 w-[60%] xl:w-[50%]  -bottom-10 p-2 flex-col justify-center items-center  text-center rounded-2xl bg-white `}
                 >
                   <h3 className="text-xs xl:text-base  font-bold text-primary tracking-wide">
                     {personal.name}
@@ -69,12 +69,12 @@ const EmblaCarousel = (props) => {
         <PrevButton
           onClick={onPrevButtonClick}
           disabled={prevBtnDisabled}
-          className="absolute transition-colors duration-300 lg:bg-white/60 hover:lg:bg-primary text-primary lg:text-primary hover:lg:text-white left-0 cursor-pointer p-0 m-0 w-[2rem] lg:w-[3rem] h-[2rem] lg:h-[3rem] z-1 rounded-full flex items-center justify-center text-body disabled:text-opacity-50 pointer-events-auto"
+          className="absolute transition-colors duration-300 lg:bg-white/60 hover:lg:bg-primary text-primary lg:text-primary hover:lg:text-white left-0 cursor-pointer p-0 m-0 w-[2rem] lg:w-[3rem] h-[2rem] lg:h-[3rem]  rounded-full flex items-center justify-center text-body disabled:text-opacity-50 pointer-events-auto"
         />
         <NextButton
           onClick={onNextButtonClick}
           disabled={nextBtnDisabled}
-          className="absolute transition-colors duration-300 lg:bg-white/60 hover:lg:bg-primary text-primary lg:text-primary hover:lg:text-white right-0 cursor-pointer p-0 m-0 w-[2rem] lg:w-[3rem] h-[2rem] lg:h-[3rem] z-1 rounded-full flex items-center justify-center text-body disabled:text-opacity-50 pointer-events-auto"
+          className="absolute transition-colors duration-300 lg:bg-white/60 hover:lg:bg-primary text-primary lg:text-primary hover:lg:text-white right-0 cursor-pointer p-0 m-0 w-[2rem] lg:w-[3rem] h-[2rem] lg:h-[3rem]  rounded-full flex items-center justify-center text-body disabled:text-opacity-50 pointer-events-auto"
         />
       </div>
     </section>

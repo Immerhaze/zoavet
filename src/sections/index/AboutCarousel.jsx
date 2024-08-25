@@ -91,7 +91,7 @@ export default function AboutCarousel() {
   }
 
   return (
-    <div className="about-cont w-full h-screen select-none">
+    <div className="about-cont w-full h-screen ">
       <div className="embla h-5/6 " ref={emblaRef}>
         <div className="embla__container h-full">
           {aboutUs.map((slide, index) => (

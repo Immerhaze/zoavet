@@ -27,7 +27,7 @@ const StaffDisplay = () => {
             <div className="w-1/3 p-2 cursor-pointer" key={member.id}>
               <div
                 onClick={() => handleClick(member)}
-                className={`w-full h-2 md:h-32 lg:h-52  bg-top-center rounded-xl bg-cover p-6 ${
+                className={`w-full h-2 md:h-32 lg:h-52 hover:shadow-md hover:shadow-secondary transition-all duration-300  bg-top-center rounded-xl bg-cover p-6 ${
                   member.id === selectedStaff?.id
                     ? "shadow-sm shadow-secondary"
                     : "shadow-sm shadow-primary"

@@ -3,8 +3,8 @@ import LogoZoa from "@/icons/logo_zoa.astro";
 
 const currentYear = new Date().getFullYear();
 ---
-<section class="w-full  p-2 md:p-5">
-<footer class="w-full lg:h-auto rounded-3xl p-5  bg-primary_light flex flex-col
+<section class="w-full  p-2 md:p-5 z-10">
+<div class="w-full lg:h-auto rounded-3xl p-5  bg-primary_light flex flex-col
    items-center lg:items-start ">
    <div class="h-1/6 w-full mb-10 flex justify-center items-center md:items-start pb-5">
       <LogoZoa logoClassName="w-4/6"/>
@@ -12,26 +12,26 @@ const currentYear = new Date().getFullYear();
     <div class="w-full h-4/6 flex flex-col lg:flex-row lg:mb-10 ">
       <div class="lg:w-2/3 w-full h-full flex flex-row">
         <div class="w-1/2 flex flex-col">
-          <ul class="w-full list-none flex flex-col text-base md:text-lg  lg:text-xl tracking-wide font-light text-primary">
-            <li class="flex items-center text-[#5E5D5C]">
-              <div class="uppercase tracking-wide font-bold flex items-center">
+          <div class="w-full list-none flex flex-col text-base md:text-lg  lg:text-xl tracking-wide font-normal text-primary">
+            <span class="flex items-center text-[#5E5D5C]">
+              <h2 class="uppercase tracking-wide font-bold flex items-center">
                 Menu
                 <span class="icon-[material-symbols-light--pet-supplies] text-xl"></span>
-              </div>
-            </li>
-            <li class="py-2 lg:hover:font-medium transition-all duration-300">
+              </h2>
+            </span>
+            <span class="py-2 lg:hover:font-medium transition-all duration-300">
               <a href="/">Inicio</a>
-            </li>
-            <li class="py-2 lg:hover:font-medium transition-all duration-300">
+            </span>
+            <span class="py-2 lg:hover:font-medium transition-all duration-300">
               <a href="/servicios">Servicios</a>
-            </li>
-            <li class="py-2 lg:hover:font-medium transition-all duration-300">
+            </span>
+            <span class="py-2 lg:hover:font-medium transition-all duration-300">
               <a href="/equipo">Equipo</a>
-            </li>
-            <li class="py-2 lg:hover:font-medium transition-all duration-300">
+            </span>
+            <span class="py-2 lg:hover:font-medium transition-all duration-300">
               <a href="/contacto">Contacto</a>
-            </li>
-          </ul>
+            </span>
+          </div>
         </div>
         <div class="w-1/2 break-all ">
           <ul class="w-full list-none flex flex-col items-start font-light text-primary gap-5">
@@ -42,11 +42,11 @@ const currentYear = new Date().getFullYear();
               </div>
             </li>
             <li class="flex flex-col text-base md:text-lg  lg:text-xl ">
-              <h3>8:00 am - 7:00 pm</h3>
+              <h3 class="font-semibold">8:00 am - 7:00 pm</h3>
               <span class="text-xs md:text-base  text-secondary font-semibold tracking-wide">Lunes a Domingo</span>
             </li>
             <li class="flex flex-col text-base md:text-lg  lg:text-xl">
-              <h3>Urgencias</h3>
+              <h3 class="font-semibold">Urgencias</h3>
               <span class="text-xs md:text-base  text-secondary font-semibold tracking-wide">24/7</span>
             </li>
             <li>
@@ -83,6 +83,6 @@ const currentYear = new Date().getFullYear();
   <p class=" text-xs lg:text-ms text-center md:text-left font-semibold text-slate-500 tracking-wide" >&copy; {currentYear} Zoa Veterinaria. Todos los derechos reservados.</p>
   <p class=" text-xs lg:text-ms font-semibold text-slate-500 tracking-wide" >Pagina web por <span class="text-secondary">NicolasCode</span></p>
 </div>
-</footer>
+</div>
 </section>
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { staffcard } from "@/consts/staff";
+import { staffCard } from "@/consts/staff";
 
 // Define component
 const StaffDisplay = () => {

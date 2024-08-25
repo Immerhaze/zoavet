@@ -55,15 +55,16 @@ const { title, description } = Astro.props;
 
 	/* about carousel */
 	.embla {
-  overflow: hidden;
-}
-.embla__container {
-  display: flex;
-}
-.embla__slide {
-  flex: 0 0 100%;
-  min-width: 0;
-}
+      overflow: hidden;
+    }
+    .embla__container {
+     display: flex;
+    }
+    .embla__slide {
+      flex: 0 0 100%;
+      min-width: 0;
+    }
+	
 </style>
 
 <script>
@@ -77,10 +78,11 @@ const { title, description } = Astro.props;
 	  const selectorPrefix = `.card-${bannerIndex}`;
   
 	  const scrollTriggerSettings = {
-		trigger: ".initial-bars",
-		start: "bottom top",
-		end: "bottom top",
+		trigger: ".embla",
+		start: "center top",
+		end: "center top",
 		toggleActions: "play none none none",
+		markers:true
 	  };
   
 	  const commonAnimationProps = {
@@ -159,5 +161,65 @@ const initMobile = () => {
 
 // Setup the animations when viewport width is below 768px
 breakPoint.add("(max-width: 768px)", initMobile);
+
+gsap.fromTo(".service-staff-text", 
+  {
+    y: 100, // Start from 100px below the normal position
+    opacity: 0 // Start invisible
+  }, 
+  {
+    y: 0, // End at the normal position
+    opacity: 1, // End fully visible
+    scrollTrigger: {
+      trigger: ".card-3",
+      start: "center top",
+      end: "center top",
+      toggleActions: "play none none none",
+      markers:true,
+	},
+    ease: "power1.out",
+    duration: 1,
+  }
+);
+gsap.fromTo(".service-staff-founder", 
+  {
+    y: 100, // Start from 100px below the normal position
+    opacity: 0 // Start invisible
+  }, 
+  {
+    y: 0, // End at the normal position
+    opacity: 1, // End fully visible
+    scrollTrigger: {
+      trigger: ".card-3",
+      start: "center top",
+      end: "center top",
+      toggleActions: "play none none none",
+      markers:true,
+	},
+    ease: "power1.out",
+    duration: 1,
+	delay:0.5
+  }
+);
+gsap.fromTo(".service-staff-team", 
+  {
+    y: 100, // Start from 100px below the normal position
+    opacity: 0 // Start invisible
+  }, 
+  {
+    y: 0, // End at the normal position
+    opacity: 1, // End fully visible
+    scrollTrigger: {
+      trigger: ".card-3",
+      start: "center top",
+      end: "center top",
+      toggleActions: "play none none none",
+      markers:true,
+	},
+    ease: "power1.out",
+    duration: 1,
+	delay:1
+  }
+);
 </script>
   

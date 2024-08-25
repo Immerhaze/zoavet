@@ -20,7 +20,7 @@ export default function FounderFrame({ image, id, name, designation }) {
       <div
         className={`${
           showTooltip == id ? "lg:flex" : "lg:hidden"
-        } lg:animate-slide-in-bottom animate-delay-100   lg:flex select-none w-[10rem] xl:w-[12rem]  lg:absolute lg:bottom-0  p-2 flex-col justify-center items-center text-center rounded-2xl bg-white`}
+        } lg:animate-slide-in-bottom animate-delay-100   lg:flex  w-[10rem] xl:w-[12rem]  lg:absolute lg:bottom-0  p-2 flex-col justify-center items-center text-center rounded-2xl bg-white`}
       >
         <h3 className="text-ms  xl:text-base font-bold text-primary lg:text-secondary tracking-wide">
           {name}

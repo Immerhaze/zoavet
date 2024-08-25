@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "zoavet",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,24 +10,24 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/react": "^3.6.2",
-    "@astrojs/tailwind": "^5.1.0",
-    "@fontsource-variable/space-grotesk": "^5.0.19",
-    "@midudev/tailwind-animations": "^0.0.7",
-    "astro": "^4.14.4",
+    "@astrojs/check": "0.9.3",
+    "@astrojs/react": "3.6.2",
+    "@astrojs/tailwind": "5.1.0",
+    "@fontsource-variable/space-grotesk": "5.0.19",
+    "@midudev/tailwind-animations": "0.0.7",
+    "astro": "4.14.4",
     "embla-carousel-autoplay": "^8.2.0",
     "embla-carousel-react": "^8.2.0",
-    "gsap": "^3.12.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "gsap": "3.12.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "tailwindcss": "^3.4.10",
-    "three": "^0.167.1",
+    "three": "0.167.1",
     "typescript": "^5.5.4"
   },
   "devDependencies": {
-    "@iconify/json": "^2.2.239",
-    "@iconify/tailwind": "^1.1.2",
-    "@types/three": "^0.167.2"
+    "@iconify/json": "2.2.239",
+    "@iconify/tailwind": "1.1.2",
+    "@types/three": "0.167.2"
   }
 }

@@ -46,9 +46,12 @@ export const DirectionAwareHover = ({ imageUrl, cardTitle, description }) => {
           <p className="text-2xl font-light tracking-wide animate-fade-in-up animate-delay-100 animate-duration-300">
             {description}
           </p>
-          <div className="w-full flex justify-center items-center">
-            <span class=" cursor-pointer p-2 flex flex-row justify-center items-center gap-2 rounded-full border-2 border-secondary bg-secondary_light hover:bg-secondary text-secondary hover:text-white transition-colors duration-200 delay-0 tracking-wide animate-fade-in-up animate-delay-200 animate-duration-300">
-              <span class={`icon-[ph--arrow-square-in-duotone] text-3xl`} />
+          <div className="w-full flex justify-center items-center group ">
+            <span class=" cursor-pointer p-2 flex flex-row justify-center items-center gap-2 rounded-full  bg-secondary text-white transition-colors duration-200 delay-0 tracking-wide animate-fade-in-up animate-delay-200 animate-duration-300">
+              <span className="icon-[line-md--calendar] text-3xl hidden group-hover:block transition-all duration-300" />
+              <span
+                class={`icon-[ph--arrow-square-in-duotone] text-3xl group-hover:hidden transition-all duration-300`}
+              />
               <p class="font-semibold text-2xl">Agendar</p>
             </span>
           </div>
