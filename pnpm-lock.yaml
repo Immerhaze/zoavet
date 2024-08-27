@@ -20,6 +20,9 @@ importers:
       '@fontsource-variable/space-grotesk':
         specifier: 5.0.19
         version: 5.0.19
+      '@gsap/react':
+        specifier: ^2.1.1
+        version: 2.1.1
       '@midudev/tailwind-animations':
         specifier: 0.0.7
         version: 0.0.7(tailwindcss@3.4.10)
@@ -50,6 +53,9 @@ importers:
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
+      zod:
+        specifier: ^3.23.8
+        version: 3.23.8
     devDependencies:
       '@iconify/json':
         specifier: 2.2.239
@@ -391,6 +397,9 @@ packages:
 
   '@fontsource-variable/space-grotesk@5.0.19':
     resolution: {integrity: sha512-uYyY1jqW+71NkPCp0P6dwEcV6uO4MEiAZ5JylhrHbMMA7C2N0uO6EZUnq7rOMZT4e58Izia5Hy5HPZ18dan3ew==}
+
+  '@gsap/react@2.1.1':
+    resolution: {integrity: sha512-apGPRrmpqxvl1T6Io1KgT8tFU+IuACI6z4zmT7t8+PASserJeLVRFJdSNUFA2Xb/eVkZI1noE8LIrY/w/oJECw==}
 
   '@iconify/json@2.2.239':
     resolution: {integrity: sha512-NoKhFlWGPQbKCUb0tslIQK00cbRXMH6NPxGvS4bQgkH2hfcK/jA7EuBEkOaIyR3HdtvRNCunCntuR9eJnP8FAQ==}
@@ -2638,6 +2647,11 @@ snapshots:
     optional: true
 
   '@fontsource-variable/space-grotesk@5.0.19': {}
+
+  '@gsap/react@2.1.1':
+    dependencies:
+      gsap: 3.12.5
+      react: 18.3.1
 
   '@iconify/json@2.2.239':
     dependencies:

@@ -43,13 +43,7 @@ const StaffDisplay = () => {
           ))}
         </div>
         <div className="md:w-1/2 rounded-xl p-5 flex justify-center items-center">
-          <div className="w-full h-full rounded-xl py-3 bg-primary_light flex flex-col justify-center items-center">
-            {/* <h2 className="block md:hidden  text-2xl md:text-4xl font-semibold tracking-wider text-primary">
-              {selectedStaff?.name}
-            </h2>
-            <h3 className="block md:hidden text-base md:text-xl font-light tracking-wider mb-3">
-              {selectedStaff?.designation}
-            </h3> */}
+          <div className="w-full h-full rounded-xl py-3 bg-primary_light/40 flex flex-col justify-center items-center">
             <img
               src={selectedStaff?.image}
               alt={selectedStaff?.name}

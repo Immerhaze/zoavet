@@ -4,7 +4,7 @@ import LogoZoa from "@/icons/logo_zoa.astro";
 const currentYear = new Date().getFullYear();
 ---
 <section class="w-full  p-2 md:p-5 z-10">
-<div class="w-full lg:h-auto rounded-3xl p-5  bg-primary_light flex flex-col
+<div class="w-full lg:h-auto rounded-3xl p-5  bg-primary_light/40 flex flex-col
    items-center lg:items-start ">
    <div class="h-1/6 w-full mb-10 flex justify-center items-center md:items-start pb-5">
       <LogoZoa logoClassName="w-4/6"/>
@@ -16,7 +16,7 @@ const currentYear = new Date().getFullYear();
             <span class="flex items-center text-[#5E5D5C]">
               <h2 class="uppercase tracking-wide font-bold flex items-center">
                 Menu
-                <span class="icon-[material-symbols-light--pet-supplies] text-xl"></span>
+                <span class="icon-[ph--bone-duotone] text-xl"></span>
               </h2>
             </span>
             <span class="py-2 lg:hover:font-medium transition-all duration-300">
@@ -37,7 +37,7 @@ const currentYear = new Date().getFullYear();
           <ul class="w-full list-none flex flex-col items-start font-light text-primary gap-5">
             <li class="flex items-center text-[#5E5D5C]">
               <div class="uppercase tracking-wide font-bold text-base md:text-lg  lg:text-xl  flex items-center gap-2">
-                <span class="icon-[streamline--circle-clock-solid] text-xl"></span>
+                <span class="icon-[iconamoon--clock-duotone] text-xl"></span>
                 Horarios
               </div>
             </li>
@@ -59,7 +59,7 @@ const currentYear = new Date().getFullYear();
             </p></li>
             <li>
               <p class="text-sm md:text-lg  lg:text-xl text-secondary_dark w-full flex flex-col font-black tracking-wide">
-                <span class="icon-[mdi--map-marker-radius] text-secondary text-3xl"></span>Carrera 113 #77-30 - <span>
+                <span class="icon-[ph--map-pin-area-duotone] text-secondary text-3xl"></span>Carrera 113 #77-30 - <span>
                   Villas De Granada, 
                 </span>
                 <span>
@@ -70,18 +70,18 @@ const currentYear = new Date().getFullYear();
           </ul>
         </div>
       </div>
-      <div class="lg:w-1/3 w-full flex flex-col justify-center items-center">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.30169041661!2d-74.12693442399332!3d4.717565795257519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8357fed2c7a7%3A0x2cfcf2ddd4318cf1!2sZoavet%20Cl%C3%ADnica%20Veterinaria!5e0!3m2!1ses-419!2scl!4v1723820529747!5m2!1ses-419!2scl" class="border-4 border-primary lg:hover:border-secondary transition-all duration-300 border-double p-2 rounded-xl mt-5 lg:mt-0" width="100%" height="100%"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="w-full flex flex-row  justify-around  items-center text-secondary_dark  my-5">
-          <span class="icon-[streamline--instagram-solid] text-[34px] cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"></span>
-          <span class="icon-[streamline--facebook-1-solid] text-[28px] cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300 "></span>
-          <span class="icon-[streamline--linkedin-solid] text-[33px] cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"></span>
+      <div class="lg:w-1/3 w-full flex flex-col justify-center items-center my-5 lg:mt-0">
+        <div class="w-full flex flex-row  justify-around  items-center text-secondary_dark  lg:my-5">
+          <span class="icon-[lets-icons--insta-duotone-line] text-[34px] cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"></span>
+          <span class="icon-[ph--facebook-logo-duotone] text-[35px] cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300 "></span>
+          <span class="icon-[ph--linkedin-logo-duotone] text-[33px] cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"></span>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.30169041661!2d-74.12693442399332!3d4.717565795257519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8357fed2c7a7%3A0x2cfcf2ddd4318cf1!2sZoavet%20Cl%C3%ADnica%20Veterinaria!5e0!3m2!1ses-419!2scl!4v1723820529747!5m2!1ses-419!2scl" class="border-4 border-primary lg:hover:border-secondary transition-all duration-300 border-double p-2 rounded-xl mt-5 lg:mt-0" width="100%" height="100%"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
 <div class="w-full h-1/6 pt-5 flex flex-col gap-5 md:flex-row justify-center items-center md:justify-between px-2 md:px-0 md:items-start border-t-4 border-white rounded-2xl">
   <p class=" text-xs lg:text-ms text-center md:text-left font-semibold text-slate-500 tracking-wide" >&copy; {currentYear} Zoa Veterinaria. Todos los derechos reservados.</p>
-  <p class=" text-xs lg:text-ms font-semibold text-slate-500 tracking-wide" >Pagina web por <span class="text-secondary">NicolasCode</span></p>
+  <p class=" text-xs lg:text-ms font-semibold text-slate-500 tracking-wide" >Pagina web por <a  href="https://www.linkedin.com/in/nicolas-romero--nicode/" target="_blank" referrerpolicy="no-referrer" class="text-secondary hover:text-primary transition-colors duration-300">NicolasCode</a></p>
 </div>
 </div>
 </section>

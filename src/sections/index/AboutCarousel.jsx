@@ -91,7 +91,7 @@ export default function AboutCarousel() {
   }
 
   return (
-    <div className="about-cont w-full h-screen ">
+    <div className="about-cont w-full py-20 ">
       <div className="embla h-5/6 " ref={emblaRef}>
         <div className="embla__container h-full">
           {aboutUs.map((slide, index) => (
@@ -99,11 +99,11 @@ export default function AboutCarousel() {
               key={index}
               className="embla__slide h-full  flex flex-col-reverse md:items-center md:flex-row "
             >
-              <div className="h-2/5 md:h-full w-full flex flex-col justify-center items-center md:items-start  p-2 md:p-0 ">
+              <div className="h-2/5 md:h-full w-full flex flex-col justify-center items-center md:items-start  p-2 md:px-5 ">
                 <img
                   src={slide.img}
                   alt="photo"
-                  className="h-full md:w-full  md:h-auto md:rounded-r-xl"
+                  className="h-full md:w-full  md:h-auto md:rounded-xl"
                 />
                 <p className=" h-5 text-xs text-slate-300 md:pl-5 ">
                   &copy; Foto por

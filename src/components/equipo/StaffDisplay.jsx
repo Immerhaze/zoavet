@@ -17,32 +17,37 @@ const StaffDisplay = () => {
   };
 
   return (
-    <div className="w-full h-full py-5 flex-col text-secondary_dark">
-      <h1 className="text-4xl md:text-6xl font-medium text-primary p-5">
-        Equipo Zoavet
-      </h1>
-      <div className="h-full flex flex-col md:flex-row">
-        <div className="h-2/6 md:w-1/2 flex flex-row flex-wrap mx-2 pb-10 mb-16">
+    <div className="w-full h-full flex-col text-secondary_dark">
+      <div className="h-1/6 flex items-center p-5">
+        <h1 className="text-4xl md:text-6xl font-medium text-primary">
+          Equipo Zoavet
+        </h1>
+      </div>
+      <div className="h-5/6 flex flex-col md:flex-row">
+        <div className="h-full md:w-3/5 flex flex-row flex-wrap items-center px-5">
           {staffCard.map((member) => (
-            <div className="w-1/3 p-2 cursor-pointer" key={member.id}>
+            <div
+              className={`p-2 w-1/3 h-1/${staffCard.length / 3} cursor-pointer`}
+              key={member.id}
+            >
               <div
                 onClick={() => handleClick(member)}
-                className={`w-full h-2 md:h-32 lg:h-52 hover:shadow-md hover:shadow-secondary transition-all duration-300  bg-top-center rounded-xl bg-cover p-6 ${
+                className={`h-48 lg:h-64  hover:shadow-md hover:shadow-secondary transition-all duration-300  bg-top rounded-xl bg-cover ${
                   member.id === selectedStaff?.id
-                    ? "shadow-sm shadow-secondary"
-                    : "shadow-sm shadow-primary"
+                    ? "shadow-md shadow-secondary"
+                    : "shadow-md shadow-primary"
                 }`}
                 style={{ backgroundImage: `url(${member.image})` }}
               />
             </div>
           ))}
         </div>
-        <div className="md:w-1/2 rounded-xl p-5 flex justify-center items-center">
-          <div className="w-full h-full rounded-xl py-3 bg-primary_light flex flex-col justify-center items-center">
+        <div className="md:w-2/5 flex justify-center items-end px-5 pb-5">
+          <div className="w-full h-4/5 rounded-xl  bg-primary_light/40 flex flex-col justify-center items-center">
             <img
               src={selectedStaff?.image}
               alt={selectedStaff?.name}
-              className="rounded-xl h-48 lg:h-64 -mt-20 shadow-md shadow-secondary_dark mb-3"
+              className="rounded-xl h-48 lg:h-1/2 -mt-44 shadow-md shadow-secondary_dark mb-3"
             />
             <h2 className="text-3xl md:text-4xl font-semibold tracking-wider text-center text-primary">
               {selectedStaff?.name}

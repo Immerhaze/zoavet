@@ -1,6 +1,7 @@
 ---
 import '@fontsource-variable/space-grotesk';
 import Footer from '@/sections/Footer.astro';
+import NavbarMenu from '@/components/NavBar';
 interface Props {
 	title: string;
 	description:string,
@@ -19,7 +20,7 @@ const { title, description } = Astro.props;
 		<meta name="keywords" content="veterinaria, urgencias, mascotas, veterinario, animales, consulta, esterilización" />
 		<meta charset="UTF-8" />
 
-		<meta name="og:image" />
+		<meta name="og:image" content="public\serviceCards\service_consulta.jpg"/>
 		<meta name="og:title" content="Zoavet - Clinica veterinaria."/>
 		<meta name="og:description" content={description} />
 		<!-- <meta name="og:url" content="https://zoavet.com.co/" /> -->
@@ -32,9 +33,17 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="max-w-7xl mx-auto">
+    <div class="max-w-7xl mx-auto">
+      <NavbarMenu  client:load/>
 			<slot />
-			<Footer/>
+      <div class="fixed right-0 top-1/2 flex flex-col gap-5 justify-center items-center">
+        <a href="https://wa.me/573046029130" class="whatsapp-general group flex justify-center items-center p-2 bg-white shadow-sm lg:hover:shadow-primary border-[0.5px] border-primary_light z-50 rounded-tl-xl rounded-bl-xl transition-shadow duration-300">
+          <span class="icon-[ph--whatsapp-logo-duotone] text-6xl text-primary lg:group-hover:scale-110 transition-all duration-300"></span>
+        </a>
+        <a  href="/contacto" class=" group whatsapp-general hidden lg:flex justify-center items-center p-2 bg-white shadow-sm hover:shadow-secondary border-[0.5px] border-primary_light z-50 rounded-tl-xl rounded-bl-xl transition-shadow duration-300">
+          <span class="icon-[ph--first-aid-duotone] text-6xl text-secondary group-hover:scale-110 transition-all duration-300"></span>
+        </a>
+      </div>
 		</div>
 	</body>
 </html>
@@ -64,7 +73,6 @@ const { title, description } = Astro.props;
       flex: 0 0 100%;
       min-width: 0;
     }
-	
 </style>
 
 <script>
@@ -82,7 +90,6 @@ const { title, description } = Astro.props;
 		start: "center top",
 		end: "center top",
 		toggleActions: "play none none none",
-		markers:true
 	  };
   
 	  const commonAnimationProps = {
@@ -175,7 +182,6 @@ gsap.fromTo(".service-staff-text",
       start: "center top",
       end: "center top",
       toggleActions: "play none none none",
-      markers:true,
 	},
     ease: "power1.out",
     duration: 1,
@@ -194,14 +200,13 @@ gsap.fromTo(".service-staff-founder",
       start: "center top",
       end: "center top",
       toggleActions: "play none none none",
-      markers:true,
 	},
     ease: "power1.out",
     duration: 1,
 	delay:0.5
   }
 );
-gsap.fromTo(".service-staff-team", 
+gsap.fromTo(".founder-tag", 
   {
     y: 100, // Start from 100px below the normal position
     opacity: 0 // Start invisible
@@ -214,12 +219,48 @@ gsap.fromTo(".service-staff-team",
       start: "center top",
       end: "center top",
       toggleActions: "play none none none",
-      markers:true,
+	},
+    ease: "power1.out",
+    duration: 1,
+	delay:1.5
+  }
+);
+gsap.fromTo(".service-staff-team", 
+  {
+    opacity: 0 // Start invisible
+  }, 
+  {
+    y: 0, // End at the normal position
+    opacity: 1, // End fully visible
+    scrollTrigger: {
+      trigger: ".card-3",
+      start: "center top",
+      end: "center top",
+      toggleActions: "play none none none",
 	},
     ease: "power1.out",
     duration: 1,
 	delay:1
   }
 );
+gsap.fromTo(".staff-tag", 
+  {
+    opacity: 0 // Start invisible
+  }, 
+  {
+    y: 0, // End at the normal position
+    opacity: 1, // End fully visible
+    scrollTrigger: {
+      trigger: ".card-3",
+      start: "center top",
+      end: "center top",
+      toggleActions: "play none none none",
+	},
+    ease: "power1.out",
+    duration: 1,
+	delay:2
+  }
+);
+
 </script>
   

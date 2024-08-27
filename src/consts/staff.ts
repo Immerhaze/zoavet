@@ -3,31 +3,31 @@ export const SLIDES = [
     id: 1,
     name: "Yissete Bautista",
     designation: "Jefe Veterinario",
-    image: "/staff/man1.png",
+    image: "/staff/man1.webp",
   },
   {
     id: 2,
     name: "Ivan Guarnizo",
     designation: "Jefe Veterinario",
-    image: "/staff/man2.png",
+    image: "/staff/man4.webp",
   },
   {
     id: 3,
     name: "Marilin Ocampo",
     designation: "Estilista Canino",
-    image: "/staff/man3.png",
+    image: "/staff/man7.webp",
   },
   {
     id: 4,
     name: "Alexandra Salazar",
     designation: "M. Veterinaria",
-    image: "/staff/man4.png",
+    image: "/staff/man1.webp",
   },
   {
     id: 5,
     name: "Lorena Tenjo",
     designation: "Técnico Auxiliar",
-    image: "/staff/man5.png",
+    image: "/staff/man4.webp",
   },
 ];
 
@@ -36,13 +36,13 @@ export const FOUNDERS = [
     id: 1,
     name: "Yissete Bautista",
     designation: "Co-Fundadora",
-    image: "/staff/man6.png",
+    image: "/staff/man4.webp",
   },
   {
     id: 2,
     name: "Ivan Guarnizo",
     designation: "Co-Fundador",
-    image: "/staff/man7.png",
+    image: "/staff/man7.webp",
   },
 ];
 

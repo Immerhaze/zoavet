@@ -14,6 +14,7 @@
     "@astrojs/react": "3.6.2",
     "@astrojs/tailwind": "5.1.0",
     "@fontsource-variable/space-grotesk": "5.0.19",
+    "@gsap/react": "^2.1.1",
     "@midudev/tailwind-animations": "0.0.7",
     "astro": "4.14.4",
     "embla-carousel-autoplay": "^8.2.0",
@@ -23,7 +24,8 @@
     "react-dom": "18.3.1",
     "tailwindcss": "^3.4.10",
     "three": "0.167.1",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@iconify/json": "2.2.239",
