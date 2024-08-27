@@ -70,7 +70,7 @@ function NavbarMenu() {
 
   return (
     <>
-      <div className="navbar select-none hidden w-full  h-24  z-50 lg:flex sticky top-0  bg-white  border-b-[1px] border-primary_light/60">
+      <div className="navbar w-screen select-none hidden  h-24  z-50 lg:flex lg:fixed top-0 left-0  bg-white  border-b-[1px] border-primary_light/60">
         <div className="w-1/2 flex justify-center items-center">
           <svg
             id="navbar-logo"
@@ -117,7 +117,7 @@ function NavbarMenu() {
             />
           </svg>
         </div>
-        <div className=" w-1/2 flex justify-around items-center lg:text-2xl tracking-wide text-primary font-medium">
+        <div className=" px-5 w-1/2 flex flex-row justify-evenly items-center lg:text-2xl tracking-wide text-primary font-medium">
           <a
             href="/"
             className="hover:text-secondary hover:scale-110 transition-all duration-300"
@@ -146,11 +146,11 @@ function NavbarMenu() {
       </div>
 
       <div
-        className={`select-none lg:hidden w-full  h-24  z-50 sticky top-0  bg-white  border-b-[1px] border-primary_light/60 ${
+        className={` w-screen select-none lg:hidden   h-24  z-50 sticky top-0  bg-white  border-b-[1px] border-primary_light/60 ${
           MobileMenuOpen ? "hidden" : "flex"
         } xl:hidden `}
       >
-        <div className="fixed right-5 top-5 bg-primary_light rounded-full p-2 flex flex-col gap-5 justify-center items-center">
+        <div className="fixed right-5 top-5 shadow-sm shadow-black  bg-white/80 rounded-full p-2 flex flex-col gap-5 justify-center items-center">
           <span
             onClick={toggleMenu}
             className="icon-[eva--menu-arrow-fill]  text-2xl md:text-4xl text-secondary_dark"
@@ -211,7 +211,7 @@ function NavbarMenu() {
           MobileMenuOpen ? "flex" : "hidden"
         }  xl:hidden`}
       >
-        <div className="w-full  h-1/2">
+        <div className="w-full  h-1/3">
           <div className="h-20 flex justify-center items-center text-3xl text-secondary_dark tracking-wide font font-semibold uppercase gap-1">
             <span className="icon-[ph--bone-duotone] text-3xl md:text-4xl"></span>
             Menu
@@ -233,7 +233,7 @@ function NavbarMenu() {
             </a>
           </div>
         </div>
-        <div className="w-full h-1/2 flex flex-col justify-center items-center gap-5">
+        <div className="w-full h-2/3 flex flex-col justify-center items-center gap-5">
           <span className="icon-[ph--phone-transfer-duotone] text-5xl md:text-7xl text-secondary"></span>
           <a
             href="tel:6016756195"
