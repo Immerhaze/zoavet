@@ -117,27 +117,31 @@ function NavbarMenu() {
             />
           </svg>
         </div>
-        <div className=" px-5 w-1/2 flex flex-row justify-evenly items-center lg:text-2xl tracking-wide text-primary font-medium">
+        <div className=" px-5 w-1/2 flex flex-row justify-evenly items-center  lg:text-2xl tracking-wide text-primary font-medium">
           <a
             href="/"
+            referrerpolicy="no-referrer"
             className="hover:text-secondary hover:scale-110 transition-all duration-300"
           >
             Inicio
           </a>
           <a
             href="/servicios"
+            referrerpolicy="no-referrer"
             className="hover:text-secondary hover:scale-110 transition-all duration-300"
           >
             Servicios
           </a>
           <a
             href="/equipo"
+            referrerpolicy="no-referrer"
             className="hover:text-secondary hover:scale-110 transition-all duration-300"
           >
             Equipo
           </a>
           <a
             href="/contacto"
+            referrerpolicy="no-referrer"
             className="hover:text-secondary hover:scale-110 transition-all duration-300"
           >
             Contacto
@@ -212,57 +216,86 @@ function NavbarMenu() {
         }  xl:hidden`}
       >
         <div className="w-full  h-1/3">
-          <div className="h-20 flex justify-center items-center text-3xl text-secondary_dark tracking-wide font font-semibold uppercase gap-1">
-            <span className="icon-[ph--bone-duotone] text-3xl md:text-4xl"></span>
+          <div className="h-20 flex justify-center items-center text-2xl md:text-4xl lg:text-5xl pr-5 text-secondary_dark tracking-wide font font-semibold uppercase gap-1">
+            <span className="icon-[ph--bone-duotone]"></span>
             Menu
             <span
               onClick={toggleMenu}
               className="icon-[line-md--menu-to-close-alt-transition] absolute right-5  top-5  text-4xl md:text-6xl"
             ></span>
           </div>
-          <div className="flex flex-grow flex-col text-3xl md:text-4-xl text-primary tracking-wide   items-center gap-3 py-3">
-            <a href="/">Inicio</a>
-            <a href="/servicios">Servicios</a>
-            <a href="/equipo">Equipo</a>
-            <a href="/contacto">Contacto</a>
+          <div className="flex flex-grow flex-col text-2xl md:text-4xl lg:text-5xl text-primary tracking-wide   items-center gap-3 py-3">
+            <a href="/" referrerpolicy="no-referrer">
+              Inicio
+            </a>
+            <a href="/servicios" referrerpolicy="no-referrer">
+              Servicios
+            </a>
+            <a href="/equipo" referrerpolicy="no-referrer">
+              Equipo
+            </a>
+            <a href="/contacto" referrerpolicy="no-referrer">
+              Contacto
+            </a>
             <a
               href="/contacto"
-              className="bg-secondary  text-xl text-white rounded-full p-3"
+              referrerpolicy="no-referrer"
+              className="bg-secondary text-lg md:text-xl text-white rounded-full p-3"
             >
               Agendar cita
             </a>
           </div>
         </div>
         <div className="w-full h-2/3 flex flex-col justify-center items-center gap-5">
-          <span className="icon-[ph--phone-transfer-duotone] text-5xl md:text-7xl text-secondary"></span>
-          <a
-            href="tel:6016756195"
-            className="text-xl md:text-2xl font-black tracking-wide"
-          >
-            (601) 6756195
-          </a>
-          <span className="icon-[iconamoon--email-duotone] text-5xl md:text-7xl text-secondary"></span>
-          <a
-            href="mailto:zoavet@hotmail.com"
-            className="text-xl md:text-2xl font-black tracking-wide text-center break-all"
-          >
-            zoavet@hotmail.com
-          </a>
-          <a
-            href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.30169041661!2d-74.12693442399332!3d4.717565795257519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8357fed2c7a7%3A0x2cfcf2ddd4318cf1!2sZoavet%20Cl%C3%ADnica%20Veterinaria!5e0!3m2!1ses-419!2scl!4v1723820529747!5m2!1ses-419!2scl"
-            className="w-full flex flex-col items-center gap-3"
-          >
-            <span className="icon-[ph--map-pin-area-duotone] text-5xl md:text-7xl text-secondary"></span>
-            <div className="w-full flex flex-col items-center gap-3 px-5">
-              <p className="text-xl md:text-2xl font-black tracking-wide text-center">
-                Carrera 113 #77-30 - Villas De Granada, Bogotá
-              </p>
-            </div>
-          </a>
+          <div className="flex justify-center items-center">
+            <span className="icon-[ph--phone-transfer-duotone] text-3xl md:text-4xl text-secondary"></span>
+            <a
+              href="tel:6016756195"
+              referrerpolicy="no-referrer"
+              className="text-lg md:text-xl font-black tracking-wide"
+            >
+              (601) 6756195
+            </a>
+          </div>
+          <div className="flex justify-center items-center">
+            <span className="icon-[iconamoon--email-duotone] text-3xl md:text-4xl text-secondary"></span>
+            <a
+              href="mailto:zoavet@hotmail.com"
+              referrerpolicy="no-referrer"
+              className="text-xl md:text-2xl font-black tracking-wide text-center break-all"
+            >
+              zoavet@hotmail.com
+            </a>
+          </div>
+          <div className="w-full flex flex-col justify-center items-center px-16">
+            <span className="icon-[ph--map-pin-area-duotone] text-4xl md:text-4xl text-secondary"></span>
+            <a
+              href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.30169041661!2d-74.12693442399332!3d4.717565795257519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8357fed2c7a7%3A0x2cfcf2ddd4318cf1!2sZoavet%20Cl%C3%ADnica%20Veterinaria!5e0!3m2!1ses-419!2scl!4v1723820529747!5m2!1ses-419!2scl"
+              referrerpolicy="no-referrer"
+              className="text-xl md:text-2xl font-black tracking-wide text-center break-all flex flex-row items-center"
+            >
+              Carrera 113 #77-30 - Villas De Granada, Bogotá
+            </a>
+          </div>
           <div className="w-full flex flex-row items-start justify-around px-5 text-secondary_dark ">
-            <span className="icon-[lets-icons--insta-duotone-line] text-5xl md:text-5xl"></span>
-            <span className="icon-[ph--facebook-logo-duotone] text-5xl md:text-5xl"></span>
-            <span className="icon-[ph--linkedin-logo-duotone]  text-5xl md:text-5xl"></span>
+            <a
+              href="https://www.instagram.com/zoaveterinarios/"
+              target="_blank"
+              referrerpolicy="no-referrer"
+              class="icon-[lets-icons--insta-duotone-line] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"
+            ></a>
+            <a
+              href="https://www.facebook.com/zoaveterinarios/?locale=es_LA"
+              target="_blank"
+              referrerpolicy="no-referrer"
+              class="icon-[ph--facebook-logo-duotone] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300 "
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/z%C3%B3a-cl%C3%ADnica-867a4a218/"
+              target="_blank"
+              referrerpolicy="no-referrer"
+              class="icon-[ph--linkedin-logo-duotone] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"
+            ></a>
           </div>
         </div>
       </div>

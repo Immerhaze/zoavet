@@ -1,6 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import ContactForm from "@/components/contacto/Formulario";
+import { ContactItem } from "@/components/contacto/ContacItem";
 import Footer from "@/sections/Footer.astro";
 const contactArray=[
     {icon:"icon-[ph--phone-transfer-duotone]", title:"Llama ya", description:"(601) 6756 195", href:"tel:6016756195"},
@@ -17,23 +18,16 @@ const contactArray=[
                 <iframe title="Mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.30169041661!2d-74.12693442399332!3d4.717565795257519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8357fed2c7a7%3A0x2cfcf2ddd4318cf1!2sZoavet%20Cl%C3%ADnica%20Veterinaria!5e0!3m2!1ses-419!2scl!4v1723820529747!5m2!1ses-419!2scl" width="100%" height="100%" class="rounded-2xl border-4 border-double border-primary hover:border-secondary" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class=" h-2/3  rounded-2xl bg-primary_light/40 px-5">
-            <div class=" w-full flex justify-center items-center py-3"><h1 class="text-5xl font-semibold text-primary py-3">Contacto</h1></div>
+            <div class=" w-full flex justify-center items-center py-3"><h1 class="text-2xl md:text-4xl lg:text-5xl font-semibold text-primary py-3">Contacto</h1></div>
             <div class="flex-grow flex flex-col lg:flex-row">
                 <div class= "lg:w-1/2">
-                <ContactForm/>
+                <ContactForm client:load/>
                 </div>
-                    <div class="lg:w-1/2 grid grid-cols-2 gap-4 lg:flex flex-col justify-start items-center p-5 ">
-                        {contactArray.map((item, index) => (
-                          <a href={item.href} class={`group flex flex-col justify-center items-center ${index > 0 && "cursor-pointer"}`}>
-                            <span class={`${item.icon} text-5xl text-secondary group-hover:scale-110 transition-all duration-300`}></span>
-                            <p class="flex justify-center items-center text-secondary_dark font-light">
-                              <span class="icon-[pajamas--dash] text-xl text-primary"></span>{item.title}
-                            </p>
-                            <p class="text-sm md:text-lg text-secondary_dark font-semibold tracking-wide">{item.description}</p>
-                          </a>
-                        ))}
-                    </div>
-                </div>
+                <div class="lg:w-1/2 grid grid-cols-2 lg:p-10">
+                    {contactArray.map((item, index) => (
+                      <ContactItem  item={item} client:load />
+                    ))}
+                  </div>
+            </div>
     </section>
-    <Footer/>
 </Layout>

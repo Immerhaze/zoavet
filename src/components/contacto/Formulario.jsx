@@ -59,7 +59,7 @@ export default function ContactForm() {
         <div className="h-1/5 w-full flex flex-col mb-3">
           <label
             htmlFor="fullName"
-            className="text-lg font-semibold tracking-wide text-primary"
+            className="text-base md:text-lg lg:text-xl font-semibold tracking-wide text-primary"
           >
             Nombre Completo
           </label>
@@ -82,7 +82,7 @@ export default function ContactForm() {
         <div className="h-1/5 w-full flex flex-col mb-3">
           <label
             htmlFor="phone"
-            className="text-lg font-semibold tracking-wide text-primary"
+            className="text-base md:text-lg lg:text-xl font-semibold tracking-wide text-primary"
           >
             Número Celular
           </label>
@@ -105,7 +105,7 @@ export default function ContactForm() {
         <div className="h-1/5 w-full flex flex-col mb-3">
           <label
             htmlFor="email"
-            className="text-lg font-semibold tracking-wide text-primary"
+            className="text-base md:text-lg lg:text-xl font-semibold tracking-wide text-primary"
           >
             E-mail
           </label>
@@ -128,7 +128,7 @@ export default function ContactForm() {
         <div className="h-1/5 w-full flex flex-col mb-3">
           <label
             htmlFor="message"
-            className="text-lg font-semibold tracking-wide text-primary"
+            className="text-base md:text-lg lg:text-xl font-semibold tracking-wide text-primary"
           >
             Mensaje
           </label>
@@ -153,8 +153,8 @@ export default function ContactForm() {
             type="submit"
             className="group w-2/5 h-10 flex flex-row gap-3 justify-center items-center rounded-full bg-secondary_light hover:bg-secondary border-2 border-secondary text-secondary hover:text-white tracking-wide transition-all duration-300"
           >
-            <span className="icon-[iconamoon--send-duotone] text-2xl"></span>
-            <p className="font-semibold text-xl">Enviar</p>
+            <span className="icon-[iconamoon--send-duotone]  text-lg md:text-xl"></span>
+            <p className="font-semibold  text-lg md:text-xl">Enviar</p>
           </button>
         </div>
       </form>

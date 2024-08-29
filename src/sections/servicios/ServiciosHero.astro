@@ -1,24 +1,32 @@
 ---
 import LogoZoa from "@/icons/logo_zoa.astro"
 ---
-<section class=" h-screen w-full flex flex-col justify-between bg-[url(/serviceBanners/services_bg.jpg)] bg-cover bg-left-bottom md:bg-bottom  bg-no-repeat">
-    <div class=" p-2 h-1/2 flex flex-col justify-start items-center gap-10">
-    <span class="w-full h-full text-left pt-20">
-      <h2 class="service-title text-center text-5xl md:text-7xl font-extralight text-secondary_dark animate-fade-in-up animate-delay-200 animate-duration-300">
+<section class="h-screen  w-full -mt-24 flex flex-col justify-between bg-[url(/serviceBanners/services_bg.jpg)] bg-cover bg-left-bottom md:bg-bottom  bg-no-repeat">
+    <div class=" pt-28 p-2 h-1/2 flex flex-col justify-start items-center gap-10">
+    <span class="w-full h-full text-left">
+      <h2 class="service-title text-center text-4xl md:text-7xl font-extralight text-secondary_dark animate-fade-in-up animate-delay-200 animate-duration-300">
         Cuidado <span class=" font-medium text-primary">Preventivo</span>
       </h2>
     </span>
 </div>
 <div class=" h-1/2 w-full flex flex-col justify-end items-center">
-  <span class="w-full flex justify-center text-white text-lg md:text-2xl">
+  <span class="w-full flex justify-center text-white text-base md:text-2xl">
     <p >Medicina Veterinaria en <span class="md:text-white font-black">zoa</span> es</p>
   </span>
     <aside class="w-full flex flex-col justify-center items-center text-3xl md:text-5xl text-white ">
-      <p class="flex gap-2 justify-center items-center font-medium"><span class="text-5xl text-secondary"> + </span> Segura</p>
-      <p class="flex gap-2 justify-center items-center font-medium"><span class="text-5xl text-secondary"> + </span> Conveniente</p>
+      <p class="flex gap-2 justify-center items-center font-medium"><span class="text-2xl text-secondary"> + </span> Segura</p>
+      <p class="flex gap-2 justify-center items-center font-medium"><span class="text-2xl text-secondary"> + </span> Conveniente</p>
     </aside>
-    <span class="w-full flex justify-center items-center text-5xl  mt-5 -mb-10">
-      <span class="icon-[icon-park-twotone--down-c] animate-jump animate-iteration-count-infinite text-secondary"></span>
+    <span class="w-full flex justify-center items-center text-2xl  mt-5 -mb-10">
+      <span class="icon-[icon-park-twotone--down-c] text-3xl md:text-5xl animate-jump animate-iteration-count-infinite text-secondary "></span>
     </span>
   </div>
 </section>
+
+<style>
+   @media (max-width: 767px) {
+    .custom-height {
+      height: calc(100% - 96px); /* Apply the custom height on mobile screens */
+    }
+  }
+</style>

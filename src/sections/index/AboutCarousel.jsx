@@ -91,19 +91,19 @@ export default function AboutCarousel() {
   }
 
   return (
-    <div className="about-cont w-full py-20 ">
+    <div className="about-cont h-screen md:h-auto w-full mt-10">
       <div className="embla h-5/6 " ref={emblaRef}>
         <div className="embla__container h-full">
           {aboutUs.map((slide, index) => (
             <div
               key={index}
-              className="embla__slide h-full  flex flex-col-reverse md:items-center md:flex-row "
+              className="embla__slide h-full  flex flex-col-reverse md:items-center lg:flex-row"
             >
               <div className="h-2/5 md:h-full w-full flex flex-col justify-center items-center md:items-start  p-2 md:px-5 ">
                 <img
                   src={slide.img}
                   alt="photo"
-                  className="h-full md:w-full  md:h-auto md:rounded-xl"
+                  className="w-full md:w-full  md:h-auto md:rounded-xl"
                 />
                 <p className=" h-5 text-xs text-slate-300 md:pl-5 ">
                   &copy; Foto por
@@ -113,16 +113,16 @@ export default function AboutCarousel() {
                 </p>
               </div>
               <div className="w-full h-3/5 gap-3 md:px-5 md:h-full flex flex-col md:justify-center xl:h-full p-3 ">
-                <h3 className="text-base md:text-base xl:text-lg self-start ">
+                <h3 className="text-base md:text-lg lg:text-xl self-start ">
                   Sobre nosotros
                 </h3>
-                <h2 className="text-4xl md:text-6xl lg:text-7xl  font-semibold tracking-wide  text-primary">
+                <h2 className="text-2xl md:text-4xl lg:text-5xl  font-semibold tracking-wide  text-primary">
                   {slide.title}
                 </h2>
-                <p className="text-base  md:text-lg lg:text-xl xl:text-2xl  font-light lg:w-4/5 ">
+                <p className="text-base  md:text-lg lg:text-xl   font-light lg:w-4/5 ">
                   {slide.text1}
                 </p>
-                <p className="text-base md:text-lg lg:text-xl  xl:text-2xl font-light lg:w-4/5">
+                <p className="text-base md:text-lg lg:text-xl  font-light lg:w-4/5">
                   {slide.text2}
                 </p>
               </div>

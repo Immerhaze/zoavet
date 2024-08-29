@@ -15,7 +15,7 @@ export default function ProgressiveBars({
           {!phone && (
             <span
               onClick={() => clic(index)}
-              className="text-nowrap lg:text-3xl hover:text-primary cursor-pointer"
+              className="text-nowrap md:text-xl  hover:text-primary cursor-pointer"
             >
               {bar}
             </span>

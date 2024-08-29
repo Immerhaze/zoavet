@@ -12,7 +12,7 @@ interface ServiceCardProps {
 const { serviceImg, title, description, index } = Astro.props;
 ---
 
-<div class={`card-${index} DirectionAwareHover w-[20rem] h-[24rem] md:w-11/12 md:h-[30rem] lg:w-1/2 lg:h-1/2 ${index % 2 == 0 ? "lg:pr-4":"lg:pl-4"} py-2 px-5 `}>
+<div class={`card-${index} DirectionAwareHover w-[20rem] h-[24rem] md:w-11/12 md:h-[30rem] lg:w-1/2 ${index % 2 == 0 ? "lg:pr-4":"lg:pl-4"} py-2 px-5 `}>
   <DirectionAwareHover 
   imageUrl={serviceImg}
   cardTitle={title}

@@ -17,22 +17,22 @@ const StaffDisplay = () => {
   };
 
   return (
-    <div className="w-full h-full flex-col text-secondary_dark">
+    <div className="w-full h-auto lg:h-screen flex-col text-secondary_dark">
       <div className="h-1/6 flex items-center p-5">
-        <h1 className="text-4xl md:text-6xl font-medium text-primary">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-medium text-primary">
           Equipo Zoavet
         </h1>
       </div>
-      <div className="h-5/6 flex flex-col md:flex-row">
-        <div className="h-full md:w-3/5 flex flex-row flex-wrap items-center px-5">
+      <div className="h-5/6 flex flex-col lg:flex-row">
+        <div className="lg:w-3/5 flex flex-row items-stretch flex-wrap   px-2">
           {staffCard.map((member) => (
             <div
-              className={`p-2 w-1/3 h-1/${staffCard.length / 3} cursor-pointer`}
+              className={`w-1/3 cursor-pointer p-2 aspect-square`}
               key={member.id}
             >
               <div
                 onClick={() => handleClick(member)}
-                className={`h-48 lg:h-64  hover:shadow-md hover:shadow-secondary transition-all duration-300  bg-top rounded-xl bg-cover ${
+                className={`h-32 md:h-full max-w-full lg:h-64  hover:shadow-md hover:shadow-secondary transition-all duration-300  bg-top rounded-xl bg-cover ${
                   member.id === selectedStaff?.id
                     ? "shadow-md shadow-secondary"
                     : "shadow-md shadow-primary"
@@ -42,22 +42,31 @@ const StaffDisplay = () => {
             </div>
           ))}
         </div>
-        <div className="md:w-2/5 flex justify-center items-end px-5 pb-5">
-          <div className="w-full h-4/5 rounded-xl  bg-primary_light/40 flex flex-col justify-center items-center">
-            <img
-              src={selectedStaff?.image}
-              alt={selectedStaff?.name}
-              className="rounded-xl h-48 lg:h-1/2 -mt-44 shadow-md shadow-secondary_dark mb-3"
-            />
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-wider text-center text-primary">
-              {selectedStaff?.name}
-            </h2>
-            <h3 className="text-lg md::text-xl font-light tracking-wider mb-3 text-center">
-              {selectedStaff?.designation}
-            </h3>
-            <p className="font-medium text-base md:text-lg  px-2 md:px-3 lg:px-5  tracking-wide text-left pb-3">
-              {selectedStaff?.description}
-            </p>
+        <div className="lg:w-2/5 h-full flex justify-center items-end px-5 py-5">
+          <div className="w-full h-4/5 rounded-xl  bg-primary_light/40 flex flex-col justify-center items-center md:p-2">
+            <span className="flex justify-center items-center w-full h-2/5 lg:-mt-48">
+              <img
+                src={selectedStaff?.image}
+                alt={selectedStaff?.name}
+                className="rounded-xl h-48 lg:h-full  shadow-md shadow-secondary_dark mb-3"
+              />
+            </span>
+            <span className="w-full h-1/5">
+              <h2 className="text-2xl lg:text-4xl font-semibold tracking-wider text-center text-primary">
+                {selectedStaff?.name}
+              </h2>
+              <h3 className="text-base md:text-lg  font-light tracking-wider mb-3 text-center">
+                {selectedStaff?.designation}
+              </h3>
+            </span>
+            <span className="w-full h-2/5">
+              <p
+                className="font-medium  text-base md:text-lg lg:text-xl 
+              px-2 md:px-3 lg:px-5  tracking-wide text-left pb-3"
+              >
+                {selectedStaff?.description}
+              </p>
+            </span>
           </div>
         </div>
       </div>

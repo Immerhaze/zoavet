@@ -31,30 +31,32 @@ const EmblaCarousel = (props) => {
   } = usePrevNextButtons(emblaApi, onNavButtonClick);
 
   return (
-    <section className="w-full h-full mx-auto lg:px-16 relative">
-      <div className="overflow-hidden w-full h-full" ref={emblaRef}>
-        <div className="flex h-full items-center py-10 lg:py-5">
+    <section className="w-full h-full relative">
+      <div className="overflow-x-hidden w-full h-full" ref={emblaRef}>
+        <div className="flex  h-full justify-start items-start ">
           {slides.map((personal, index) => (
             <div
-              className="relative w-full flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33.33%] lg:flex-col p-2"
+              className="relative w-full flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33.33%]"
               key={index}
             >
-              <div className="relative h-full flex items-center justify-center lg:flex-col">
+              <div className="relative h-full flex items-center justify-center lg:flex-col group p-5">
                 <img
                   onMouseEnter={() => setShowTooltip(personal.id)}
                   onMouseLeave={() => setShowTooltip(null)}
                   src={personal.image}
                   alt={"photo"}
-                  className="w-[8rem] h-[8rem] lg:w-3/6 lg:h-full object-cover object-top rounded-full border-4 border-primary duration-300"
+                  className="w-3/5 md:w-2/3 lg:w-2/4 xl:w-2/5 *:object-contain object-top rounded-full border-4 border-primary duration-300 aspect-square"
                 />
                 <a
                   href={"/equipo"}
-                  className={`staff-tag select-none -mb-10 lg:m-0 cursor-pointer absolute lg:relative bottom-0 flex w-2/3 p-2 flex-col justify-center items-center text-center rounded-2xl bg-white`}
+                  target="_blank"
+                  referrerpolicy="no-referrer"
+                  className={`staff-tag select-none cursor-pointer lg:hidden absolute bottom-0 group-hover:flex animate-fade-in-up animate-duration-300 w-auto  px-5 py-1 flex-col justify-center items-center text-center rounded-2xl bg-white`}
                 >
-                  <h3 className="text-xs xl:text-base font-bold text-primary tracking-wide">
+                  <h3 className="text-base xl:text-base font-bold text-primary tracking-wide">
                     {personal.name}
                   </h3>
-                  <p className="text-xs xl:text-ms font-normal tracking-wide">
+                  <p className="text-sm xl:text-ms font-normal tracking-wide">
                     {personal.designation}
                   </p>
                 </a>
