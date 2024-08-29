@@ -6,7 +6,7 @@ const StaffDisplay = () => {
     id: 1,
     name: "Yissete Bautista",
     designation: "Jefe Veterinario & Co-fundadora",
-    image: "/staff/large/man1.jpg",
+    image: "/staff/large/man1.webp",
     description:
       "Nuestra Jefe Veterinaria y Co-Fundadora. Se graduó en la Universidad Nacional de Colombia con un título en Medicina Veterinaria. Con más de 15 años de experiencia en el cuidado de animales, su pasión por la veterinaria y su liderazgo han sido fundamentales para el crecimiento de nuestra clínica.",
   });

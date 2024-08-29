@@ -16,7 +16,7 @@ export default function AboutCarousel() {
     {
       photographer: "Manja Vitolic",
       profile: "https://unsplash.com/es/@madhatterzone",
-      img: "/nosotrosCarousel/gato_verde.jpg",
+      img: "/nosotrosCarousel/gato_verde.webp",
       alt: "Foto, gato acostado con fondo verde",
       title: "Nosotros",
       text1: `Zoavet se fundó en 2015 para ofrecer atención domiciliaria de calidad y promover la tenencia responsable de mascotas en Bogotá.`,
@@ -25,7 +25,7 @@ export default function AboutCarousel() {
     {
       photographer: "James Barker",
       profile: "https://unsplash.com/es/@barkernotbaker",
-      img: "/nosotrosCarousel/dog_lick.jpg",
+      img: "/nosotrosCarousel/dog_lick.webp",
       alt: "Foto, Close up de perro lamiéndose el hocico",
       title: "Misión",
       text1: `Nos dedicamos al cuidado animal y a la tenencia responsable, integrando a las mascotas como parte esencial de las familias.`,
@@ -34,7 +34,7 @@ export default function AboutCarousel() {
     {
       photographer: "Cong H",
       profile: "https://unsplash.com/es/@houcong",
-      img: "/nosotrosCarousel/gato_amarillo.jpg",
+      img: "/nosotrosCarousel/gato_amarillo.webp",
       alt: "Foto, gato acostado con fondo amarillo",
       title: "Visión",
       text1: `Nos esforzamos por posicionar la formación de tutores responsables y el rol veterinario como fundamentales en las familias.`,
@@ -43,7 +43,7 @@ export default function AboutCarousel() {
     {
       photographer: "Alvan Nee",
       profile: "https://unsplash.com/es/@alvannee",
-      img: "/nosotrosCarousel/dog_orange.jpg",
+      img: "/nosotrosCarousel/dog_orange.webp",
       alt: "Foto, perro corgi parado al lado de unas plantas fondo naranja",
       title: "Valores",
       text1: `En Zoavet, nos guiamos por valores de responsabilidad, respeto y atención integral.`,
