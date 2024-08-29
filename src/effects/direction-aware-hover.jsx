@@ -64,7 +64,9 @@ export const DirectionAwareHover = ({
                 className={`icon-[ph--arrow-square-in-duotone] group-hover/primarybtn:hidden text-xl`}
               ></span>
               <span className="icon-[line-md--compass-twotone-loop] hidden group-hover/primarybtn:block   text-xl"></span>
-              <p className="font-semibold text-lg md:text-xl ">Agendar</p>
+              <p className="font-semibold text-lg md:text-xl ">
+                {index == 1 ? "Contactar" : "Agendar"}
+              </p>
             </a>
           </div>
         </div>
