@@ -50,30 +50,29 @@ import LogoZoa from "@/icons/logo_zoa.astro";
   labelRenderer.domElement.style.pointerEvents = `none`;
   document.body.appendChild(labelRenderer.domElement);
 
-  // Create the div container with the icon and text
   const div = document.createElement('div');
-  div.style.position = "relative";
-  div.style.pointerEvents = "auto"; // Allow pointer events for interaction
+div.className = "ClicContainer";
+div.style.position = "relative";
+div.style.pointerEvents = "auto";
+div.style.backgroundColor = "rgba(06, 160, 154, 0.4)"; // Semi-transparent background
+div.style.padding = "30px"; // Padding around the text
+div.style.borderRadius = "50%"; // Rounded corners
+div.style.color = "white"; // Text color for better contrast
 
-  // Create the icon span
-  const iconSpan = document.createElement('span');
-  iconSpan.className = "icon-[svg-spinners--pulse-rings-2] pulseicon";
-  div.appendChild(iconSpan);
+// Create the text span
+const textSpan = document.createElement('span');
+textSpan.textContent = "Clic";
+textSpan.className = "textIcon";
+div.appendChild(textSpan);
 
-  // Create the text span
-  const textSpan = document.createElement('span');
-  textSpan.textContent = "Click";
-  textSpan.className = "textIcon";
-  div.appendChild(textSpan);
+// Convert to CSS2DObject and add to the scene
+const divContainer = new CSS2DObject(div);
+scene.add(divContainer);
+divContainer.position.set(0, 0.65, 0);
 
-  // Convert to CSS2DObject and add to the scene
-  const divContainer = new CSS2DObject(div);
-  scene.add(divContainer);
-  divContainer.position.set(0, 0.65, 0);
-
-  // Add event listener for hover and click
-  divContainer.element.style.cursor = 'pointer'; // Change cursor to pointer on hover
-  divContainer.element.addEventListener('click', AnimateOnClick); // Call AnimateOnClick on click
+// Add event listener for hover and click
+divContainer.element.style.cursor = 'pointer'; // Change cursor to pointer on hover
+divContainer.element.addEventListener('click', AnimateOnClick); // Call Animate
 
   const loadingManager = new THREE.LoadingManager();
   const progressBar = document.getElementById('progress') as HTMLProgressElement;
