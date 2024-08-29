@@ -61,7 +61,6 @@ export default function ContactForm() {
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("Form submitted successfully:", data);
           setProcessing(false);
           setFormData({
             fullName: "",
@@ -73,7 +72,6 @@ export default function ContactForm() {
           // Optionally, handle success (e.g., show a success message, reset form, etc.)
         })
         .catch((error) => {
-          console.error("Error submitting form:", error);
           setProcessing(false);
           // Optionally, handle error (e.g., show an error message)
         });

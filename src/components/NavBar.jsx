@@ -29,8 +29,6 @@ function NavbarMenu() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      console.log("current:", scrollTop);
-      console.log("last current:", lastScrollTop);
 
       if (scrollTop > lastScrollTop && scrollTop > 100) {
         // Scroll down - hide navbar

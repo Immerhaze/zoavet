@@ -13,7 +13,6 @@ const StaffDisplay = () => {
 
   const handleClick = (staffMember) => {
     setSelectedStaff(staffMember);
-    console.log(staffMember); // Logging the selected staff member
   };
 
   return (

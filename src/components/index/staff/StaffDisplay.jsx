@@ -17,7 +17,6 @@ const StaffDisplay = () => {
 
   const handleClick = (staffMember) => {
     setSelectedStaff(staffMember);
-    console.log(selectedStaff);
   };
 
   return (
