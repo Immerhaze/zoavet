@@ -120,28 +120,28 @@ function NavbarMenu() {
         <div className=" px-5 w-1/2 flex flex-row justify-evenly items-center  lg:text-2xl tracking-wide text-primary font-medium">
           <a
             href="/"
-            referrerpolicy="no-referrer"
+            referrerPolicy="no-referrer"
             className="hover:text-secondary hover:scale-110 transition-all duration-300"
           >
             Inicio
           </a>
           <a
             href="/servicios"
-            referrerpolicy="no-referrer"
+            referrerPolicy="no-referrer"
             className="hover:text-secondary hover:scale-110 transition-all duration-300"
           >
             Servicios
           </a>
           <a
             href="/equipo"
-            referrerpolicy="no-referrer"
+            referrerPolicy="no-referrer"
             className="hover:text-secondary hover:scale-110 transition-all duration-300"
           >
             Equipo
           </a>
           <a
             href="/contacto"
-            referrerpolicy="no-referrer"
+            referrerPolicy="no-referrer"
             className="hover:text-secondary hover:scale-110 transition-all duration-300"
           >
             Contacto
@@ -225,21 +225,21 @@ function NavbarMenu() {
             ></span>
           </div>
           <div className="flex flex-grow flex-col text-2xl md:text-4xl lg:text-5xl text-primary tracking-wide   items-center gap-3 py-3">
-            <a href="/" referrerpolicy="no-referrer">
+            <a href="/" referrerPolicy="no-referrer">
               Inicio
             </a>
-            <a href="/servicios" referrerpolicy="no-referrer">
+            <a href="/servicios" referrerPolicy="no-referrer">
               Servicios
             </a>
-            <a href="/equipo" referrerpolicy="no-referrer">
+            <a href="/equipo" referrerPolicy="no-referrer">
               Equipo
             </a>
-            <a href="/contacto" referrerpolicy="no-referrer">
+            <a href="/contacto" referrerPolicy="no-referrer">
               Contacto
             </a>
             <a
               href="/contacto"
-              referrerpolicy="no-referrer"
+              referrerPolicy="no-referrer"
               className="bg-secondary text-lg md:text-xl text-white rounded-full p-3"
             >
               Agendar cita
@@ -249,7 +249,7 @@ function NavbarMenu() {
         <div className="w-full h-2/3 flex flex-col justify-center items-center gap-5">
           <div className="w-full flex flex-col justify-center items-center px-10">
             <span className="icon-[ph--map-pin-area-duotone] text-4xl md:text-4xl text-secondary"></span>
-            <p class="text-xl text-center md:text-2xlw-full flex flex-col font-black tracking-wide">
+            <p className="text-xl text-center md:text-2xlw-full flex flex-col font-black tracking-wide">
               Carrera 113 #77-30 - <span>Villas De Granada,</span>
               <span>Bogotá</span>
             </p>
@@ -258,7 +258,7 @@ function NavbarMenu() {
             <span className="icon-[ph--phone-transfer-duotone] text-3xl md:text-4xl text-secondary"></span>
             <a
               href="tel:6016756195"
-              referrerpolicy="no-referrer"
+              referrerPolicy="no-referrer"
               className="text-lg md:text-xl font-black tracking-wide"
             >
               (601) 6756195
@@ -268,7 +268,7 @@ function NavbarMenu() {
             <span className="icon-[iconamoon--email-duotone] text-3xl md:text-4xl text-secondary"></span>
             <a
               href="mailto:zoavet@hotmail.com"
-              referrerpolicy="no-referrer"
+              referrerPolicy="no-referrer"
               className="text-xl md:text-2xl font-black tracking-wide text-center break-all"
             >
               zoavet@hotmail.com
@@ -278,20 +278,20 @@ function NavbarMenu() {
             <a
               href="https://www.instagram.com/zoaveterinarios/"
               target="_blank"
-              referrerpolicy="no-referrer"
-              class="icon-[lets-icons--insta-duotone-line] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"
+              referrerPolicy="no-referrer"
+              className="icon-[lets-icons--insta-duotone-line] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"
             ></a>
             <a
               href="https://www.facebook.com/zoaveterinarios/?locale=es_LA"
               target="_blank"
-              referrerpolicy="no-referrer"
-              class="icon-[ph--facebook-logo-duotone] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300 "
+              referrerPolicy="no-referrer"
+              className="icon-[ph--facebook-logo-duotone] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300 "
             ></a>
             <a
               href="https://www.linkedin.com/in/z%C3%B3a-cl%C3%ADnica-867a4a218/"
               target="_blank"
-              referrerpolicy="no-referrer"
-              class="icon-[ph--linkedin-logo-duotone] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"
+              referrerPolicy="no-referrer"
+              className="icon-[ph--linkedin-logo-duotone] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"
             ></a>
           </div>
         </div>

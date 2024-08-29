@@ -50,7 +50,7 @@ const EmblaCarousel = (props) => {
                 <a
                   href={"/equipo"}
                   target="_blank"
-                  referrerpolicy="no-referrer"
+                  referrerPolicy="no-referrer"
                   className={`staff-tag select-none cursor-pointer  absolute bottom-0 group-hover:flex animate-fade-in-up animate-duration-300 w-auto  px-5 py-1 flex-col justify-center items-center text-center rounded-2xl bg-white`}
                 >
                   <h3 className="text-sm xl:text-base font-bold text-primary tracking-wide">

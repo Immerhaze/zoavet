@@ -17,7 +17,7 @@ export default function FounderFrame({ image, id, name, designation }) {
       <a
         href="/equipo"
         target="_blank"
-        referrerpolicy="no-referrer"
+        referrerPolicy="no-referrer"
         className={`founder-tag select-none cursor-pointer flex w-full md:w-auto  px-5 py-1 flex-col justify-center items-center text-center rounded-2xl bg-white`}
       >
         <h3 className="text-base  font-bold text-secondary tracking-wide">
