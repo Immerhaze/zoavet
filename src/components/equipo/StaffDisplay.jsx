@@ -42,7 +42,7 @@ const StaffDisplay = () => {
           ))}
         </div>
         <div className="lg:w-2/5 h-full flex justify-center items-end px-5 py-5">
-          <div className="w-full h-4/5 rounded-xl  bg-primary_light/40 flex flex-col justify-center items-center md:p-2">
+          <div className="w-full h-4/5 rounded-xl  bg-primary_light flex flex-col justify-center items-center md:p-2">
             <span className="flex justify-center items-center w-full h-2/5 lg:-mt-48">
               <img
                 src={selectedStaff?.image}

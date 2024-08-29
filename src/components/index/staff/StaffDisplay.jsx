@@ -42,7 +42,7 @@ const StaffDisplay = () => {
           ))}
         </div>
         <div className="md:w-1/2 rounded-xl p-5 flex justify-center items-center">
-          <div className="w-full h-full rounded-xl py-3 bg-primary_light/40 flex flex-col justify-center items-center">
+          <div className="w-full h-full rounded-xl py-3 bg-primary_light flex flex-col justify-center items-center">
             <img
               src={selectedStaff?.image}
               alt={`Personal zoavet: ${selectedStaff?.name}`}

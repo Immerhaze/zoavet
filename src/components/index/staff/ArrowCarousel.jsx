@@ -41,6 +41,7 @@ export const PrevButton = (props) => {
 
   return (
     <button
+      aria-label="Ir al anterior"
       className="embla__button embla__button--prev"
       type="button"
       {...restProps}
@@ -61,6 +62,7 @@ export const NextButton = (props) => {
 
   return (
     <button
+      aria-label="Ir al siguiente"
       className="embla__button embla__button--next"
       type="button"
       {...restProps}
