@@ -247,6 +247,13 @@ function NavbarMenu() {
           </div>
         </div>
         <div className="w-full h-2/3 flex flex-col justify-center items-center gap-5">
+          <div className="w-full flex flex-col justify-center items-center px-10">
+            <span className="icon-[ph--map-pin-area-duotone] text-4xl md:text-4xl text-secondary"></span>
+            <p class="text-xl text-center md:text-2xlw-full flex flex-col font-black tracking-wide">
+              Carrera 113 #77-30 - <span>Villas De Granada,</span>
+              <span>Bogotá</span>
+            </p>
+          </div>
           <div className="flex justify-center items-center">
             <span className="icon-[ph--phone-transfer-duotone] text-3xl md:text-4xl text-secondary"></span>
             <a
@@ -265,16 +272,6 @@ function NavbarMenu() {
               className="text-xl md:text-2xl font-black tracking-wide text-center break-all"
             >
               zoavet@hotmail.com
-            </a>
-          </div>
-          <div className="w-full flex flex-col justify-center items-center px-16">
-            <span className="icon-[ph--map-pin-area-duotone] text-4xl md:text-4xl text-secondary"></span>
-            <a
-              href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.30169041661!2d-74.12693442399332!3d4.717565795257519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8357fed2c7a7%3A0x2cfcf2ddd4318cf1!2sZoavet%20Cl%C3%ADnica%20Veterinaria!5e0!3m2!1ses-419!2scl!4v1723820529747!5m2!1ses-419!2scl"
-              referrerpolicy="no-referrer"
-              className="text-xl md:text-2xl font-black tracking-wide text-center break-all flex flex-row items-center"
-            >
-              Carrera 113 #77-30 - Villas De Granada, Bogotá
             </a>
           </div>
           <div className="w-full flex flex-row items-start justify-around px-5 text-secondary_dark ">

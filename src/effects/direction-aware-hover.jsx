@@ -4,7 +4,12 @@ import { useRef } from "react";
 import { cn } from "@/utils/cn";
 import PrimaryButton from "@/components/primaryButton.astro";
 
-export const DirectionAwareHover = ({ imageUrl, cardTitle, description }) => {
+export const DirectionAwareHover = ({
+  imageUrl,
+  cardTitle,
+  description,
+  index,
+}) => {
   const ref = useRef();
 
   return (
@@ -32,7 +37,9 @@ export const DirectionAwareHover = ({ imageUrl, cardTitle, description }) => {
               className="lg:hidden p-2 flex flex-row justify-center items-center rounded-full gap-2 border-2 border-secondary bg-secondary lg:bg-secondary_light lg:hover:bg-secondary  text-white lg:text-secondary lg:hover:text-white tracking-wide transition-all duration-300"
             >
               <span className="icon-[ph--arrow-square-in-duotone]  text-lg md:text-xl"></span>
-              <p className="font-semibold text-lg md:text-xl">Agendar</p>
+              <p className="font-semibold text-lg md:text-xl">
+                {index == 1 ? "Contactar" : "Agendar"}
+              </p>
             </a>
           </div>
         </div>
