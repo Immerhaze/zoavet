@@ -9,6 +9,7 @@ export const DirectionAwareHover = ({
   cardTitle,
   description,
   index,
+  alt,
 }) => {
   const ref = useRef();
 
@@ -23,7 +24,7 @@ export const DirectionAwareHover = ({
         <div className="lg:group-hover/card:block hidden absolute inset-0 w-full h-full bg-gradient-to-b from-black/40 to-black  z-10 transition duration-500" />
         <div className="h-full dark:bg-black">
           <img
-            alt="image"
+            alt={alt}
             className={cn(" h-full w-full object-cover scale-[1.15]")}
             src={imageUrl}
           />
@@ -33,7 +34,7 @@ export const DirectionAwareHover = ({
             </h2>
             <a
               href={"/contacto"}
-              referrerPolicy="no-referrer"
+              rel="noopener noreferrer"
               className="lg:hidden p-2 flex flex-row justify-center items-center rounded-full gap-2 border-2 border-secondary bg-secondary lg:bg-secondary_light lg:hover:bg-secondary  text-white lg:text-secondary lg:hover:text-white tracking-wide transition-all duration-300"
             >
               <span className="icon-[ph--arrow-square-in-duotone]  text-lg md:text-xl"></span>
@@ -57,7 +58,7 @@ export const DirectionAwareHover = ({
           <div className="w-full flex justify-center items-center group ">
             <a
               href={"/contacto"}
-              referrerPolicy="no-referrer"
+              rel="noopener noreferrer"
               className="group/primarybtn px-3 py-1 flex flex-row justify-center items-center lg:mr-10 rounded-full gap-2 border-2 border-secondary bg-secondary lg:bg-secondary_light lg:hover:bg-secondary  text-white lg:text-secondary lg:hover:text-white tracking-wide transition-all duration-300"
             >
               <span

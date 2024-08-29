@@ -44,13 +44,13 @@ const EmblaCarousel = (props) => {
                   onMouseEnter={() => setShowTooltip(personal.id)}
                   onMouseLeave={() => setShowTooltip(null)}
                   src={personal.image}
-                  alt={"photo"}
+                  alt={`Equipo zoavet: ${personal.name}`}
                   className="w-3/5 md:w-2/3 lg:w-2/5 xl:w-2/5 *:object-contain object-top rounded-full border-4 border-primary duration-300 aspect-square"
                 />
                 <a
                   href={"/equipo"}
                   target="_blank"
-                  referrerPolicy="no-referrer"
+                  rel="noopener noreferrer"
                   className={`staff-tag select-none cursor-pointer  absolute bottom-0 group-hover:flex animate-fade-in-up animate-duration-300 w-auto  px-5 py-1 flex-col justify-center items-center text-center rounded-2xl bg-white`}
                 >
                   <h3 className="text-sm xl:text-base font-bold text-primary tracking-wide">

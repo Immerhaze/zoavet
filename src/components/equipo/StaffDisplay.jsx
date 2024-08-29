@@ -47,7 +47,7 @@ const StaffDisplay = () => {
             <span className="flex justify-center items-center w-full h-2/5 lg:-mt-48">
               <img
                 src={selectedStaff?.image}
-                alt={selectedStaff?.name}
+                alt={`Personal zoavet: ${selectedStaff?.name}`}
                 className="rounded-xl h-48 lg:h-full  shadow-md shadow-secondary_dark mb-3"
               />
             </span>

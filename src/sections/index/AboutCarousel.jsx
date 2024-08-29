@@ -17,23 +17,26 @@ export default function AboutCarousel() {
       photographer: "Manja Vitolic",
       profile: "https://unsplash.com/es/@madhatterzone",
       img: "/nosotrosCarousel/gato_verde.jpg",
+      alt: "Foto, gato acostado con fondo verde",
       title: "Nosotros",
       text1: `Zoavet se fundó en 2015 para ofrecer atención domiciliaria de calidad y promover la tenencia responsable de mascotas en Bogotá.`,
-      text2: `En 2019, abrimos nuestro Pet-Spa en Villas de Granada, ampliando a servicios clínicos en 2020 y fortaleciendo nuestra capacidad de atención las 24 horas.`,
+      text2: `En 2019, abrimos nuestro Pet-Spa en Villas de Granada, ampliando los servicios clínicos en 2020 y fortaleciendo nuestra capacidad de atención las 24 horas.`,
     },
     {
       photographer: "James Barker",
       profile: "https://unsplash.com/es/@barkernotbaker",
       img: "/nosotrosCarousel/dog_lick.jpg",
+      alt: "Foto, Close up de perro lamiéndose el hocico",
       title: "Misión",
-      text1: `Nos dedicamos al cuidado animal y la tenencia responsable, integrando a las mascotas como parte esencial de las familias.`,
+      text1: `Nos dedicamos al cuidado animal y a la tenencia responsable, integrando a las mascotas como parte esencial de las familias.`,
       text2: `Ofrecemos atención integral con empatía y respeto, buscando siempre superar las expectativas de nuestros clientes.`,
     },
     {
       photographer: "Cong H",
       profile: "https://unsplash.com/es/@houcong",
       img: "/nosotrosCarousel/gato_amarillo.jpg",
-      title: "Vision",
+      alt: "Foto, gato acostado con fondo amarillo",
+      title: "Visión",
       text1: `Nos esforzamos por posicionar la formación de tutores responsables y el rol veterinario como fundamentales en las familias.`,
       text2: `Buscamos ser referentes en atención médica integral en nuestra ciudad y expandir nuestra misión a otras localidades a largo plazo.`,
     },
@@ -41,9 +44,10 @@ export default function AboutCarousel() {
       photographer: "Alvan Nee",
       profile: "https://unsplash.com/es/@alvannee",
       img: "/nosotrosCarousel/dog_orange.jpg",
+      alt: "Foto, perro corgi parado al lado de unas plantas fondo naranja",
       title: "Valores",
       text1: `En Zoavet, nos guiamos por valores de responsabilidad, respeto y atención integral.`,
-      text2: `Promovemos la tenencia responsable, actuamos con transparencia y ética, nos comprometemos con el bienestar animal y la satisfacción de nuestros clientes.`,
+      text2: `Promovemos la tenencia responsable, actuamos con transparencia y ética, y nos comprometemos con el bienestar animal y la satisfacción de nuestros clientes.`,
     },
   ];
 
@@ -102,7 +106,7 @@ export default function AboutCarousel() {
               <div className="h-2/5 md:h-full w-full flex flex-col justify-center items-center md:items-start  p-2 md:px-5 ">
                 <img
                   src={slide.img}
-                  alt="photo"
+                  alt={slide.alt}
                   className="w-full md:w-full  md:h-auto md:rounded-xl"
                 />
                 <p className=" h-5 text-xs text-slate-300 md:pl-5 ">

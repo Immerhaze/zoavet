@@ -2,8 +2,8 @@ export const ContactItem = ({ item }) => {
   return (
     <a
       href={item.href}
-      referrerpolicy="no-referrer"
-      className="group p-3 w-1/2 lg:w-3/4 h-1/2 flex flex-col justify-center items-center hover:cursor-pointer transition-all duration-300"
+      rel="noopener noreferrer"
+      className="group p-3 w-1/2 lg:w-1/2 h-1/2 flex flex-col justify-center items-center hover:cursor-pointer transition-all duration-300"
     >
       <span
         className={`${item.icon} text-2xl md:text-4xl lg:text-5xl text-secondary group-hover:scale-110`}

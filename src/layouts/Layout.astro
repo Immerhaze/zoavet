@@ -37,7 +37,7 @@ const { title, description } = Astro.props;
       <NavbarMenu  client:load/>
 			<slot />
       <div class="fixed right-0 top-1/2 flex flex-col gap-5 justify-center items-center">
-        <a title="link whatsapp" href="https://wa.me/573046029130" target="_blank" referrerpolicy="no-referrer" class="whatsapp-general group flex justify-center items-center p-2 bg-white shadow-sm lg:hover:shadow-primary border-[0.5px] border-primary_light z-50 rounded-tl-xl rounded-bl-xl transition-shadow duration-300">
+        <a title="link whatsapp" href="https://wa.me/573046029130" target="_blank" rel="noopener noreferrer"" class="whatsapp-general group flex justify-center items-center p-2 bg-white shadow-sm lg:hover:shadow-primary border-[0.5px] border-primary_light z-50 rounded-tl-xl rounded-bl-xl transition-shadow duration-300">
           <span class="icon-[ph--whatsapp-logo-duotone] text-6xl text-primary lg:group-hover:scale-110 transition-all duration-300"></span>
         </a>
         <a title="link contacto"  href="/contacto" class=" group whatsapp-general hidden lg:flex justify-center items-center p-2 bg-white shadow-sm hover:shadow-secondary border-[0.5px] border-primary_light z-50 rounded-tl-xl rounded-bl-xl transition-shadow duration-300">

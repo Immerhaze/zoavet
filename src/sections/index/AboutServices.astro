@@ -10,7 +10,7 @@ import PrimaryButton from '@/components/primaryButton.astro'
       Salud Integral
     </h1>
     <p class="w-full text-base md:text-lg lg:text-xl tracking-wide leading-relaxed font-light ">
-      Cuidamos a tu mascota como parte de nuestra familia, ofreciéndole los mejores servicios para su bienestar y salud.
+      Cuidamos a tu mascota como si fuera parte de nuestra familia, ofreciéndole los mejores servicios para su bienestar y salud.
     </p>
   </div>
   <div class="flex flex-col">
@@ -21,6 +21,7 @@ import PrimaryButton from '@/components/primaryButton.astro'
           title={service.title}
           description={service.description}
           index={index}
+          alt={service.alt}
         />
       ))}
     </div>

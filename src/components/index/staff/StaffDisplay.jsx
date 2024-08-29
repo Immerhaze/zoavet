@@ -46,7 +46,7 @@ const StaffDisplay = () => {
           <div className="w-full h-full rounded-xl py-3 bg-primary_light/40 flex flex-col justify-center items-center">
             <img
               src={selectedStaff?.image}
-              alt={selectedStaff?.name}
+              alt={`Personal zoavet: ${selectedStaff?.name}`}
               className="rounded-xl w-1/2 -mt-20 shadow-md shadow-secondary_dark mb-5"
             />
             <h2 className="text-4xl xl:text-5xl font-semibold tracking-wider text-center text-primary">

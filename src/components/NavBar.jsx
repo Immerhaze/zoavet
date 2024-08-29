@@ -120,28 +120,28 @@ function NavbarMenu() {
         <div className=" px-5 w-1/2 flex flex-row justify-evenly items-center  lg:text-2xl tracking-wide text-primary font-medium">
           <a
             href="/"
-            referrerPolicy="no-referrer"
+            rel="noopener noreferrer"
             className="hover:text-secondary hover:scale-110 transition-all duration-300"
           >
             Inicio
           </a>
           <a
             href="/servicios"
-            referrerPolicy="no-referrer"
+            rel="noopener noreferrer"
             className="hover:text-secondary hover:scale-110 transition-all duration-300"
           >
             Servicios
           </a>
           <a
             href="/equipo"
-            referrerPolicy="no-referrer"
+            rel="noopener noreferrer"
             className="hover:text-secondary hover:scale-110 transition-all duration-300"
           >
             Equipo
           </a>
           <a
             href="/contacto"
-            referrerPolicy="no-referrer"
+            rel="noopener noreferrer"
             className="hover:text-secondary hover:scale-110 transition-all duration-300"
           >
             Contacto
@@ -225,21 +225,21 @@ function NavbarMenu() {
             ></span>
           </div>
           <div className="flex flex-grow flex-col text-2xl md:text-4xl lg:text-5xl text-primary tracking-wide   items-center gap-3 py-3">
-            <a href="/" referrerPolicy="no-referrer">
+            <a href="/" rel="noopener noreferrer">
               Inicio
             </a>
-            <a href="/servicios" referrerPolicy="no-referrer">
+            <a href="/servicios" rel="noopener noreferrer">
               Servicios
             </a>
-            <a href="/equipo" referrerPolicy="no-referrer">
+            <a href="/equipo" rel="noopener noreferrer">
               Equipo
             </a>
-            <a href="/contacto" referrerPolicy="no-referrer">
+            <a href="/contacto" rel="noopener noreferrer">
               Contacto
             </a>
             <a
               href="/contacto"
-              referrerPolicy="no-referrer"
+              rel="noopener noreferrer"
               className="bg-secondary text-lg md:text-xl text-white rounded-full p-3"
             >
               Agendar cita
@@ -258,7 +258,7 @@ function NavbarMenu() {
             <span className="icon-[ph--phone-transfer-duotone] text-3xl md:text-4xl text-secondary"></span>
             <a
               href="tel:6016756195"
-              referrerPolicy="no-referrer"
+              rel="noopener noreferrer"
               className="text-lg md:text-xl font-black tracking-wide"
             >
               (601) 6756195
@@ -268,7 +268,7 @@ function NavbarMenu() {
             <span className="icon-[iconamoon--email-duotone] text-3xl md:text-4xl text-secondary"></span>
             <a
               href="mailto:zoavet@hotmail.com"
-              referrerPolicy="no-referrer"
+              rel="noopener noreferrer"
               className="text-xl md:text-2xl font-black tracking-wide text-center break-all"
             >
               zoavet@hotmail.com
@@ -278,19 +278,19 @@ function NavbarMenu() {
             <a
               href="https://www.instagram.com/zoaveterinarios/"
               target="_blank"
-              referrerPolicy="no-referrer"
+              rel="noopener noreferrer"
               className="icon-[lets-icons--insta-duotone-line] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"
             ></a>
             <a
               href="https://www.facebook.com/zoaveterinarios/?locale=es_LA"
               target="_blank"
-              referrerPolicy="no-referrer"
+              rel="noopener noreferrer"
               className="icon-[ph--facebook-logo-duotone] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300 "
             ></a>
             <a
               href="https://www.linkedin.com/in/z%C3%B3a-cl%C3%ADnica-867a4a218/"
               target="_blank"
-              referrerPolicy="no-referrer"
+              rel="noopener noreferrer"
               className="icon-[ph--linkedin-logo-duotone] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"
             ></a>
           </div>
