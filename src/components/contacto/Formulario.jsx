@@ -186,7 +186,7 @@ export default function ContactForm() {
         <div className="h-full w-full">
           <button
             type="submit"
-            className="group w-2/5 h-10 flex flex-row gap-3 justify-center items-center rounded-full bg-secondary_light hover:bg-secondary border-2 border-secondary text-secondary hover:text-white tracking-wide transition-all duration-300"
+            className="group w-2/5 h-10 flex flex-row gap-3 justify-center items-center rounded-full bg-secondary_light hover:bg-secondary_brand border-2 border-secondary_brand text-secondary_brand hover:text-white tracking-wide transition-all duration-300"
           >
             {processing ? (
               <span className="icon-[svg-spinners--blocks-shuffle-3] text-lg md:text-xl"></span>

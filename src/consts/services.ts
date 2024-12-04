@@ -23,40 +23,11 @@ export const SERVICES_INITIAL = [
   },
 
   {
-    title: "Grooming",
+    title: "Hospitalización",
     img: "/serviceCards/service_grooming.webp",
     alt: "Foto, bulldog recibiendo un baño",
     description:
-      "Nuestros servicios de estética no solo mejoran el aspecto exterior de tu mascota, sino que también promueven su bienestar y felicidad.",
-  },
-];
-
-export const SERVICES_ALL = [
-  {
-    title: "Consulta Medica",
-    img: "/serviceCards/service_consulta.webp",
-    description:
-      "Desde la prevención hasta el tratamiento, nuestra consulta médica garantiza la mejor atención para tu mascota.",
-  },
-  {
-    title: "Urgencias 24/7",
-    img: "/serviceCards/service_urgencia.webp",
-    description:
-      "Desde accidentes hasta problemas de salud repentinos, nuestra atención de urgencias veterinarias está preparada para ofrecer la mejor atención médica en momentos críticos.",
-  },
-
-  {
-    title: "Microchip",
-    img: "/serviceCards/service_microchip2.webp",
-    description:
-      "Garantiza la tranquilidad de saber que tu mascota siempre regresará a casa con nuestro servicio de microchip confiable.",
-  },
-
-  {
-    title: "Grooming",
-    img: "/serviceCards/service_grooming.webp",
-    description:
-      "Descubre cómo nuestros servicios de estética no solo mejoran el aspecto exterior de tu mascota, sino que también promueven su bienestar y felicidad.",
+      "Brindamos un entorno seguro y atención personalizada para garantizar la recuperación óptima de tu mascota durante su hospitalización.",
   },
 ];
 
@@ -139,17 +110,17 @@ export const SERVICE_BANNER = [
       "El microchip asegura la identificación de tu mascota. Con el tamaño de un grano de arroz, se implanta con una simple inyección y se registra en la plataforma Ciudadano de 4 Patas. Facilita la identificación y recuperación en caso de pérdida.",
   },
 
-  {
-    title: "Guardería & Colegio",
-    description:
-      "Disponemos de guarderías campestres en Tenjo y Chía, con instalaciones óptimas y personal capacitado para el cuidado y entretenimiento de tu mascota.",
-  },
+  // {
+  //   title: "Guardería & Colegio",
+  //   description:
+  //     "Disponemos de guarderías campestres en Tenjo y Chía, con instalaciones óptimas y personal capacitado para el cuidado y entretenimiento de tu mascota.",
+  // },
 
   {
-    title: "Grooming",
-    img: "/serviceBanners/grooming.webp",
-    alt: "ilustración, bulldog Frances en una bañera rodeado instrumento de baño",
+    title: "Servicios Especializados",
+    // img: "/serviceBanners/specialized-services.webp",
+    alt: "ilustración de un veterinario colaborando con un especialista en cardiología y comportamiento animal",
     description:
-      "Ofrecemos cuidados completos que incluyen baños, cortes de pelo, limpieza de oídos y recorte de uñas, adaptados a las necesidades de cada animal. Con productos de alta calidad, garantizamos que tu mascota luzca bien y se sienta cómoda.",
+      "En Zoavet, ofrecemos atención especializada a través de colaboraciones con expertos en diversas áreas de la salud animal, como cardiología, comportamiento, y más. Nos aseguramos de que tu mascota reciba la mejor atención, sin importar el tipo de condición, con profesionales altamente capacitados para atender casos complejos.",
   },
 ];

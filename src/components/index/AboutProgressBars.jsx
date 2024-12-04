@@ -15,14 +15,14 @@ export default function ProgressiveBars({
           {!phone && (
             <span
               onClick={() => clic(index)}
-              className="text-nowrap md:text-xl  hover:text-primary cursor-pointer"
+              className="text-nowrap md:text-xl  hover:text-primary_brand cursor-pointer"
             >
               {bar}
             </span>
           )}
           <div onClick={() => clic(index)} className="border-b-2 h-2 relative ">
             <div
-              className="absolute bottom-[-3px] rounded-full left-0 h-full bg-secondary transition-all duration-[100ms]"
+              className="absolute bottom-[-3px] rounded-full left-0 h-full bg-secondary_brand transition-all duration-[100ms]"
               style={{
                 width: index === activeIndex ? `${progress}%` : "0%",
               }}

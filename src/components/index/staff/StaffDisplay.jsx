@@ -21,7 +21,7 @@ const StaffDisplay = () => {
 
   return (
     <div className=" w-full h-full py-5 flex-col text-secondary_dark ">
-      <h1 className="text-4xl md:text-6xl font-medium text-primary p-5">
+      <h1 className="text-4xl md:text-6xl font-medium text-primary_brand p-5">
         Nuestro equipo
       </h1>
       <div className="h-full flex flex-col md:flex-row ">
@@ -33,8 +33,8 @@ const StaffDisplay = () => {
                 onClick={() => handleClick(member)}
                 className={`w-full h-40 lg:h-52 xl:h-64  rounded-xl bg-cover p-6 ${
                   member.id === selectedStaff?.id
-                    ? "shadow-sm shadow-secondary"
-                    : "shadow-sm shadow-primary"
+                    ? "shadow-sm shadow-secondary_brand"
+                    : "shadow-sm shadow-primary_brand"
                 }`}
                 style={{ backgroundImage: `url(${member.image})` }}
               />
@@ -48,7 +48,7 @@ const StaffDisplay = () => {
               alt={`Personal zoavet: ${selectedStaff?.name}`}
               className="rounded-xl w-1/2 -mt-20 shadow-md shadow-secondary_dark mb-5"
             />
-            <h2 className="text-4xl xl:text-5xl font-semibold tracking-wider text-center text-primary">
+            <h2 className="text-4xl xl:text-5xl font-semibold tracking-wider text-center text-primary_brand">
               {selectedStaff?.name}
             </h2>
             <h3 className="text-xl xl:text-2xl font-light tracking-wider mb-3 text-center ">

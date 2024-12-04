@@ -39,13 +39,13 @@ const EmblaCarousel = (props) => {
               className="relative w-full flex-[0_0_100%] sm:flex-[0_0_50%] md:flex-[0_0_33.33%]"
               key={index}
             >
-              <div className="relative h-full flex items-center justify-center lg:flex-col group p-5">
+              <div className="relative h-full flex items-center justify-center lg:flex-col group p-5   transition-transform transform hover:scale-110">
                 <img
                   onMouseEnter={() => setShowTooltip(personal.id)}
                   onMouseLeave={() => setShowTooltip(null)}
                   src={personal.image}
                   alt={`Equipo zoavet: ${personal.name}`}
-                  className="w-3/5 md:w-2/3 lg:w-2/5 xl:w-2/5 *:object-contain object-top rounded-full border-4 border-primary duration-300 aspect-square"
+                  className="w-3/5 md:w-2/3 lg:w-2/5 xl:w-2/5 *:object-contain object-top rounded-full border-4 border-primary_brand duration-300 aspect-square"
                 />
                 <a
                   href={"/equipo"}
@@ -53,7 +53,7 @@ const EmblaCarousel = (props) => {
                   rel="noopener noreferrer"
                   className={`staff-tag select-none cursor-pointer  absolute bottom-0 group-hover:flex animate-fade-in-up animate-duration-300 w-auto  px-5 py-1 flex-col justify-center items-center text-center rounded-2xl bg-white`}
                 >
-                  <span className="text-sm xl:text-base font-bold text-primary tracking-wide">
+                  <span className="text-sm xl:text-base font-bold text-primary_brand tracking-wide">
                     {personal.name}
                   </span>
                   <p className="text-sm xl:text-ms font-normal tracking-wide">
@@ -70,12 +70,12 @@ const EmblaCarousel = (props) => {
         <PrevButton
           onClick={onPrevButtonClick}
           disabled={prevBtnDisabled}
-          className="absolute transition-colors duration-300 lg:bg-white/60 hover:lg:bg-primary text-primary lg:text-primary hover:lg:text-white left-0 cursor-pointer p-0 m-0 w-[2rem] lg:w-[3rem] h-[2rem] lg:h-[3rem]  rounded-full flex items-center justify-center text-body disabled:text-opacity-50 pointer-events-auto"
+          className="absolute transition-colors duration-300 lg:bg-white/60 hover:lg:bg-primary_brand text-primary_brand lg:text-primary_brand hover:lg:text-white left-0 cursor-pointer p-0 m-0 w-[2rem] lg:w-[3rem] h-[2rem] lg:h-[3rem]  rounded-full flex items-center justify-center text-body disabled:text-opacity-50 pointer-events-auto"
         />
         <NextButton
           onClick={onNextButtonClick}
           disabled={nextBtnDisabled}
-          className="absolute transition-colors duration-300 lg:bg-white/60 hover:lg:bg-primary text-primary lg:text-primary hover:lg:text-white right-0 cursor-pointer p-0 m-0 w-[2rem] lg:w-[3rem] h-[2rem] lg:h-[3rem]  rounded-full flex items-center justify-center text-body disabled:text-opacity-50 pointer-events-auto"
+          className="absolute transition-colors duration-300 lg:bg-white/60 hover:lg:bg-primary_brand text-primary_brand lg:text-primary_brand hover:lg:text-white right-0 cursor-pointer p-0 m-0 w-[2rem] lg:w-[3rem] h-[2rem] lg:h-[3rem]  rounded-full flex items-center justify-center text-body disabled:text-opacity-50 pointer-events-auto"
         />
       </div>
     </section>

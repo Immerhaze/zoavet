@@ -17,37 +17,37 @@ export default function AboutCarousel() {
       photographer: "Manja Vitolic",
       profile: "https://unsplash.com/es/@madhatterzone",
       img: "/nosotrosCarousel/gato_verde.webp",
-      alt: "Foto, gato acostado con fondo verde",
+      alt: "Foto de un gato acostado con fondo verde",
       title: "Nosotros",
-      text1: `Zoavet se fundó en 2015 para ofrecer atención domiciliaria de calidad y promover la tenencia responsable de mascotas en Bogotá.`,
-      text2: `En 2019, abrimos nuestro Pet-Spa en Villas de Granada, ampliando los servicios clínicos en 2020 y fortaleciendo nuestra capacidad de atención las 24 horas.`,
+      text1: `Zoavet, fundada en 2015 en Bogotá, comenzó ofreciendo servicios de atención domiciliaria y Pet-Spa en Villas de Granada (2019). En 2020, amplió su portafolio para incluir consultas médicas, hospitalización, cirugías, atención 24/7, entre otros.`,
+      text2: `Actualmente enfrenta el desafío de integrar especialidades médicas, mantener una capacitación continua y brindar excelencia a los tutores de sus hijos de cuatro patas.`,
     },
     {
       photographer: "James Barker",
       profile: "https://unsplash.com/es/@barkernotbaker",
       img: "/nosotrosCarousel/dog_lick.webp",
-      alt: "Foto, Close up de perro lamiéndose el hocico",
+      alt: "Foto de un perro lamiéndose el hocico en primer plano",
       title: "Misión",
-      text1: `Nos dedicamos al cuidado animal y a la tenencia responsable, integrando a las mascotas como parte esencial de las familias.`,
-      text2: `Ofrecemos atención integral con empatía y respeto, buscando siempre superar las expectativas de nuestros clientes.`,
+      text1: `Comprometidos con el cuidado animal y la tenencia responsable, promovemos la formación y actualización constante para garantizar los cuidados básicos de las mascotas.`,
+      text2: `Reconocemos a las mascotas como parte fundamental de las familias y trabajamos con empatía para ofrecer atención profesional e integral.`,
     },
     {
       photographer: "Cong H",
       profile: "https://unsplash.com/es/@houcong",
       img: "/nosotrosCarousel/gato_amarillo.webp",
-      alt: "Foto, gato acostado con fondo amarillo",
+      alt: "Foto de un gato acostado con fondo amarillo",
       title: "Visión",
-      text1: `Nos esforzamos por posicionar la formación de tutores responsables y el rol veterinario como fundamentales en las familias.`,
-      text2: `Buscamos ser referentes en atención médica integral en nuestra ciudad y expandir nuestra misión a otras localidades a largo plazo.`,
+      text1: `Buscamos posicionarnos como un servicio médico veterinario de referencia, promoviendo la formación de tutores responsables y resaltando el rol esencial de las mascotas en las familias.`,
+      text2: `Aspiramos a destacar por la calidad de nuestra atención y la integralidad de nuestros servicios, con la visión de expandirnos a otras ciudades a largo plazo.`,
     },
     {
       photographer: "Alvan Nee",
       profile: "https://unsplash.com/es/@alvannee",
       img: "/nosotrosCarousel/dog_orange.webp",
-      alt: "Foto, perro corgi parado al lado de unas plantas fondo naranja",
+      alt: "Foto de un perro corgi parado al lado de unas plantas con fondo naranja",
       title: "Valores",
-      text1: `En Zoavet, nos guiamos por valores de responsabilidad, respeto y atención integral.`,
-      text2: `Promovemos la tenencia responsable, actuamos con transparencia y ética, y nos comprometemos con el bienestar animal y la satisfacción de nuestros clientes.`,
+      text1: `En Zoavet, nos guiamos por valores de empatía, integridad y compromiso con el cuidado animal.`,
+      text2: `Fomentamos la tenencia responsable, actuamos con rigor científico y ética, y trabajamos para garantizar el bienestar animal y la confianza de nuestros clientes.`,
     },
   ];
 
@@ -96,37 +96,40 @@ export default function AboutCarousel() {
 
   return (
     <div className="about-cont h-screen md:h-auto w-full mt-10">
-      <div className="embla h-5/6 " ref={emblaRef}>
+      <div className="embla h-5/6" ref={emblaRef}>
         <div className="embla__container h-full">
           {aboutUs.map((slide, index) => (
             <div
               key={index}
-              className="embla__slide h-full  flex flex-col-reverse md:items-center lg:flex-row"
+              className="embla__slide h-full flex flex-col-reverse md:flex-row items-center md:items-stretch"
             >
-              <div className="h-2/5 md:h-full w-full flex flex-col justify-center items-center md:items-start  p-2 md:px-5 ">
+              {/* Image Section */}
+              <div className="h-2/5 md:h-full w-full flex flex-col justify-center items-center p-3 md:p-5">
                 <img
                   src={slide.img}
                   alt={slide.alt}
-                  className="w-full md:w-full  md:h-auto md:rounded-xl"
+                  className="w-full md:w-4/5 lg:w-full max-h-64 md:max-h-full object-cover rounded-lg"
                 />
-                <p className=" h-5 text-xs text-slate-300 md:pl-5 ">
-                  &copy; Foto por
+                <p className="text-xs text-slate-400 mt-2 md:mt-3">
+                  &copy; Foto por{" "}
                   <a href={slide.profile} className="font-semibold underline">
                     {slide.photographer}
                   </a>
                 </p>
               </div>
-              <div className="w-full h-3/5 gap-3 md:px-5 md:h-full flex flex-col md:justify-center xl:h-full p-3 ">
-                <h3 className="text-base md:text-lg lg:text-xl self-start ">
+
+              {/* Text Section */}
+              <div className="w-full h-3/5 md:h-full p-5 flex flex-col justify-center">
+                <h3 className="text-sm md:text-lg text-primary_brand mb-2">
                   Sobre nosotros
                 </h3>
-                <h2 className="text-2xl md:text-4xl lg:text-5xl  font-semibold tracking-wide  text-primary">
+                <h2 className="text-xl md:text-3xl lg:text-4xl font-semibold mb-4">
                   {slide.title}
                 </h2>
-                <p className="text-base  md:text-lg lg:text-xl   font-light lg:w-4/5 ">
+                <p className="text-sm md:text-base lg:text-lg font-light mb-3">
                   {slide.text1}
                 </p>
-                <p className="text-base md:text-lg lg:text-xl  font-light lg:w-4/5">
+                <p className="text-sm mb-4 md:text-base lg:text-lg font-light">
                   {slide.text2}
                 </p>
               </div>
@@ -134,7 +137,9 @@ export default function AboutCarousel() {
           ))}
         </div>
       </div>
-      <div className="md:hidden h-1/6 initial-bars">
+
+      {/* Progress Bars - Mobile */}
+      <div className="md:hidden h-1/6">
         <AboutProgressBars
           phone={true}
           activeIndex={activeIndex}
@@ -142,7 +147,9 @@ export default function AboutCarousel() {
           clic={JumpToSlide}
         />
       </div>
-      <div className="h-1/6 hidden md:flex text-2xl font-semibold  lg:justify-center tracking-wide">
+
+      {/* Progress Bars - Tablet & Desktop */}
+      <div className="hidden md:flex h-1/6 justify-center items-center">
         <AboutProgressBars
           activeIndex={activeIndex}
           progress={progress}

@@ -8,17 +8,45 @@ import ServiciosSteps from "@/sections/servicios/ServiciosSteps.astro"
 import Footer from '@/sections/Footer.astro';
 ---
 
-<Layout description=`Zoavet es una clínica veterinaria que cuneta con todo tipo de servicios de alud para tus mascotas,
- ofreciendo servicios desde consultas y prevención hasta urgencias.` title="Zoavet- Servicios">
-    <ServiciosHero/>
-    <main>
+<Layout description="Zoavet es una clínica veterinaria que cuenta con todo tipo de servicios de salud para tus mascotas, ofreciendo servicios desde consultas y prevención hasta urgencias." title="Zoavet - Servicios">
+  <span class="w-full h-full text-left m-16">
+    <h2 class="service-title text-center text-4xl md:text-7xl font-extralight text-secondary_dark animate-fade-in-up animate-delay-200 animate-duration-300">
+      Medicina <span class="font-medium text-primary_brand">Preventiva</span>
+    </h2>
+    <p class="text-left text-lg text-gray-700 mt-4 mx-4 max-w-2xl  md:mx-auto">
+      En Zoavet, creemos firmemente en la importancia de la medicina preventiva para asegurar la salud y bienestar de tu mascota. A continuación, podrás ver la lista de servicios integrales disponibles en nuestra clínica para mantener a tu compañero saludable.
+    </p>
+  </span>
+  <main>
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 mx-4 max-w-7xl md:mx-auto">
+      <!-- Domiciliary Visits Section -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="/serviceBanners/domiciliary-visit.webp" alt="Veterinario visitando una mascota en su hogar" class="w-full h-64 object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-primary_brand">Visitas Domiciliarias</h3>
+          <p class="text-gray-700 mt-2">Nuestro equipo de médicos veterinarios puede visitar tu hogar para brindar atención médica personalizada a tu mascota en la comodidad de tu casa.</p>
+          <a href="/agendamiento" class="mt-4 inline-block bg-primary_brand text-white py-2 px-6 rounded-lg text-lg font-semibold hover:bg-primary_brand-dark transition">Solicitar Visita</a>
+        </div>
+      </div>
+  
+      <!-- Telemedicine Consultations Section -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <img src="/serviceBanners/telemedicine-consult.webp" alt="Consulta veterinaria por video llamada" class="w-full h-64 object-cover" />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-primary_brand">Consultas por Telemedicina</h3>
+          <p class="text-gray-700 mt-2">Con las consultas por telemedicina, puedes acceder a una atención de calidad para tu mascota sin salir de casa. ¡Agendamos tu consulta en línea rápidamente!</p>
+          <a href="/agendamiento" class="mt-4 inline-block bg-primary_brand text-white py-2 px-6 rounded-lg text-lg font-semibold hover:bg-primary_brand-dark transition">Agendar Consulta</a>
+        </div>
+      </div>
+    </section>
     <ServiciosBanners/>
     <ServiciosStaff/>
     <ServiciosTech/>
     <ServiciosSteps/>
-    </main>
-    <Footer/>
+  </main>
+  <Footer/>
 </Layout>
+
 <script>
   import gsap from "gsap"; 
   import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -141,7 +169,7 @@ gsap.fromTo(".staff-title",
     y: 0, // End at the normal position
     opacity: 1, // End fully visible
     scrollTrigger: {
-      trigger: ".banner-12",
+      trigger: ".banner-11",
       start: "top top",
       end: "top top",
       toggleActions: "play none none none",
@@ -159,7 +187,7 @@ gsap.fromTo(".staff-title",
     y: 0, // End at the normal position
     opacity: 1, // End fully visible
     scrollTrigger: {
-      trigger: ".banner-12",
+      trigger: ".banner-11",
       start: "top top",
       end: "top top",
       toggleActions: "play none none none",

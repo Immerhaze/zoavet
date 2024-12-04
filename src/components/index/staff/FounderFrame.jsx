@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 export default function FounderFrame({ image, id, name, designation }) {
   return (
-    <div className="w-full h-full flex flex-col md:flex-row justify-center items-center lg:justify-start gap-1 p-5 lg:pl-[10%]">
+    <div className="w-full h-full flex flex-col md:flex-row justify-center items-center lg:justify-start gap-1 p-5 lg:pl-[10%]  transition-transform transform hover:scale-105">
       <img
         src={image}
         alt={`Co-fundador/a: ${name}`}
-        className="w-2/3 md:w-2/5 lg:w-1/3 object-contain object-top rounded-full border-4 border-secondary/80 transition-all duration-300 aspect-square"
+        className="w-2/3 md:w-2/5 lg:w-1/3 object-contain object-top rounded-full border-4 border-secondary_brand/80 transition-all duration-300 aspect-square"
       />
       <a
         href="/equipo"
@@ -14,7 +14,7 @@ export default function FounderFrame({ image, id, name, designation }) {
         rel="noopener noreferrer"
         className="founder-tag cursor-pointer flex w-full md:w-auto px-5 py-1 flex-col justify-center items-center text-center rounded-2xl bg-white"
       >
-        <span className="text-base font-bold text-secondary tracking-wide">
+        <span className="text-base font-bold text-secondary_brand tracking-wide">
           {name}
         </span>
         <p className="text-sm font-normal tracking-wide">{designation}</p>

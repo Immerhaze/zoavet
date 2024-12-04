@@ -13,20 +13,20 @@ export const SLIDES = [
   },
   {
     id: 3,
-    name: "Marilin Ocampo",
-    designation: "Estilista Canino",
+    name: "Tania Caro",
+    designation: "M. Veterinaria",
     image: "/staff/man7.webp",
   },
   {
     id: 4,
-    name: "Alexandra Salazar",
+    name: "Juanita Gomez",
     designation: "M. Veterinaria",
     image: "/staff/man1.webp",
   },
   {
     id: 5,
-    name: "Lorena Tenjo",
-    designation: "Técnico Auxiliar",
+    name: "Alejandra Becerra ",
+    designation: "Auxiliar Veterinaria",
     image: "/staff/man4.webp",
   },
 ];
@@ -53,7 +53,7 @@ export const staffCard = [
     designation: "Jefe Veterinario & Co-fundadora",
     image: "/staff/large/man1.webp",
     description:
-      "Nuestra Jefe Veterinaria y Co-Fundadora. Se graduó en la Universidad Nacional de Colombia con un título en Medicina Veterinaria. Con más de 15 años de experiencia en el cuidado de animales, su pasión por la veterinaria y su liderazgo han sido fundamentales para el crecimiento de nuestra clínica.",
+      "Médico Veterinario y Zootecnista de la UDCA (2015), especialista en Epidemiología Veterinaria (2016). Realizó residencia en cirugía en UFPEL, Brasil, con enfoque en cirugía de tejidos blandos y ecografía abdominal. Actualmente, cursa la Maestría en Clínica Médica y Quirúrgica de Pequeños Animales en la Universidad del Tolima, con énfasis en Cardiología. Miembro aspirante de la Sociedad Colombiana de Cardiología Veterinaria y directora médica y fundadora de Zoavet.",
   },
   {
     id: 2,
@@ -61,30 +61,30 @@ export const staffCard = [
     designation: "Jefe Veterinario & Co-fundadora",
     image: "/staff/large/man2.webp",
     description:
-      "Jefe Veterinario y Co-Fundador, obtuvo su título en la Universidad de los Andes. Su experiencia en cirugía veterinaria y su dedicación al bienestar animal son invaluables para nuestro equipo. Su compromiso con la excelencia es la base de nuestra práctica.",
+      "Filósofo de la Universidad Nacional, actualmente es estudiante de medicina veterinaria y zootecnia en la Fundación Universitaria San Martin con alta proyección en el manejo de pacientes felinos. Miembro  fundador de ZOAVET",
   },
   {
     id: 3,
-    name: "Marilin Ocampo",
+    name: "Tania Caro",
     designation: "Estilista Canino",
     image: "/staff/large/man3.webp",
     description:
-      "Estilista Canina, formada en el Instituto de Belleza Canina de Bogotá. Su habilidad en el estilismo y cuidado estético de los perros asegura que cada mascota luzca y se sienta maravillosa. Marilin tiene un toque especial que transforma el aspecto de cada peludo.",
+      "Médico  Veterinario y Zootecnista de la Universidad del Tolima del 2022. Su práctica clínica se ha enfocado en el manejo de hospital y cuidado critico, es pionera en el manejo Cat Friendly instaurado en ZOAVET. Actualmente es estudiante de la maestría de Clínica medica y quirúrgica de pequeños animales con énfasis en la profundización en Nefrourologia veterinaria.",
   },
   {
     id: 4,
-    name: "Alexandra Salazar",
+    name: "Juanita Gomez",
     designation: "M. Veterinaria",
     image: "/staff/large/man4.webp",
     description:
-      "M. Veterinaria, graduada en la Universidad de Caldas. Con experiencia en diversas áreas de la medicina veterinaria, Alexandra se dedica a brindar atención especializada y compasiva a nuestras mascotas.",
+      "Médico veterinario de la Universidad Agraria de Colombia del 2024  realizó sus prácticas bajo el servicio quirúrgico del Dr Sergio Andres Moreno Prada, actualmente es nuestra médico Junior, su enfoque clínico está dado hacia el liderazgo en el quirófano,el manejo de heridas y la anestesia en ZOAVET.",
   },
   {
     id: 5,
-    name: "Lorena Tenjo",
+    name: "Alejandra Becerra",
     designation: "Técnico Auxiliar",
     image: "/staff/large/man5.webp",
     description:
-      "Técnico Auxiliar en nuestra clínica, se formó en el Centro de Formación Técnica de Veterinaria. Su apoyo en procedimientos y cuidados diarios es esencial para el funcionamiento eficiente de nuestra clínica.",
+      "Auxiliar Veterinaria de la Corporación Universitaria Nacional CEN, Actualmente se desempeña como lider de auxiliares en ZOAVET, se caracteriza por su empatía con los pacientes y el manejo organizacional de las áreas de hospital y quirófano.",
   },
 ];

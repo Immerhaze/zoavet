@@ -1,0 +1,39 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Footer from '@/sections/Footer.astro';
+---
+
+<Layout title="Zoavet - Tour Virtual de la Clínica" description="Explora nuestra clínica veterinaria de manera virtual con el tour en 3D. Conoce nuestras instalaciones y servicios de manera interactiva.">
+  <section class="bg-primary_white text-gray-800 font-sans p-6 min-h-screen flex flex-col items-center justify-between">
+    <!-- Sección de Encabezado -->
+    <div class="text-center mb-6">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-fredoka text-primary_brand">
+        Tour Virtual 3D de Nuestra Clínica
+      </h1>
+    </div>
+
+    <!-- Sección del Tour 3D -->
+    <section class="relative flex-1 w-full max-w-full mx-auto p-6 sm:p-8 lg:p-12">
+      <div class="aspect-w-16 aspect-h-9 shadow-lg rounded-lg overflow-hidden w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh]">
+        <!-- Google Street View 3D Tour Embed (Sample Public Location) -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!4v1611838377892!6m8!1m7!1sCAoSLEFGMVFpcE9aaER6dWdGZTgzVmRveGlRYlV0a3lWTGpNRXB3S1BQbTl2dm9F!2m2!1d40.748817!2d-73.985428!3f23.3!4f1.5!5f0.1"
+          width="100%"
+          height="100%"
+          style="border:0; border-radius: 8px;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+      <p class="text-center text-gray-600 mt-4 text-sm sm:text-base">Explora nuestras instalaciones y navega por la clínica con un solo clic. ¡Haz clic y arrastra para moverte!</p>
+    </section>
+
+    <!-- Llamada a la Acción -->
+    <section class="text-center mt-6">
+      <a href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=40.748817,-73.985428" target="_blank" class="bg-primary_brand text-white py-3 px-8 rounded-lg text-lg sm:text-xl font-bold hover:bg-primary_brand-dark transition duration-200">
+        Abrir Tour en Pantalla Completa
+      </a>
+    </section>
+  </section>
+  <Footer/>
+</Layout>

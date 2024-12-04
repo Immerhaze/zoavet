@@ -8,7 +8,7 @@ const StaffDisplay = () => {
     designation: "Jefe Veterinario & Co-fundadora",
     image: "/staff/large/man1.webp",
     description:
-      "Nuestra Jefe Veterinaria y Co-Fundadora. Se graduó en la Universidad Nacional de Colombia con un título en Medicina Veterinaria. Con más de 15 años de experiencia en el cuidado de animales, su pasión por la veterinaria y su liderazgo han sido fundamentales para el crecimiento de nuestra clínica.",
+      "Médico Veterinario y Zootecnista de la UDCA (2015), especialista en Epidemiología Veterinaria (2016). Realizó residencia en cirugía en UFPEL, Brasil, con enfoque en cirugía de tejidos blandos y ecografía abdominal. Actualmente, cursa la Maestría en Clínica Médica y Quirúrgica de Pequeños Animales en la Universidad del Tolima, con énfasis en Cardiología. Miembro aspirante de la Sociedad Colombiana de Cardiología Veterinaria y directora médica y fundadora de Zoavet.",
   });
 
   const handleClick = (staffMember) => {
@@ -17,55 +17,59 @@ const StaffDisplay = () => {
 
   return (
     <div className="w-full h-auto lg:h-screen flex-col text-secondary_dark">
-      <div className="h-1/6 flex items-center p-5">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-medium text-primary">
+      {/* Header */}
+      <div className="h-1/6 flex items-center justify-center p-5">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-primary_brand">
           Equipo Zoavet
         </h1>
       </div>
+
+      {/* Main Content */}
       <div className="h-5/6 flex flex-col lg:flex-row">
-        <div className="lg:w-3/5 flex flex-row items-stretch flex-wrap   px-2">
+        {/* Staff Cards */}
+        <div className="lg:w-3/5 grid grid-cols-2 sm:grid-cols-3 gap-4 p-4">
           {staffCard.map((member) => (
             <div
-              className={`w-1/3 cursor-pointer p-2 aspect-square`}
               key={member.id}
+              className="cursor-pointer"
+              onClick={() => handleClick(member)}
             >
               <div
-                onClick={() => handleClick(member)}
-                className={`h-32 md:h-full max-w-full lg:h-64  hover:shadow-md hover:shadow-secondary transition-all duration-300  bg-top rounded-xl bg-cover ${
+                className={`aspect-w-1 aspect-h-1 lg:h-64 bg-cover rounded-xl transition-all duration-300 ${
                   member.id === selectedStaff?.id
-                    ? "shadow-md shadow-secondary"
-                    : "shadow-md shadow-primary"
+                    ? "shadow-lg shadow-secondary_brand"
+                    : "shadow-md shadow-primary_brand"
                 }`}
                 style={{ backgroundImage: `url(${member.image})` }}
               />
             </div>
           ))}
         </div>
-        <div className="lg:w-2/5 h-full flex justify-center items-end px-5 py-5">
-          <div className="w-full h-4/5 rounded-xl  bg-primary_light flex flex-col justify-center items-center md:p-2">
-            <span className="flex justify-center items-center w-full h-2/5 lg:-mt-48">
+
+        {/* Selected Staff Details */}
+        <div className="lg:w-2/5 flex flex-col justify-between items-center p-4 lg:p-8 min-h-[500px]">
+          <div className="w-full bg-primary_light rounded-xl shadow-lg p-4 flex flex-col justify-between h-full">
+            {/* Image */}
+            <div className="w-full h-56 sm:h-64 md:h-72 lg:h-80 mb-4">
               <img
                 src={selectedStaff?.image}
                 alt={`Personal zoavet: ${selectedStaff?.name}`}
-                className="rounded-xl h-48 lg:h-full  shadow-md shadow-secondary_dark mb-3"
+                className="w-full h-full object-cover rounded-xl shadow-md"
               />
-            </span>
-            <span className="w-full h-1/5">
-              <h2 className="text-2xl lg:text-4xl font-semibold tracking-wider text-center text-primary">
+            </div>
+
+            {/* Text Content */}
+            <div className="flex flex-col h-full space-y-3 overflow-hidden">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-primary_brand leading-tight">
                 {selectedStaff?.name}
               </h2>
-              <h3 className="text-base md:text-lg  font-light tracking-wider mb-3 text-center">
+              <h3 className="text-sm sm:text-base md:text-lg font-light text-primary_brand">
                 {selectedStaff?.designation}
               </h3>
-            </span>
-            <span className="w-full h-2/5">
-              <p
-                className="font-medium  text-base md:text-lg lg:text-xl 
-              px-2 md:px-3 lg:px-5  tracking-wide text-left pb-3"
-              >
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-primary_text_light">
                 {selectedStaff?.description}
               </p>
-            </span>
+            </div>
           </div>
         </div>
       </div>

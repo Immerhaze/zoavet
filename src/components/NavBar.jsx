@@ -115,32 +115,46 @@ function NavbarMenu() {
             />
           </svg>
         </div>
-        <div className=" px-5 w-1/2 flex flex-row justify-evenly items-center  lg:text-2xl tracking-wide text-primary font-medium">
+        <div className="px-5 w-3/4 flex flex-row justify-evenly items-center  lg:text-2xl tracking-wide text-primary_brand font-medium">
           <a
             href="/"
             rel="noopener noreferrer"
-            className="hover:text-secondary hover:scale-110 transition-all duration-300"
+            className="hover:text-secondary_brand hover:scale-110 transition-all duration-300"
           >
             Inicio
           </a>
           <a
             href="/servicios"
             rel="noopener noreferrer"
-            className="hover:text-secondary hover:scale-110 transition-all duration-300"
+            className="hover:text-secondary_brand hover:scale-110 transition-all duration-300"
           >
             Servicios
           </a>
           <a
             href="/equipo"
             rel="noopener noreferrer"
-            className="hover:text-secondary hover:scale-110 transition-all duration-300"
+            className="hover:text-secondary_brand hover:scale-110 transition-all duration-300"
           >
             Equipo
           </a>
           <a
+            href="/instalaciones"
+            rel="noopener noreferrer"
+            className="hover:text-secondary_brand hover:scale-110 transition-all duration-300"
+          >
+            Instalaciones
+          </a>
+          <a
+            href="/fqa"
+            rel="noopener noreferrer"
+            className="hover:text-secondary_brand hover:scale-110 transition-all duration-300"
+          >
+            FQA
+          </a>
+          <a
             href="/contacto"
             rel="noopener noreferrer"
-            className="hover:text-secondary hover:scale-110 transition-all duration-300"
+            className="hover:text-secondary_brand hover:scale-110 transition-all duration-300"
           >
             Contacto
           </a>
@@ -222,7 +236,7 @@ function NavbarMenu() {
               className="icon-[line-md--menu-to-close-alt-transition] absolute right-5  top-5  text-4xl md:text-6xl"
             ></span>
           </div>
-          <div className="flex flex-grow flex-col text-2xl md:text-4xl lg:text-5xl text-primary tracking-wide   items-center gap-3 py-3">
+          <div className="flex flex-grow flex-col text-2xl md:text-4xl lg:text-5xl text-primary_brand tracking-wide   items-center gap-3 py-3">
             <a href="/" rel="noopener noreferrer">
               Inicio
             </a>
@@ -236,9 +250,9 @@ function NavbarMenu() {
               Contacto
             </a>
             <a
-              href="/contacto"
+              href="/agendamiento"
               rel="noopener noreferrer"
-              className="bg-secondary text-lg md:text-xl text-white rounded-full p-3"
+              className="bg-secondary_brand text-lg md:text-xl text-white rounded-full p-3"
             >
               Agendar cita
             </a>
@@ -246,14 +260,14 @@ function NavbarMenu() {
         </div>
         <div className="w-full h-2/3 flex flex-col justify-center items-center gap-5">
           <div className="w-full flex flex-col justify-center items-center px-10">
-            <span className="icon-[ph--map-pin-area-duotone] text-4xl md:text-4xl text-secondary"></span>
+            <span className="icon-[ph--map-pin-area-duotone] text-4xl md:text-4xl text-secondary_brand"></span>
             <p className="text-xl text-center md:text-2xlw-full flex flex-col font-black tracking-wide">
               Carrera 113 #77-30 - <span>Villas De Granada,</span>
               <span>Bogotá</span>
             </p>
           </div>
           <div className="flex justify-center items-center">
-            <span className="icon-[ph--phone-transfer-duotone] text-3xl md:text-4xl text-secondary"></span>
+            <span className="icon-[ph--phone-transfer-duotone] text-3xl md:text-4xl text-secondary_brand"></span>
             <a
               href="tel:6016756195"
               rel="noopener noreferrer"
@@ -263,7 +277,7 @@ function NavbarMenu() {
             </a>
           </div>
           <div className="flex justify-center items-center">
-            <span className="icon-[iconamoon--email-duotone] text-3xl md:text-4xl text-secondary"></span>
+            <span className="icon-[iconamoon--email-duotone] text-3xl md:text-4xl text-secondary_brand"></span>
             <a
               href="mailto:zoavet@hotmail.com"
               rel="noopener noreferrer"

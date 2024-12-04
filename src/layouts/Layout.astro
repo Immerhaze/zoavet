@@ -37,11 +37,11 @@ const { title, description } = Astro.props;
       <NavbarMenu  client:load/>
 			<slot />
       <div class="fixed right-0 top-1/2 flex flex-col gap-5 justify-center items-center">
-        <a title="link whatsapp" href="https://wa.me/573046029130" target="_blank" rel="noopener noreferrer" class="whatsapp-general group flex justify-center items-center p-2 bg-white shadow-sm lg:hover:shadow-primary border-[0.5px] border-primary_light z-50 rounded-tl-xl rounded-bl-xl transition-shadow duration-300">
-          <span class="icon-[ph--whatsapp-logo-duotone] text-6xl text-primary lg:group-hover:scale-110 transition-all duration-300"></span>
+        <a title="link whatsapp" href="https://wa.me/573046029130" target="_blank" rel="noopener noreferrer" class="whatsapp-general group flex justify-center items-center p-2 bg-white shadow-sm lg:hover:shadow-primary_brand border-[0.5px] border-primary_light z-50 rounded-tl-xl rounded-bl-xl transition-shadow duration-300">
+          <span class="icon-[ph--whatsapp-logo-duotone] text-6xl text-primary_brand lg:group-hover:scale-110 transition-all duration-300"></span>
         </a>
-        <a title="link contacto"  href="/contacto" class=" group whatsapp-general hidden lg:flex justify-center items-center p-2 bg-white shadow-sm hover:shadow-secondary border-[0.5px] border-primary_light z-50 rounded-tl-xl rounded-bl-xl transition-shadow duration-300">
-          <span class="icon-[ph--first-aid-duotone] text-6xl text-secondary group-hover:scale-110 transition-all duration-300"></span>
+        <a title="Agendar"  href="/agendamiento" class=" group whatsapp-general hidden lg:flex justify-center items-center p-2 bg-white shadow-sm hover:shadow-secondary_brand border-[0.5px] border-primary_light z-50 rounded-tl-xl rounded-bl-xl transition-shadow duration-300">
+          <span class="icon-[iconamoon--calendar-remove-duotone] text-6xl text-secondary_brand group-hover:scale-110 transition-all duration-300"></span>
         </a>
       </div>
 		</div>
@@ -49,10 +49,10 @@ const { title, description } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--color-primary: #60a09a;
-		--color-primary-light:#e1f0ee;
-		--color-secondary: #e67658;
-		--color-secondary-light: #fae4de;
+		--color-primary_brand: #60a09a;
+		--color-primary_brand-light:#e1f0ee;
+		--color-secondary_brand: #e67658;
+		--color-secondary_brand-light: #fae4de;
 		--color-dark: #5E5D5C;
 
 	}

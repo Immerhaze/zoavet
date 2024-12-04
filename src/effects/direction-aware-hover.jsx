@@ -28,14 +28,14 @@ export const DirectionAwareHover = ({
             className={cn(" h-full w-full object-cover scale-[1.15]")}
             src={imageUrl}
           />
-          <div className="w-[100%] py-2  absolute bottom-0 flex flex-col md:flex-row   items-center gap-2 bg-primary/90 px-10">
+          <div className="w-[100%] py-2  absolute bottom-0 flex flex-col md:flex-row   items-center gap-2 bg-primary_brand/90 px-10">
             <h2 className="w-full text-center md:text-left lg:text-center  text-2xl md:text-4xl  font-black text-white ">
               {cardTitle}
             </h2>
             <a
-              href={"/contacto"}
+              href={"/agendamiento"}
               rel="noopener noreferrer"
-              className="lg:hidden p-2 flex flex-row justify-center items-center rounded-full gap-2 border-2 border-secondary bg-secondary lg:bg-secondary_light lg:hover:bg-secondary  text-white lg:text-secondary lg:hover:text-white tracking-wide transition-all duration-300"
+              className="lg:hidden p-2 flex flex-row justify-center items-center rounded-full gap-2 border-2 border-secondary_brand bg-secondary_brand lg:bg-secondary_light lg:hover:bg-secondary_brand  text-white lg:text-secondary_brand lg:hover:text-white tracking-wide transition-all duration-300"
             >
               <span className="icon-[ph--arrow-square-in-duotone]  text-lg md:text-xl"></span>
               <p className="font-semibold text-lg md:text-xl">
@@ -57,9 +57,9 @@ export const DirectionAwareHover = ({
           </p>
           <div className="w-full flex justify-center items-center group ">
             <a
-              href={"/contacto"}
+              href={"/agendamiento"}
               rel="noopener noreferrer"
-              className="group/primarybtn px-3 py-1 flex flex-row justify-center items-center lg:mr-10 rounded-full gap-2 border-2 border-secondary bg-secondary lg:bg-secondary_light lg:hover:bg-secondary  text-white lg:text-secondary lg:hover:text-white tracking-wide transition-all duration-300"
+              className="group/primarybtn px-3 py-1 flex flex-row justify-center items-center lg:mr-10 rounded-full gap-2 border-2 border-secondary_brand bg-secondary_brand lg:bg-secondary_light lg:hover:bg-secondary_brand  text-white lg:text-secondary_brand lg:hover:text-white tracking-wide transition-all duration-300"
             >
               <span
                 className={`icon-[ph--arrow-square-in-duotone] group-hover/primarybtn:hidden text-xl`}
