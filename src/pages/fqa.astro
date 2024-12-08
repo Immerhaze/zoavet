@@ -29,6 +29,7 @@ import Footer from '@/sections/Footer.astro';
       </div>
     </section>
 
+    <!-- Sección de Testimonios -->
     <Testimonials client:load />
 
     <!-- Sección de Colaboración con ONGs -->
@@ -63,27 +64,41 @@ import Footer from '@/sections/Footer.astro';
     <!-- Sección de Preguntas Frecuentes con Acordeones -->
     <section class="mb-10 mx-4">
       <h2 class="text-2xl font-fredoka text-secondary_brand mb-4">Preguntas Frecuentes</h2>
-      <Accordion preguntas={[ 
-        { pregunta: "¿Por qué son importantes las visitas regulares al veterinario?", respuesta: "Las visitas regulares al veterinario son esenciales para detectar enfermedades a tiempo y asegurar un cuidado preventivo adecuado. Esto ayuda a mantener a tu mascota saludable y mejora su calidad de vida." },
-        { pregunta: "¿Cuáles vacunas son indispensables?", respuesta: "Vacunas esenciales como la rabia, moquillo y parvovirus son cruciales para todas las mascotas. Consulta con tu veterinario para recomendaciones específicas según la edad y salud de tu mascota." },
-        { pregunta: "¿Cómo puedo mantener a mi mascota en forma?", respuesta: "El ejercicio diario y una dieta balanceada son clave para la salud física y mental de tu mascota. Consulta a tu veterinario para obtener consejos personalizados según la raza y edad de tu mascota." }
+      <Accordion preguntas={[
+        { pregunta: "¿Qué cuidados necesita una mascota recién adoptada?", respuesta: "Es importante programar una revisión veterinaria inicial, establecer un plan de vacunas y desparasitación, y preparar un entorno seguro y cómodo." },
+        { pregunta: "¿Cómo identificar si mi mascota está enferma?", respuesta: "Signos como cambios en el apetito, letargo, vómitos, diarrea, o comportamientos inusuales pueden indicar enfermedad. Consulta con un veterinario si notas algo inusual." },
+        { pregunta: "¿Por qué es importante esterilizar o castrar a mi mascota?", respuesta: "Ayuda a prevenir problemas de salud, reduce comportamientos no deseados, y contribuye al control de la población animal." },
+        { pregunta: "¿Qué debe incluir una dieta equilibrada para mi mascota?", respuesta: "Debe incluir proteínas, carbohidratos, grasas, vitaminas y minerales en cantidades adecuadas. Consulta con un veterinario para una dieta específica." },
+        { pregunta: "¿Cómo mantener la salud dental de mi mascota?", respuesta: "Cepilla sus dientes regularmente con productos específicos para mascotas y ofrece juguetes o snacks que promuevan la salud bucal." }
       ]} client:load />
     </section>
 
-    <!-- Sección de Blog -->
+    <!-- Sección de Consejos -->
     <section class="mx-4">
       <h2 class="text-2xl font-fredoka text-secondary_brand mb-4">Consejos para la Tenencia Responsable</h2>
       <ul class="space-y-6">
         <li class="p-4 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-          <h3 class="text-xl font-bold text-gray-800">La Importancia del Cuidado Preventivo</h3>
-          <p class="text-gray-600 mt-2">Las visitas regulares al veterinario, vacunaciones y un estilo de vida saludable contribuyen a una vida larga y feliz para tu mascota.</p>
+          <h3 class="text-xl font-bold text-gray-800">Cuidado Regular</h3>
+          <p class="text-gray-600 mt-2">Programa visitas periódicas al veterinario y mantén al día las vacunas de tu mascota.</p>
         </li>
         <li class="p-4 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-          <h3 class="text-xl font-bold text-gray-800">Nutrición Saludable para Mascotas</h3>
-          <p class="text-gray-600 mt-2">Las dietas balanceadas varían según el tipo de mascota, edad y estado de salud. Siempre consulta a tu veterinario para obtener las mejores recomendaciones dietéticas.</p>
+          <h3 class="text-xl font-bold text-gray-800">Ejercicio Diario</h3>
+          <p class="text-gray-600 mt-2">Asegúrate de que tu mascota reciba suficiente ejercicio para mantenerla activa y saludable.</p>
+        </li>
+        <li class="p-4 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+          <h3 class="text-xl font-bold text-gray-800">Identificación Adecuada</h3>
+          <p class="text-gray-600 mt-2">Usa un collar con identificación y considera implantar un microchip para mayor seguridad.</p>
+        </li>
+        <li class="p-4 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+          <h3 class="text-xl font-bold text-gray-800">Socialización</h3>
+          <p class="text-gray-600 mt-2">Socializa a tu mascota desde temprana edad para que sea amistosa y se adapte bien a diferentes entornos.</p>
+        </li>
+        <li class="p-4 border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+          <h3 class="text-xl font-bold text-gray-800">Ambiente Seguro</h3>
+          <p class="text-gray-600 mt-2">Asegúrate de que el hogar esté libre de peligros y proporciónale un espacio cómodo y seguro.</p>
         </li>
       </ul>
     </section>
   </section>
-  <Footer/>
+  <Footer />
 </Layout>
