@@ -1,29 +1,38 @@
 ---
 import SpecialistCard from '../../components/index/SpecialistCards';
-
+import EmblaCarousel from '@/components/index/staff/EmblaCarousel';
 const specialists = [
-  { name: "Dr. Alex Ramos", specialty: "Cardiología", description: "Especialista en cardiología felina y canina." },
-  { name: "Dra. Marta Gil", specialty: "Neurología", description: "Tratamientos avanzados en neurocirugía veterinaria." },
-  { name: "Dr. Hugo Lara", specialty: "Oncología", description: "Especialista en terapias oncológicas y cuidados paliativos." },
-  { name: "Dra. Carla Méndez", specialty: "Oftalmología", description: "Experta en tratamientos oculares para mascotas." },
-  { name: "Dr. Luis Torres", specialty: "Dermatología", description: "Enfocado en problemas dermatológicos crónicos." },
-  { name: "Dra. Sofía Vargas", specialty: "Cirugía Ortopédica", description: "Especialista en cirugías ortopédicas avanzadas." },
-  { name: "Dr. Pablo Morales", specialty: "Endocrinología", description: "Tratamiento de enfermedades hormonales." },
-  { name: "Dra. Irene Salazar", specialty: "Nutrición", description: "Planes nutricionales personalizados." },
+  { name: "Dr. Alex Ramos", designation: "Cardiología", description: "Especialista en cardiología felina y canina." },
+  { name: "Dra. Marta Gil", designation: "Neurología", description: "Tratamientos avanzados en neurocirugía veterinaria." },
+  { name: "Dr. Hugo Lara", designation: "Oncología", description: "Especialista en terapias oncológicas y cuidados paliativos." },
+  { name: "Dra. Carla Méndez", designation: "Oftalmología", description: "Experta en tratamientos oculares para mascotas." },
+  { name: "Dr. Luis Torres", designation: "Dermatología", description: "Enfocado en problemas dermatológicos crónicos." },
+  { name: "Dra. Sofía Vargas", designation: "Cirugía Ortopédica", description: "Especialista en cirugías ortopédicas avanzadas." },
+  { name: "Dr. Pablo Morales", designation: "Endocrinología", description: "Tratamiento de enfermedades hormonales." },
+  { name: "Dra. Irene Salazar", designation: "Nutrición", description: "Planes nutricionales personalizados." },
 ];
 ---
-<section class="w-full lg:h-screen  px-5">
+<section class="w-full lg:h-full px-5">
   <div class="min-w-full h-auto py-16 bg-primary_light rounded-2xl overflow-visible p-3">
-    <h1 class="uppercase text-center  text-2xl md:text-4xl lg:text-5xl  font-semibold tracking-wide  text-primary_brand mb-3">
-     Especialistas Colaboradores
-  </h1>
+    <h1 class="uppercase text-center text-2xl md:text-4xl lg:text-5xl font-semibold tracking-wide text-primary_brand mb-3">
+      Especialistas Colaboradores
+    </h1>
     <p class="text-center text-black font-semibold mb-12">
       Especialistas que colaboran con Zóavet en tratamientos avanzados.
     </p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-      {specialists.map(specialist => (
-        <SpecialistCard name={specialist.name} specialty={specialist.specialty} description={specialist.description} />
+    <!-- Desktop and Tablet Grid -->
+    <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+      {specialists.map((specialist) => (
+        <SpecialistCard
+          name={specialist.name}
+          specialty={specialist.designation}
+          description={specialist.description}
+        />
       ))}
+    </div>
+    <!-- Mobile Carousel -->
+    <div class="md:hidden">
+      <EmblaCarousel slides={specialists} client:load />
     </div>
   </div>
 </section>

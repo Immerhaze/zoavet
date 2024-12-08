@@ -1,0 +1,42 @@
+---
+const methods = [
+  {title:'Todas las Tarjetas', icon:"icon-[material-symbols--credit-score-outline]"},
+  { icon:"/public/pagos/sistecredito.png"},
+  { icon:"/public/pagos/paypal.svg"},
+  {icon:"/public/pagos/mercado.png"},
+]
+
+---
+
+
+
+<section class="bg-primary_light p-8 rounded-xl mx-2 md:mx-5 my-16">
+  <div class="text-center mb-12">
+    <h2 class="text-primary_brand text-3xl md:text-4xl lg:text-5xl text-primary_text_light font-semibold">
+      Métodos de pago seguros y confiables
+    </h2>
+    <p class="text-sm md:text-base text-secondary_text_light mt-4">
+      Ofrecemos diversas opciones para que puedas pagar con comodidad y seguridad. ¡Elige el que prefieras!
+    </p>
+  </div>
+
+  <div class="flex justify-center items-center gap-12 flex-wrap">
+    {methods.map((method) => (
+      <div
+        class="flex flex-col items-center justify-center w-full bg-white rounded-xl border-2 border-transparent hover:scale-105 transition-all duration-300"
+      >
+        {method.icon.startsWith("icon-") ? (
+          <i class={`text-6xl ${method.icon}`} />
+        ) : (
+          <img
+            src={method.icon}
+            class="w-32 h-32 object-contain transition-transform transform hover:scale-110"
+            alt={method.title}
+          />
+        )}
+        <p class="text-2xl font-semibold text-primary_text_light">{method.title}</p>
+      </div>
+    ))}
+  </div>
+</section>
+

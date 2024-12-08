@@ -69,7 +69,7 @@ function NavbarMenu() {
   return (
     <>
       <div className="navbar w-screen select-none hidden  h-24  z-50 lg:flex lg:fixed top-0 left-0  bg-white  border-b-[1px] border-primary_light/60">
-        <div className="w-1/2 flex justify-center items-center">
+        <div className="flex justify-center items-center">
           <svg
             id="navbar-logo"
             className={`logo-big-nav w-3/5 h-20 `}
@@ -115,7 +115,7 @@ function NavbarMenu() {
             />
           </svg>
         </div>
-        <div className="px-5 w-3/4 flex flex-row justify-evenly items-center  lg:text-2xl tracking-wide text-primary_brand font-medium">
+        <div className="px-5 w-3/4 flex flex-row justify-evenly items-center gap-4  lg:text-2xl tracking-wide text-primary_brand font-medium">
           <a
             href="/"
             rel="noopener noreferrer"
@@ -145,18 +145,18 @@ function NavbarMenu() {
             Instalaciones
           </a>
           <a
-            href="/fqa"
-            rel="noopener noreferrer"
-            className="hover:text-secondary_brand hover:scale-110 transition-all duration-300"
-          >
-            FQA
-          </a>
-          <a
             href="/contacto"
             rel="noopener noreferrer"
             className="hover:text-secondary_brand hover:scale-110 transition-all duration-300"
           >
             Contacto
+          </a>
+          <a
+            href="/fqa"
+            rel="noopener noreferrer"
+            className="hover:text-secondary_brand hover:scale-110 transition-all duration-300"
+          >
+            FQA
           </a>
         </div>
       </div>
@@ -227,7 +227,7 @@ function NavbarMenu() {
           MobileMenuOpen ? "flex" : "hidden"
         }  xl:hidden`}
       >
-        <div className="w-full  h-1/3">
+        <div className="w-full  h-full">
           <div className="h-20 flex justify-center items-center text-2xl md:text-4xl lg:text-5xl pr-5 text-secondary_dark tracking-wide font font-semibold uppercase gap-1">
             <span className="icon-[ph--bone-duotone]"></span>
             Menu
@@ -246,8 +246,17 @@ function NavbarMenu() {
             <a href="/equipo" rel="noopener noreferrer">
               Equipo
             </a>
+            <a href="/instalaciones" rel="noopener noreferrer">
+              Instalaciones
+            </a>
+            <a href="/fqa" rel="noopener noreferrer">
+              Equipo
+            </a>
             <a href="/contacto" rel="noopener noreferrer">
               Contacto
+            </a>
+            <a href="/fqa" rel="noopener noreferrer">
+              FQA
             </a>
             <a
               href="/agendamiento"
@@ -285,26 +294,6 @@ function NavbarMenu() {
             >
               zoavet@hotmail.com
             </a>
-          </div>
-          <div className="w-full flex flex-row items-start justify-around px-5 text-secondary_dark ">
-            <a
-              href="https://www.instagram.com/zoaveterinarios/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-[lets-icons--insta-duotone-line] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"
-            ></a>
-            <a
-              href="https://www.facebook.com/zoaveterinarios/?locale=es_LA"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-[ph--facebook-logo-duotone] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300 "
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/z%C3%B3a-cl%C3%ADnica-867a4a218/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-[ph--linkedin-logo-duotone] text-5xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"
-            ></a>
           </div>
         </div>
       </div>
