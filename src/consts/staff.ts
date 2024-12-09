@@ -66,7 +66,7 @@ export const staffCard = [
   {
     id: 3,
     name: "Tania Caro",
-    designation: "Estilista Canino",
+    designation: "Medico Veterinaria",
     image: "/staff/large/man3.webp",
     description:
       "Médico  Veterinario y Zootecnista de la Universidad del Tolima del 2022. Su práctica clínica se ha enfocado en el manejo de hospital y cuidado critico, es pionera en el manejo Cat Friendly instaurado en ZOAVET. Actualmente es estudiante de la maestría de Clínica medica y quirúrgica de pequeños animales con énfasis en la profundización en Nefrourologia veterinaria.",
