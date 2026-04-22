@@ -1,13 +1,12 @@
 ---
-import PrimaryButton  from "@/components/primaryButton.astro"
+import PrimaryButton from "@/components/primaryButton.astro"
 ---
-<section class="bg-secondary_light/30  group p-5 rounded-xl mx-2 md:mx-5">
-    <div class="flex flex-col gap-3 text-center  text-secondary_brand font-medium">
-        <p class="text-2xl md:text-4xl lg:text-5xl tracking-wide">Al confiar el cuidado de tu mascota a nuestro equipo de profesionales veterinarios dedicados, puedes estar seguro de que está en manos expertas y afectuosas.</>
-        <div class="w-full h-full flex flex-col justify-center items-center gap-4">
-            <div class="w-full flex justify-center my-10">
-                <PrimaryButton title="Agendar cita" icon="icon-[streamline--add-circle]" href="/agendamiento" />
-            </div>
-        </div>
-    </div>
-  </section>
+
+<section class="w-full px-4 md:px-5 py-12">
+  <div class="rounded-3xl bg-primary_light p-8 md:p-12 flex flex-col items-center text-center gap-6">
+    <p class="text-xl md:text-2xl lg:text-3xl font-semibold text-secondary_dark max-w-2xl leading-relaxed">
+      Al confiar el cuidado de tu mascota a nuestro equipo, puedes estar seguro de que está en manos expertas y afectuosas.
+    </p>
+    <PrimaryButton title="Agendar cita" icon="icon-[streamline--add-circle]" href="/agendamiento" />
+  </div>
+</section>

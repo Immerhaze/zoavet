@@ -1,6 +1,5 @@
 ---
 import '@fontsource-variable/space-grotesk';
-import Footer from '@/sections/Footer.astro';
 import NavbarMenu from '@/components/NavBar';
 interface Props {
 	title: string;
@@ -33,15 +32,18 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="bg-primary_white">
-    <div class="max-w-7xl mx-auto lg:pt-24">
+    <div class="max-w-7xl mx-auto lg:pt-20">
       <NavbarMenu  client:load/>
 			<slot />
-      <div class="fixed right-0 top-1/2 flex flex-col gap-5 justify-center items-center">
-        <a title="link whatsapp" href="https://wa.me/573046029130" target="_blank" rel="noopener noreferrer" class="whatsapp-general group flex justify-center items-center p-2 bg-white shadow-sm lg:hover:shadow-primary_brand border-[0.5px] border-primary_light z-50 rounded-tl-xl rounded-bl-xl transition-shadow duration-300">
-          <span class="icon-[ph--whatsapp-logo-duotone] text-6xl text-primary_brand lg:group-hover:scale-110 transition-all duration-300"></span>
+      <!-- Floating action buttons -->
+      <div class="fixed right-0 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-40">
+        <a title="WhatsApp" href="https://wa.me/573046029130" target="_blank" rel="noopener noreferrer"
+          class="whatsapp-general group flex justify-center items-center w-12 h-12 bg-white shadow-md border border-primary_light/60 rounded-tl-xl rounded-bl-xl hover:w-14 transition-all duration-300">
+          <span class="icon-[ph--whatsapp-logo-duotone] text-3xl text-primary_brand group-hover:scale-110 transition-all duration-300"></span>
         </a>
-        <a title="Agendar"  href="/agendamiento" class=" group whatsapp-general hidden lg:flex justify-center items-center p-2 bg-white shadow-sm hover:shadow-secondary_brand border-[0.5px] border-primary_light z-50 rounded-tl-xl rounded-bl-xl transition-shadow duration-300">
-          <span class="icon-[iconamoon--calendar-remove-duotone] text-6xl text-secondary_brand group-hover:scale-110 transition-all duration-300"></span>
+        <a title="Agendar cita" href="/agendamiento"
+          class="whatsapp-general group hidden lg:flex justify-center items-center w-12 h-12 bg-white shadow-md border border-primary_light/60 rounded-tl-xl rounded-bl-xl hover:w-14 transition-all duration-300">
+          <span class="icon-[iconamoon--calendar-remove-duotone] text-3xl text-secondary_brand group-hover:scale-110 transition-all duration-300"></span>
         </a>
       </div>
 		</div>

@@ -2,93 +2,117 @@
 import LogoZoa from "@/icons/logo_zoa.astro";
 
 const currentYear = new Date().getFullYear();
----
-<section class="w-full  p-2 md:p-5 z-10">
-<div class="w-full lg:h-auto rounded-3xl p-5  bg-primary_light flex flex-col
-   items-center lg:items-start ">
-   <div class="h-1/6 w-full mb-10 flex justify-center items-center md:items-start pb-5">
-      <LogoZoa logoClassName="w-4/6 lg:w-2/6"/>
-    </div>
-    <div class="w-full h-4/6 flex flex-col lg:flex-row lg:mb-10 ">
-      <div class="lg:w-2/3 w-full h-full flex flex-row">
-        <div class="w-1/2 flex flex-col">
-          <div class="w-full list-none flex flex-col text-lg md:text-lg  lg:text-xl tracking-wide font-normal text-primary_brand">
-            <span class="flex items-center text-[#5E5D5C]">
-              <h2 class="uppercase tracking-wide font-bold flex items-center text-2xl">
-                Menu
-                <span class="icon-[ph--bone-duotone] text-2xl"></span>
-              </h2>
-            </span>
-            <span class="py-2 lg:hover:font-medium transition-all duration-300">
-              <a href="/">Inicio</a>
-            </span>
-            <span class="py-2 lg:hover:font-medium transition-all duration-300">
-              <a href="/servicios">Servicios</a>
-            </span>
-            <span class="py-2 lg:hover:font-medium transition-all duration-300">
-              <a href="/equipo">Equipo</a>
-            </span>
-            <span class="py-2 lg:hover:font-medium transition-all duration-300">
-              <a href="/instalaciones">Instalaciones</a>
-            </span>
-            <span class="py-2 lg:hover:font-medium transition-all duration-300">
-              <a href="/contacto">Contacto</a>
-            </span>
-            <span class="py-2 lg:hover:font-medium transition-all duration-300">
-              <a href="/fqa">FQA</a>
-            </span>
-          </div>
-        </div>
-        <div class="w-1/2 break-all ">
-          <ul class="w-full list-none flex flex-col items-start font-light text-primary_brand gap-5">
-            <li class="flex items-center text-[#5E5D5C]">
-              <div class="uppercase tracking-wide font-bold text-2xl  flex items-center gap-2">
-                <span class="icon-[iconamoon--clock-duotone] text-2xl"></span>
-                Horarios
-              </div>
-            </li>
-            <li class="flex flex-col text-base md:text-lg  lg:text-xl ">
-              <h3 class="font-semibold">8:00 am - 7:00 pm</h3>
-              <span class="text-xs md:text-lg  text-secondary_brand font-semibold tracking-wide">Lunes a Domingo</span>
-            </li>
-            <li class="flex flex-col text-lg md:text-lg  lg:text-xl">
-              <h3 class="font-semibold">Urgencias</h3>
-              <span class="text-xs md:text-lg  text-secondary_brand font-semibold tracking-wide">24/7</span>
-            </li>
-            <li><p class="text-sm md:text-lg  lg:text-xl text-secondary_dark font-black tracking-wide text-center">
-              zoavet@hotmail.com
-            </p></li>
-            <li>
-              <p class="text-lg md:text-lg  lg:text-xl text-secondary_dark font-black tracking-wide">
-                (601) 6756195
-              </p>
-            </li>
-            <li>
-              <p class="text-base md:text-lg  lg:text-xl text-secondary_dark w-full flex flex-col font-black tracking-wide">
-                <span class="icon-[ph--map-pin-area-duotone] text-secondary_brand text-3xl"></span>Carrera 113 #77-30 - <span>
-                  Villas De Granada, 
-                </span>
-                <span>
-                  Bogotá
-                </span>
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="lg:w-1/3 w-full flex flex-col justify-center items-center my-5 lg:mt-0">
-        <div class="w-full flex flex-row  justify-around  items-center text-secondary_dark  lg:my-5">
-          <a aria-label="Ir a instagram " href="https://www.instagram.com/zoaveterinarios/" target="_blank" rel="noopener noreferrer" class="icon-[lets-icons--insta-duotone-line] text-4xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"></a>
-          <a aria-label="Ir a facebook" href="https://www.facebook.com/zoaveterinarios/?locale=es_LA" target="_blank" rel="noopener noreferrer" class="icon-[ph--facebook-logo-duotone] text-4xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300 "></a>
-          <a aria-label="Ir a linkedin" href="https://www.linkedin.com/in/z%C3%B3a-cl%C3%ADnica-867a4a218/" target="_blank" rel="noopener noreferrer" class="icon-[ph--linkedin-logo-duotone] text-4xl cursor-pointer lg:hover:scale-110 lg:hover:text-secondary_dark/60 transition-all duration-300"></a>
-        </div>
-        <iframe title="Mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.30169041661!2d-74.12693442399332!3d4.717565795257519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8357fed2c7a7%3A0x2cfcf2ddd4318cf1!2sZoavet%20Cl%C3%ADnica%20Veterinaria!5e0!3m2!1ses-419!2scl!4v1723820529747!5m2!1ses-419!2scl" class="border-4 border-primary_brand lg:hover:border-secondary_brand transition-all duration-300 border-double p-2 rounded-xl mt-5 lg:mt-0" width="100%" height="100%"  allowfullscreen="" loading="lazy"  referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-<div class="w-full h-1/6 pt-5 flex flex-col gap-5 md:flex-row justify-center items-center md:justify-between px-2 md:px-0 md:items-start border-t-4 border-white rounded-2xl">
-  <p class=" text-xs md:text-sm lg:text-ms text-center md:text-left font-semibold text-slate-500 tracking-wide" >&copy; {currentYear} Zoa Veterinaria. Todos los derechos reservados.</p>
-  <p class=" text-xs md:text-sm lg:text-ms font-semibold text-slate-500 tracking-wide" >Pagina web por <a  href="https://www.linkedin.com/in/nicolas-romero--nicode/" target="_blank" rel="noopener noreferrer" class="text-secondary_brand hover:text-primary_brand transition-colors duration-300">NicolasCode</a></p>
-</div>
-</div>
-</section>
 
+const navLinks = [
+  { href: "/", label: "Inicio" },
+  { href: "/servicios", label: "Servicios" },
+  { href: "/equipo", label: "Equipo" },
+  { href: "/instalaciones", label: "Instalaciones" },
+  { href: "/contacto", label: "Contacto" },
+  { href: "/fqa", label: "FQA" },
+];
+---
+
+<footer class="w-full px-4 md:px-5 pb-5 pt-4">
+  <div class="w-full rounded-3xl bg-primary_light p-6 md:p-10">
+
+    <!-- Top: Logo + tagline -->
+    <div class="mb-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <LogoZoa logoClassName="w-36 md:w-44" />
+      <p class="text-sm text-secondary_dark/60 font-light max-w-xs">
+        Clínica veterinaria con tecnología de punta y personal especializado en Bogotá.
+      </p>
+    </div>
+
+    <!-- Grid: nav, info, map -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+
+      <!-- Navigation -->
+      <div>
+        <h3 class="text-xs font-semibold tracking-[0.15em] uppercase text-secondary_dark mb-4">Navegación</h3>
+        <ul class="flex flex-col gap-2.5">
+          {navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-sm text-secondary_dark/70 hover:text-primary_brand transition-colors duration-200"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Contact & Hours -->
+      <div>
+        <h3 class="text-xs font-semibold tracking-[0.15em] uppercase text-secondary_dark mb-4">Contacto</h3>
+        <ul class="flex flex-col gap-3">
+          <li class="flex flex-col">
+            <span class="text-xs font-semibold text-secondary_dark/50 uppercase tracking-wide mb-0.5">Horario</span>
+            <span class="text-sm text-secondary_dark font-medium">8:00 am – 7:00 pm</span>
+            <span class="text-xs text-secondary_brand font-semibold">Lunes a Domingo</span>
+          </li>
+          <li class="flex flex-col">
+            <span class="text-xs font-semibold text-secondary_dark/50 uppercase tracking-wide mb-0.5">Urgencias</span>
+            <span class="text-sm text-secondary_dark font-medium">24/7</span>
+          </li>
+          <li>
+            <a href="mailto:zoavet@hotmail.com" class="text-sm text-secondary_dark/70 hover:text-primary_brand transition-colors duration-200 break-all">
+              zoavet@hotmail.com
+            </a>
+          </li>
+          <li>
+            <a href="tel:6016756195" class="text-sm text-secondary_dark/70 hover:text-primary_brand transition-colors duration-200">
+              (601) 675 6195
+            </a>
+          </li>
+          <li class="flex gap-1.5 flex-col">
+            <span class="text-xs font-semibold text-secondary_dark/50 uppercase tracking-wide">Dirección</span>
+            <span class="text-sm text-secondary_dark/70">Carrera 113 #77-30</span>
+            <span class="text-sm text-secondary_dark/70">Villas De Granada, Bogotá</span>
+          </li>
+        </ul>
+
+        <!-- Social links -->
+        <div class="flex gap-4 mt-5">
+          <a aria-label="Instagram" href="https://www.instagram.com/zoaveterinarios/" target="_blank" rel="noopener noreferrer"
+            class="icon-[lets-icons--insta-duotone-line] text-2xl text-secondary_dark/50 hover:text-primary_brand transition-colors duration-200"></a>
+          <a aria-label="Facebook" href="https://www.facebook.com/zoaveterinarios/?locale=es_LA" target="_blank" rel="noopener noreferrer"
+            class="icon-[ph--facebook-logo-duotone] text-2xl text-secondary_dark/50 hover:text-primary_brand transition-colors duration-200"></a>
+          <a aria-label="LinkedIn" href="https://www.linkedin.com/in/z%C3%B3a-cl%C3%ADnica-867a4a218/" target="_blank" rel="noopener noreferrer"
+            class="icon-[ph--linkedin-logo-duotone] text-2xl text-secondary_dark/50 hover:text-primary_brand transition-colors duration-200"></a>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="sm:col-span-2 lg:col-span-1">
+        <h3 class="text-xs font-semibold tracking-[0.15em] uppercase text-secondary_dark mb-4">Ubicación</h3>
+        <div class="rounded-2xl overflow-hidden border border-primary_brand/20 h-48 md:h-56">
+          <iframe
+            title="Mapa Zoavet"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.30169041661!2d-74.12693442399332!3d4.717565795257519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8357fed2c7a7%3A0x2cfcf2ddd4318cf1!2sZoavet%20Cl%C3%ADnica%20Veterinaria!5e0!3m2!1ses-419!2scl!4v1723820529747!5m2!1ses-419!2scl"
+            class="w-full h-full"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="pt-6 border-t border-white/80 flex flex-col sm:flex-row gap-2 items-center justify-between">
+      <p class="text-xs text-secondary_dark/40 font-medium">
+        &copy; {currentYear} Zoavet Clínica Veterinaria. Todos los derechos reservados.
+      </p>
+      <p class="text-xs text-secondary_dark/40">
+        Sitio web por
+        <a href="https://www.linkedin.com/in/nicolas-romero--nicode/" target="_blank" rel="noopener noreferrer"
+          class="text-secondary_brand hover:text-primary_brand transition-colors duration-200 font-semibold">
+          NicolasCode
+        </a>
+      </p>
+    </div>
+  </div>
+</footer>

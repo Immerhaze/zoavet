@@ -2,27 +2,32 @@
 import PrimaryButton from "@/components/primaryButton.astro"
 ---
 
-<section class="w-full bg-gradient-to-b from-primary_white from-5% to-primary_light md:bg-white flex flex-col md:flex-row mt-20 gap-5 md:gap-0 md:p-5 rounded-2xl">
-    <span class="md:hidden block">
-        <h1 class="staff-title uppercase text-center text-2xl md:text-4xl lg:text-5xl font-semibold text-primary_brand tracking-wider">
-            Somos Zoavet
-        </h1>
-    </span>
-    <div class="w-full h-1/2 md:w-2/3 overflow-visible -mb-32 md:mb-0 z-20">
-        <img alt="Equipo zoavet" class="w-full h-full object-contain rounded-bl-xl rounded-br-xl" src="/serviceBanners/staff.webp" />
+<section class="w-full px-4 md:px-5 py-16">
+  <div class="rounded-3xl bg-primary_light overflow-hidden flex flex-col md:flex-row items-stretch">
+    <!-- Image -->
+    <div class="md:w-1/2 lg:w-3/5 overflow-hidden">
+      <img
+        alt="Equipo Zoavet"
+        class="w-full h-64 md:h-full object-cover object-top"
+        src="/serviceBanners/staff.webp"
+      />
     </div>
-    <div class="bg-white md:bg-transparent md:w-1/3 flex flex-col lg:justify-center items-center gap-3 p-2 m-2 rounded-xl pt-28 md:py-5 pb-5 10">
-        <span class="hidden md:block">
-            <h1 class="staff-title uppercase text-center text-2xl md:text-4xl lg:text-5xl font-semibold text-primary_brand tracking-wider">
-                Somos Zoavet
-            </h1>
-        </span>
-        <p class="staff-p text-base md:text-lg lg:text-xl text-left tracking-wider text-secondary_dark">
-            El compromiso de nuestro equipo va más allá del cuidado médico; nos esforzamos por crear un ambiente cálido y acogedor tanto para las mascotas como para sus guardianes.
-        </p>
-        <p class="staff-p text-base md:text-lg lg:text-xl  text-left tracking-wider text-secondary_dark pb-5">
-            Cada miembro de nuestro equipo aporta una combinación única de habilidades, experiencia y cariño, lo que nos permite ofrecer un servicio integral y personalizado.
-        </p>
-        <PrimaryButton title="Equipo Zoa" icon="icon-[streamline--add-circle]" href="/equipo" />
+
+    <!-- Text -->
+    <div class="md:w-1/2 lg:w-2/5 p-6 md:p-10 flex flex-col justify-center gap-4">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-secondary_brand">Quiénes somos</p>
+      <h2 class="staff-title text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-secondary_dark">
+        Somos Zoavet
+      </h2>
+      <p class="staff-p text-sm md:text-base text-secondary_dark/70 font-light leading-relaxed">
+        El compromiso de nuestro equipo va más allá del cuidado médico; nos esforzamos por crear un ambiente cálido y acogedor tanto para las mascotas como para sus guardianes.
+      </p>
+      <p class="staff-p text-sm md:text-base text-secondary_dark/70 font-light leading-relaxed">
+        Cada miembro aporta una combinación única de habilidades, experiencia y cariño, permitiéndonos ofrecer un servicio integral y personalizado.
+      </p>
+      <div class="pt-2">
+        <PrimaryButton title="Conoce al equipo" icon="icon-[streamline--add-circle]" href="/equipo" />
+      </div>
     </div>
+  </div>
 </section>

@@ -1,12 +1,12 @@
 ---
 let {icon, title, href} = Astro.props;
-import { cn } from "@/utils/cn";
 ---
-<a href={href}  rel="noopener noreferrer"  class="group/primarybtn p-3 flex flex-row justify-center items-center lg:mr-10 rounded-full gap-2 border-2 border-secondary_brand bg-secondary_brand lg:bg-secondary_light lg:hover:bg-secondary_brand  text-white lg:text-secondary_brand lg:hover:text-white tracking-wide transition-all duration-300">
-  <span
-    class={`${icon} group-hover/primarybtn:hidden text-lg md:text-xl`}
-  ></span>
-  <span class="icon-[line-md--compass-twotone-loop] hidden group-hover/primarybtn:block  text-lg md:text-xl"></span>
-  <p class="font-semibold text-lg md:text-xl">{title}</p>
+<a
+  href={href}
+  rel="noopener noreferrer"
+  class="group/primarybtn inline-flex items-center gap-2.5 px-6 py-3 rounded-full border-2 border-secondary_brand bg-transparent text-secondary_brand hover:bg-secondary_brand hover:text-white font-semibold text-base tracking-wide transition-all duration-300"
+>
+  <span class={`${icon} group-hover/primarybtn:hidden text-lg`}></span>
+  <span class="icon-[ph--arrow-right] hidden group-hover/primarybtn:block text-lg transition-transform group-hover/primarybtn:translate-x-0.5"></span>
+  <span>{title}</span>
 </a>
-

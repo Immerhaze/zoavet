@@ -4,33 +4,37 @@ import { SERVICES_INITIAL } from '@/consts/services';
 import PrimaryButton from '@/components/primaryButton.astro'
 ---
 
-<div class="w-full flex flex-col gap-3 p-5">
-  <div class="w-full h-1/6 flex flex-col justify-evenly">
-    <h1 class="service-title uppercase text-left text-2xl md:text-4xl lg:text-5xl font-semibold tracking-wide text-primary_brand mb-6">
-      Atención Salud Veterinaria Integral
-    </h1>
-    <p class="w-full text-base md:text-lg lg:text-xl tracking-wide leading-relaxed font-light">
-      Creemos en la prevención como base del cuidado animal. Ante la enfermedad, ofrecemos atención integral con apoyo de especialistas y la familia, priorizando la calidad de vida y una recuperación óptima como miembro de la familia.
+<section class="w-full px-5 py-16">
+  <!-- Section header -->
+  <div class="mb-12">
+    <p class="text-xs font-semibold tracking-[0.2em] uppercase text-secondary_brand mb-3">Nuestros servicios</p>
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-secondary_dark leading-tight mb-5">
+      Atención Veterinaria<br class="hidden md:block"/> Integral
+    </h2>
+    <p class="max-w-2xl text-base md:text-lg text-secondary_dark/70 font-light leading-relaxed">
+      Creemos en la prevención como base del cuidado animal. Ante la enfermedad, ofrecemos atención integral con apoyo de especialistas y la familia, priorizando la calidad de vida y una recuperación óptima.
     </p>
   </div>
-  <div class="flex flex-col">
-    <div class="cards flex flex-col lg:flex-row justify-center items-center lg:items-start lg:flex-wrap">
-      {SERVICES_INITIAL.map((service, index) => (
-        <ServiceCards
-          serviceImg={service.img}
-          title={service.title}
-          description={service.description}
-          index={index}
-          alt={service.alt}
-        />
-      ))}
-    </div>
-    <div class="w-full flex justify-center items-center lg:my-10">
-      <PrimaryButton
-        title="Más servicios"
-        icon="icon-[streamline--add-circle]"
-        href="/servicios"
+
+  <!-- Cards grid -->
+  <div class="flex flex-col lg:flex-row flex-wrap justify-center items-center lg:items-start gap-0">
+    {SERVICES_INITIAL.map((service, index) => (
+      <ServiceCards
+        serviceImg={service.img}
+        title={service.title}
+        description={service.description}
+        index={index}
+        alt={service.alt}
       />
-    </div>
+    ))}
   </div>
-</div>
+
+  <!-- CTA -->
+  <div class="flex justify-center mt-10">
+    <PrimaryButton
+      title="Ver todos los servicios"
+      icon="icon-[streamline--add-circle]"
+      href="/servicios"
+    />
+  </div>
+</section>

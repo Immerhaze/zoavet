@@ -1,21 +1,26 @@
 ---
 ---
 
-<section class="h-screen rounded-bl-xl rounded-br-xl lg:h-auto w-full p-2 md:p-5 ">
-    <div class="p-2 md:p-5 bg-secondary_light flex flex-col rounded-2xl  max-h-screen md:h-full w-full">
-      <span class="tech-title flex justify-center items-center mb-3">
-        <h1 class="service-title uppercase text-left text-2xl md:text-4xl lg:text-5xl font-semibold text-secondary_brand tracking-wider">
-            Tecnologías
-          </h1>
-      </span>
-      <div class="md:h-full w-full flex flex-col justify-center items-center md:flex-row relative">
-        <p class="tech-p text-base md:text-lg lg:text-xl  md:w-1/2  text-left tracking-wider text-secondary_brand ">
-          Nuestros productos y servicios diagnósticos han transformado la forma en que recopilamos e interpretamos la información veterinaria, aprovechando nuestra experiencia en el campo. Contamos con tecnología de vanguardia para ofrecer servicios completos: laboratorio, ecografía, cirugía, hospitalización y anestesia.
-        </p>
-      <span class="w-full flex justify-end items-center md:w-1/2 md:-ml-10">
-        <img alt="Ilustracion, equipo de laboratorio" src={'/serviceBanners/tech.webp'} class="tech w-[70%] md:h-[80%]  md:tech-img"/>
-      </span>
-      </div>
+<section class="w-full px-4 md:px-5 py-8">
+  <div class="rounded-3xl bg-secondary_light p-6 md:p-10 flex flex-col md:flex-row items-center gap-8">
+    <!-- Text -->
+    <div class="w-full md:w-1/2 flex flex-col gap-4">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-secondary_brand">Infraestructura</p>
+      <h2 class="tech-title text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-secondary_dark">
+        Tecnología de punta
+      </h2>
+      <p class="tech-p text-sm md:text-base text-secondary_dark/70 font-light leading-relaxed">
+        Nuestros servicios diagnósticos aprovechan tecnología de vanguardia para ofrecer atención completa: laboratorio, ecografía, cirugía, hospitalización y anestesia.
+      </p>
     </div>
-  </section>
-  
+
+    <!-- Image -->
+    <div class="w-full md:w-1/2 flex justify-center items-center">
+      <img
+        alt="Equipo de laboratorio Zoavet"
+        src="/serviceBanners/tech.webp"
+        class="tech w-full max-w-sm object-contain"
+      />
+    </div>
+  </div>
+</section>

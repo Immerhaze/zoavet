@@ -3,31 +3,54 @@ import Layout from "@/layouts/Layout.astro";
 import ContactForm from "@/components/contacto/Formulario";
 import { ContactItem } from "@/components/contacto/ContacItem";
 import Footer from "@/sections/Footer.astro";
-const contactArray = [
-    {icon: "icon-[ph--phone-transfer-duotone]", title: "Llama ya", description: "(601) 6756 195", href: "tel:6016756195"},
-    {icon: "icon-[ph--whatsapp-logo-duotone]", title: "Enlace directo", description: "Whatsapp", href: "https://wa.me/573046029130"},
-    {icon: "icon-[ph--instagram-logo-duotone]", title: "Enlace directo", description: "Instagram", href: "https://www.instagram.com/zoaveterinarios/"},
-    {icon: "icon-[iconamoon--email-duotone]", title: "Escríbenos", description: "zoavet@hotmail.com", href: "mailto:zoavet@hotmail.com"},
-];
 
+const contactArray = [
+    { icon: "icon-[ph--phone-transfer-duotone]", title: "Llámanos", description: "(601) 6756 195", href: "tel:6016756195" },
+    { icon: "icon-[ph--whatsapp-logo-duotone]", title: "WhatsApp", description: "Escríbenos directo", href: "https://wa.me/573046029130" },
+    { icon: "icon-[ph--instagram-logo-duotone]", title: "Instagram", description: "@zoaveterinarios", href: "https://www.instagram.com/zoaveterinarios/" },
+    { icon: "icon-[iconamoon--email-duotone]", title: "Email", description: "zoavet@hotmail.com", href: "mailto:zoavet@hotmail.com" },
+];
 ---
 
-<Layout title="Zoavet | Contacto" description="Zoavet - contcatanos por cualquiera de esteos medios.">
-    <section class="w-full flex flex-col justify-center items-center p-2">
-            <div class="h-1/3 w-full" >
-                <iframe title="Mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.30169041661!2d-74.12693442399332!3d4.717565795257519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8357fed2c7a7%3A0x2cfcf2ddd4318cf1!2sZoavet%20Cl%C3%ADnica%20Veterinaria!5e0!3m2!1ses-419!2scl!4v1723820529747!5m2!1ses-419!2scl" width="100%" height="100%" class="rounded-2xl border-4 border-double border-primary_brand hover:border-secondary_brand" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class=" md:h-2/3 w-full  rounded-2xl bg-primary_light ">
-            <div class=" w-full flex justify-center items-center py-3"><h1 class="text-2xl md:text-4xl lg:text-5xl font-semibold text-primary_brand py-3">Contacto</h1></div>
-            <div class="flex-grow flex flex-col lg:flex-row pb-5">
-                <div class= "lg:w-1/2">
-                <ContactForm client:load/>
-                </div>
-                <div class="lg:w-1/2  flex flex-wrap">
-                    {contactArray.map((item, index) => (
-                      <ContactItem  item={item} client:load />
-                    ))}
-                  </div>
-            </div>
-    </section>
+<Layout title="Zoavet | Contacto" description="Zoavet - contáctanos por cualquiera de estos medios.">
+  <section class="w-full px-4 md:px-5 pt-8 pb-4 flex flex-col gap-6">
+
+    <!-- Map -->
+    <div class="w-full h-64 md:h-80 rounded-3xl overflow-hidden border border-primary_light">
+      <iframe
+        title="Mapa Zoavet"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.30169041661!2d-74.12693442399332!3d4.717565795257519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f8357fed2c7a7%3A0x2cfcf2ddd4318cf1!2sZoavet%20Cl%C3%ADnica%20Veterinaria!5e0!3m2!1ses-419!2scl!4v1723820529747!5m2!1ses-419!2scl"
+        width="100%"
+        height="100%"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <!-- Contact section -->
+    <div class="w-full rounded-3xl bg-primary_light p-6 md:p-10">
+      <!-- Header -->
+      <div class="mb-8">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-secondary_brand mb-3">Escríbenos</p>
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-secondary_dark">Contáctanos</h1>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-8">
+        <!-- Form -->
+        <div class="w-full lg:w-1/2">
+          <ContactForm client:load />
+        </div>
+
+        <!-- Contact items -->
+        <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+          {contactArray.map((item) => (
+            <ContactItem item={item} client:load />
+          ))}
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <Footer />
 </Layout>

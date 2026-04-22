@@ -3,20 +3,11 @@ export const ContactItem = ({ item }) => {
     <a
       href={item.href}
       rel="noopener noreferrer"
-      className="group p-3 w-1/2 lg:w-1/2 h-1/2 flex flex-col justify-center items-center hover:cursor-pointer transition-all duration-300"
+      className="group flex flex-col justify-center items-center gap-2 p-5 bg-white rounded-2xl border border-primary_light hover:border-primary_brand hover:shadow-sm transition-all duration-300 text-center"
     >
-      <span
-        className={`${item.icon} text-2xl md:text-4xl lg:text-5xl text-secondary_brand group-hover:scale-110`}
-      >
-        {/* Icon will be displayed here */}
-      </span>
-      <p className="flex justify-center items-center text-secondary_dark font-light">
-        <span className="icon-[pajamas--dash] text-sm md:text-base lg:text-lg text-primary_brand"></span>
-        {item.title}
-      </p>
-      <p className="text-base md:text-lg  text-secondary_dark font-semibold tracking-wide">
-        {item.description}
-      </p>
+      <span className={`${item.icon} text-3xl text-secondary_brand group-hover:scale-110 transition-transform duration-300`}></span>
+      <p className="text-xs font-semibold tracking-wide uppercase text-secondary_dark/50">{item.title}</p>
+      <p className="text-sm font-medium text-secondary_dark leading-tight">{item.description}</p>
     </a>
   );
 };
